@@ -1,0 +1,14 @@
+name: It's All Coming Together
+category: Crypto
+value: 100
+flag: bcactf{c0nv3rg3d_0r_n3v3r3nd1ng?_jvnai23b15cxkl}
+description: |-
+  Hey, someone wrote all these numbers on my computer! Can you check them out?
+hints:
+  - We at BCACTF pride ourselves on our "inventive" crypto problems.
+  - Remember to compensate for loss of precision.
+files:
+  - src: numbers.txt
+authors:
+  - micpap25
+visible: false
