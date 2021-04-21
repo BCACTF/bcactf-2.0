@@ -1,0 +1,13 @@
+name: Home Automation
+category: Webex
+value: 50
+flag:
+  file: ./server/flag.txt
+description: |-
+  Check out my super secure home automation system! No, don't try turning the lights off...
+hints:
+  - How do websites know who you are?
+  - What's on the table?
+authors:
+  - anli
+visible: false
