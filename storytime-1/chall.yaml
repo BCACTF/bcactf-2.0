@@ -1,9 +1,9 @@
-name: Example Problem
+name: Storytime: The First Chapter
 category: Rev
 value: 75
 flag: bcactf{w0ol_m4k3s_str1ng_ziv4mk3ca91b}
 description: |-
-  Gather around, it's time for a story!
+  Gather around, it's time for a story! I've even included a reward at the end!
 hints:
   - I don't think that's the *whole* story.
   - What can you make with wool?
