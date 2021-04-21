@@ -1,0 +1,16 @@
+name: A Fun Game
+category: Rev
+value: 75
+flag: bcactf{h0p3fu1ly_y0U_d1dNt_actUa1ly_tYpe_1000_1ett3rs}
+description: |-
+  A really fun game where you have to type the correct letter 1000 times to get the flag!
+  It won't take that long, right?
+  It's not like there's another way to do it...
+hints:
+  - Is it possible to modify the variable storing your points?
+  - What does a program like GameConqueror or CheatEngine do?
+files:
+  - src: Game.cs
+authors:
+  - Krish Arora
+visible: false
