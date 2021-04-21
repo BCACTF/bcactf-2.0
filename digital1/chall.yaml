@@ -1,0 +1,17 @@
+name: To Be Determined
+category: Crypto
+value: 50
+flag: bcactf{that_was_pretty_simple2357432987}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+  Looks simple enough.
+hints:
+  - https://github.com/hneemann/Digital
+files:
+  - src: circuit_1.dig
+  - src: enc.txt
+authors:
+  - MichaelK522
+visible: true
