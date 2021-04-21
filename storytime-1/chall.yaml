@@ -1,0 +1,17 @@
+name: Example Problem
+category: Rev
+value: 75
+flag: bcactf{w0ol_m4k3s_str1ng_ziv4mk3ca91b}
+description: |-
+  Gather around, it's time for a story!
+hints:
+  - I don't think that's the *whole* story.
+  - What can you make with wool?
+  - Maybe a command line tool will help?
+files:
+  - src: story
+authors:
+  - micpap25
+visible: true
+# TODO: compile
+# - compile as windows binary
