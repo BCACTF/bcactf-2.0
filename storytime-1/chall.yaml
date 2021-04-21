@@ -13,3 +13,5 @@ files:
 authors:
   - micpap25
 visible: true
+# TODO: compile
+# - compile as windows binary
