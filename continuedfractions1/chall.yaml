@@ -5,7 +5,7 @@ flag: bcactf{c0nv3rg3d_0r_n3v3r3nd1ng?_jvnai23b15cxkl}
 description: |-
   Hey, someone wrote all these numbers on my computer! Can you check them out?
 hints:
-  - We at BCACTF pride ourselves on our "inventive" crypto problems.
+  - They left a note! It says something about division?
   - Remember to compensate for loss of precision.
 files:
   - src: numbers.txt
