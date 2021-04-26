@@ -3,7 +3,7 @@ category: Forensics
 value: 50
 flag: bcactf{z3r0_w1dth_jungl3_j82axH4}
 description: |-
-  My friend sent me this email yesterday, but I can't seem to understand what it means. Can you help me out?
+  My friend just sent me this file, but it looks pretty empty. Are you able to see anything?
 hints:
   - File names aren't random. What does `zwsp` mean?
   - How do you convert binary to text?
