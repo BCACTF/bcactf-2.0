@@ -1,0 +1,14 @@
+name: Stylish
+category: Webex
+value: 100
+flag:
+  file: ./server/flag.txt
+description: |-
+  Check out my cool website! Now with customizable themes that you can share with your friends!
+hints:
+  - That CSS looks suspicious...
+authors:
+  - anli
+visible: false
+
+# TODO: Deployment
