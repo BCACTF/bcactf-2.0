@@ -1,6 +1,6 @@
 name: Stylish
 category: Webex
-value: 100
+value: 200
 flag:
   file: ./server/flag.txt
 description: |-
