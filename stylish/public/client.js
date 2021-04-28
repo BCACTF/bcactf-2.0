@@ -11,7 +11,7 @@ function applyTheme(theme) {
     if (typeof theme.bfg !== "string") throw new Error("bfg must be a string");
 
     document.getElementById("style").innerText = `
-    body, .modal-content {
+    body, .c {
         background-color: ${theme.bg};
     }
 
@@ -47,7 +47,7 @@ function getThemeFromForm() {
  * @param {string} [text] 
  */
 function updatePasscodeDisplay(text) {
-    const display = /** @type {HTMLElement | null} */ (document.querySelector(".passcode-display"));
+    const display = /** @type {HTMLElement | null} */ (document.querySelector(".d"));
     if (display) {
         display.innerText = text || (passcode.length > 0 ? passcode : "Enter passcode to access flag.");
     }
@@ -75,16 +75,16 @@ function setupPasscodeModal() {
         updatePasscodeDisplay();
     }));
 
-    content.querySelector(".submit-passcode").addEventListener("click", _ => {
+    content.querySelector(".s").addEventListener("click", _ => {
         getFlag();
     });
 
-    content.querySelector(".reset-passcode").addEventListener("click", _ => {
+    content.querySelector(".r").addEventListener("click", _ => {
         passcode = "";
         updatePasscodeDisplay();
     });
 
-    content.querySelector(".close-modal").addEventListener("click", _ => {
+    content.querySelector(".x").addEventListener("click", _ => {
         content.remove();
     });
 

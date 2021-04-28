@@ -38,7 +38,7 @@ export default async function visit(url, passcode) {
         await page.click(`#${id}`);
         await timeout(50);
     }
-    await page.click(".submit-passcode");
+    await page.click(".s");
     await timeout(100);
 
     await page.close();

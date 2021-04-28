@@ -32,7 +32,7 @@ button:hover, button:focus {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.modal {
+.m {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,7 +43,7 @@ button:hover, button:focus {
     background-color: rgba(50, 50, 50, 0.8);
 }
 
-.modal-content {
+.c {
     min-width: 400px;
     border-radius: 8px;
     padding: 16px;
@@ -54,7 +54,7 @@ button:hover, button:focus {
     transform: translate(-50%, -50%);
 }
 
-.passcode-display {
+.d {
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
@@ -71,7 +71,7 @@ button:hover, button:focus {
     width: fit-content;
 }
 
-.modal-actions {
+.a {
     margin-top: 16px;
     text-align: center;
 }
