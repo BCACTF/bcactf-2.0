@@ -1,0 +1,18 @@
+name: Agent Gerald
+category: Webex
+value: 50
+flag: bcactf{y0u_h@ck3d_5tegos@urus_1nt3lligence}
+description: |-
+  Agent Gerald is a spy in SI-6 (Stegosaurus Intelligence-6). We need you to infiltrate this
+  top-secret SI-6 webpage, but it looks like it can only be accesed by Agent Gerald...
+
+  
+hints:
+  - What are some ways webpages know who you are?
+
+authors:
+  - Zsofia Gordon
+visible: false
+#TODO: deployment 
+#TODO: uwu
+
