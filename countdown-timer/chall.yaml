@@ -8,9 +8,6 @@ description: |-
   However, the minimum time you can set for the countdown is 100 days, so you might be here for a while.
 hints:
   - Can you modify a website's JavaScript?
-files:
-  - src: index.html
-  - src: style.css
 authors:
   - Krish Arora
 visible: false
