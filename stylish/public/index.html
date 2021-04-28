@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>stylish</title>
-        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="style.css" />
         <style id="style"></style>
     </head>
     <body>
@@ -28,7 +28,7 @@
                     <label id="background">Button Foreground</label>
                     <input type="color" name="bfg" id="bfg">
                 </div>
-                <p><a id="permalink" href="#">Theme Permalink</a></p>
+                <a id="permalink" href="#">Theme Permalink</a>
                 <button type="submit" id="submit-theme">Submit for Review</button>
             </form>
         </div>
@@ -54,12 +54,14 @@
                         <button>E</button>
                         <button>F</button>
                     </div>
-                    <button class="submit-passcode">Submit</button>
-                    <button class="reset-passcode">Reset</button>
-                    <button class="close-modal">Close</button>
+                    <div class="modal-actions">
+                        <button class="submit-passcode">Submit</button>
+                        <button class="reset-passcode">Reset</button>
+                        <button class="close-modal">Close</button>
+                    </div>
                 </div>
             </div>
         </template>
-        <script src="script.js"></script>
+        <script src="client.js"></script>
     </body>
 </html>

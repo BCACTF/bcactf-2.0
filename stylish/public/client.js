@@ -23,6 +23,10 @@ function applyTheme(theme) {
         background-color: ${theme.bbg};
         color: ${theme.bfg};
     }
+
+    #theme-creator {
+        border-color: ${theme.fg};
+    }
     `;
 
     const permalink = `#${encodeURIComponent(JSON.stringify(theme))}`;
@@ -83,6 +87,8 @@ function setupPasscodeModal() {
     content.querySelector(".close-modal").addEventListener("click", _ => {
         content.remove();
     });
+
+    updatePasscodeDisplay();
 }
 
 window.addEventListener("DOMContentLoaded", _ => {
@@ -97,8 +103,6 @@ window.addEventListener("DOMContentLoaded", _ => {
         alert(`Error loading theme: ${e}`);
         theme = defaultTheme;
     }
-
-    updatePasscodeDisplay();
 
     /** @type {HTMLInputElement} */ (document.getElementById("bg")).value = theme.bg;
     /** @type {HTMLInputElement} */ (document.getElementById("fg")).value = theme.fg;
