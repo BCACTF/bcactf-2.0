@@ -20,9 +20,11 @@ function timeout(ms) {
  * @returns {Promise<void>}
  */
 export default async function visit(url, passcode) {
-    const page = await (await browser).newPage();
+    const context = await (await browser).createIncognitoBrowserContext();
+    const page = await context.newPage();
+    await page.setCacheEnabled(false);
 
-    await page.goto(url, {waitUntil: "load", timeout: 500});
+    await page.goto(url, {waitUntil: "load", timeout: 1000});
     await page.click("#get-flag");
     await page.waitForSelector(".e");
     for (let i = 0; i < passcode.length; i++) {
@@ -39,7 +41,8 @@ export default async function visit(url, passcode) {
         await timeout(50);
     }
     await page.click(".s");
-    await timeout(500);
+    await timeout(1000);
 
     await page.close();
+    await context.close();
 }
