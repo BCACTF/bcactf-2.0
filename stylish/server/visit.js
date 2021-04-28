@@ -22,7 +22,7 @@ function timeout(ms) {
 export default async function visit(url, passcode) {
     const page = await (await browser).newPage();
 
-    await page.goto(url, {waitUntil: "domcontentloaded", timeout: 500});
+    await page.goto(url, {waitUntil: "load", timeout: 500});
     await page.click("#get-flag");
     await page.waitForSelector(".e");
     for (let i = 0; i < passcode.length; i++) {
@@ -39,7 +39,7 @@ export default async function visit(url, passcode) {
         await timeout(50);
     }
     await page.click(".submit-passcode");
-    await timeout(500);
+    await timeout(100);
 
     await page.close();
 }

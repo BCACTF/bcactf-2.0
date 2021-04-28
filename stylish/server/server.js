@@ -2,18 +2,7 @@ import express from 'express';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import visit from './visit.js';
-
-function generatePasscode() {
-    // Permute the array of characters
-    const chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
-    for (let i = 0; i < chars.length - 1; i++) {
-        let temp = chars[i];
-        let j = Math.floor(Math.random() * (chars.length - i)) + i;
-        chars[i] = chars[j];
-        chars[j] = temp;
-    }
-    return chars.join("");
-}
+import generatePasscode from './passcode.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const passcode = generatePasscode();
