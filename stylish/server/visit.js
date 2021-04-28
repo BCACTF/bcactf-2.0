@@ -39,7 +39,7 @@ export default async function visit(url, passcode) {
         await timeout(50);
     }
     await page.click(".s");
-    await timeout(200);
+    await timeout(500);
 
     await page.close();
 }

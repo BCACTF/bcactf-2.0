@@ -100,8 +100,9 @@ window.addEventListener("DOMContentLoaded", _ => {
         }
         applyTheme(theme);
     } catch (e) {
-        alert(`Error loading theme: ${e}`);
+        document.getElementById("error-display").innerText = `Error loading theme: ${e}`;
         theme = defaultTheme;
+        applyTheme(theme);
     }
 
     /** @type {HTMLInputElement} */ (document.getElementById("bg")).value = theme.bg;
