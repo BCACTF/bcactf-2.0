@@ -1,0 +1,13 @@
+name: I Can Haz Interwebz?
+category: Miscallaneous
+value: 50
+flag: bcactf{r41nb0w_P0p_t4rT5_g0_nY4_s3Dy0Bqd6u}
+description: |-
+  Awww! Look at these cute and adorable cats helping me navigate the interwebzes.
+hints:
+  - If you don't have it, [install netcat](https://nmap.org/ncat).
+  - You'll need to run the command from the terminal.
+authors:
+  - Edward Feng
+visible: true
+# TODO: deployment
