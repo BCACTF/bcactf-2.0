@@ -1,0 +1,19 @@
+name: Stylish
+category: Webex
+value: 200
+flag:
+  file: ./server/flag.txt
+description: |-
+  Check out my cool website! Now with customizable themes that you can share with your friends!
+hints:
+  - That CSS looks suspicious...
+authors:
+  - anli
+files:
+  - src: server/server.js
+  - src: server/passcode.js
+  - src: server/visit.js
+visible: false
+
+# TODO: Deployment (note: uses puppeteer)
+# TODO: Rate-limiting/captchas

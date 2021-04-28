@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>stylish</title>
+        <link rel="stylesheet" href="style.css" />
+        <style id="style"></style>
+    </head>
+    <body>
+        <div id="content">
+            <h1>stylish</h1>
+            <button id="get-flag">Get Flag</button>
+            <form method="POST" action="/submit" id="theme-creator">
+                <h2>Create your own theme!</h2>
+                <p id="error-display"></p>
+                <div class="theme-creator-input-group">
+                    <label id="background">Page Background</label>
+                    <input type="color" name="bg" id="bg" />
+                </div>
+                <div>
+                    <label id="background">Page Foreground</label>
+                    <input type="color" name="fg" id="fg" />
+                </div>
+                <div>
+                    <label id="background">Button Background</label>
+                    <input type="color" name="bbg" id="bbg" />
+                </div>
+                <div>
+                    <label id="background">Button Foreground</label>
+                    <input type="color" name="bfg" id="bfg">
+                </div>
+                <a id="permalink" href="#">Theme Permalink</a>
+                <button type="submit" id="submit-theme">Submit for Review</button>
+            </form>
+        </div>
+        <template id="passcode-modal">
+            <div class="m">
+                <div class="c">
+                    <h3 class="d"></h3>
+                    <div class="e">
+                        <button>0</button>
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button>A</button>
+                        <button>B</button>
+                        <button>C</button>
+                        <button>D</button>
+                        <button>E</button>
+                        <button>F</button>
+                    </div>
+                    <div class="a">
+                        <button class="s">Submit</button>
+                        <button class="r">Reset</button>
+                        <button class="x">Close</button>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <script src="client.js"></script>
+    </body>
+</html>
