@@ -6,8 +6,8 @@ flag:
 description: |-
     This publishing site is running a writing competition! Can you win the flag?
 hints:
-  - There are multiple exploits here. The problem name is one of them.
   - No SQL to be found here...
+  - There are multiple exploits here. The problem name is one of them.
 authors:
   - anli
 files:
