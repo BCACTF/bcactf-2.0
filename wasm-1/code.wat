@@ -49,36 +49,6 @@
 
         (return
             (i32.const 0)))
-    
-    (func $copyString (export "copyString")
-        (param $addr i32)
-        (param $newAddr i32)
-        
-        (local $index i32) ;; Index of the character its copying
-
-        loop $charCopy
-            (i32.store8 ;; copy the character
-                (i32.add
-                    (local.get $index)
-                    (local.get $newAddr))
-                (i32.load8_u
-                    (i32.add
-                        (local.get $index)
-                        (local.get $addr))))
-            (i32.load8_u ;; load up again and make sure it hasn't hit the null byte yet
-                (i32.add
-                    (local.get $index)
-                    (local.get $addr)))
-            (i32.eqz)
-            if ;; if it has, stop
-                return
-            end
-
-            (local.set $index
-                (i32.add
-                    (local.get $index)
-                    (i32.const 1)))
-            end $charCopy)
     (; Main Program ;)
 
     ;; Flag is bcactf{w4sm-m4g1c-xRz5} @1016
