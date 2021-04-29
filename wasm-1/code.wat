@@ -1,6 +1,6 @@
 ;; This file is not directly seen
-;; It is the code that was compiled to wasm
-;; It is only here or reference
+;; It is the code that was compiled to wasm (which ik u said not to include but its the thing being hosted)
+;; here for reference
 (module
     (memory $memory (export "memory") 1) ;; 1 page
 
