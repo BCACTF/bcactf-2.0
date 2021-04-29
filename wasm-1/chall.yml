@@ -1,11 +1,11 @@
-name: Web Assembly 1
+name: Wasm Protected Site 1
 category: Webex
-value: 75
+value: 50 # maybe 25 since its in plain sight
 flag: bcactf{w4sm-m4g1c-xRz5}
 description: |-
-  - Check out my website! Try to get the flag!
+  - Check out my super safe website! Enter the login to get the flag
 hints:
-  - What is Web Assembly?
+  - What is Web Assembly/wasm?
   - How does the Web Assembly check the password you entered, and what is it looking for?
 authors:
   - Andrew
