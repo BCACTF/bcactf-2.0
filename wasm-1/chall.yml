@@ -1,0 +1,13 @@
+name: Web Assembly 1
+category: Webex
+value: 75
+flag: bcactf{w4sm-m4g1c-xRz5}
+description: |-
+  - Check out my website! Try to get the flag!
+hints:
+  - What is Web Assembly?
+  - How does the Web Assembly check the password you entered, and what is it looking for?
+authors:
+  - Andrew
+visible: false
+# TODO: deploy (code.wasm, index.html, main.js)
