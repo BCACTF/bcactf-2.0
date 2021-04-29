@@ -3,7 +3,7 @@ if (typeof window.WebAssembly === 'undefined') {
     throw 'no wasm :(';
 }
 
-const fetchWASMCode = () => {// gets the binary for the web assembly
+const fetchWASMCode = () => {
     return new Promise((res, rej) => {
         const req = new XMLHttpRequest();
 
@@ -21,7 +21,7 @@ const fetchWASMCode = () => {// gets the binary for the web assembly
 };
 
 let wasm = null;
-fetchWASMCode().then(buffer => {// loads and instantiates
+fetchWASMCode().then(buffer => {
     WebAssembly.instantiate(buffer).then(res => {
         wasm = res;
     }).catch(err => {
@@ -30,7 +30,7 @@ fetchWASMCode().then(buffer => {// loads and instantiates
     })
 });
 
-// respond to interactions
+
 const input = document.querySelector('input#password');
 const response = document.querySelector('p#response-text');
 
@@ -44,7 +44,7 @@ document.querySelector('button').addEventListener('click', () => {
         const end = memory.indexOf(0, resultAddr);
 
         response.innerText = "Response: " + new TextDecoder().decode(memory.subarray(resultAddr, end));
-    } else {// Wasm isn't loaded yet
+    } else {
         response.innerText = "Please try again in a few seconds";
     }
-}, true);
+}, 1);
