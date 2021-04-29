@@ -1,0 +1,18 @@
+name: Completely Secure Publishing
+category: Webex
+value: 200
+flag:
+  file: ./server/flag.txt
+description: |-
+    This publishing site is running a writing competition! Can you win the flag?
+hints:
+  - There are multiple exploits here. The problem name is one of them.
+  - No SQL to be found here...
+authors:
+  - anli
+files:
+  - src: server/server.js
+visible: false
+
+# TODO: Deployment (note: uses puppeteer)
+# TODO: Rate-limiting/captchas

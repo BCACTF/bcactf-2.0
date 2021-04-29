@@ -1,0 +1,14 @@
+{
+    "name": "content-insecurity-policy",
+    "type": "module",
+    "private": true,
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "nedb": "^1.8.0",
+        "puppeteer": "^9.0.0"
+    }
+}
