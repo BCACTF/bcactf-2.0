@@ -1,5 +1,6 @@
 body {
     font-family: "Times New Roman", serif;
+    height: 100vh;
 }
 
 .btn {
@@ -42,8 +43,4 @@ textarea {
 
 #publish-details.submitted .hint-text {
     display: none;
-}
-
-body {
-    height: 100vh;
 }
