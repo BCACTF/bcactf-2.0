@@ -1,0 +1,19 @@
+name: Sailing Thru Decryption
+category: Crypto
+value: 75
+flag: bcactf{1s_h1s_n4me_g3r4rd?}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+  I seem to have lost something while I was sailing to France. I know it was one of my pets, but I can't seem to remember his name. Could you help me remember it?
+
+hints:
+  - I wonder how the Navy encrypts their signals?
+  - Nothing beats the French!
+files:
+  - src: flags.png
+    name: image.png # Optional display name
+authors:
+  - Yusuf
+visible: false
