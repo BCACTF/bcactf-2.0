@@ -10,6 +10,10 @@ import cookieParser from 'cookie-parser';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const db = new Datastore();
+db.ensureIndex({
+    fieldName: "created",
+    expireAfterSeconds: 10 * 60
+}, () => {})
 
 const browser = puppeteer.launch({args: ["--incognito"]});
 
