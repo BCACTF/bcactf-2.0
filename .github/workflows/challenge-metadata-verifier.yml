@@ -22,6 +22,7 @@ jobs:
       with:
         repository: 'BCACTF/challenge-metadata-verifier'
         path: 'challenge-metadata-verifier'
+        ssh-key: ${{secrets.VERIFIER_DEPLOY_KEY}}
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
