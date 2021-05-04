@@ -1,0 +1,21 @@
+name: Digitally Encrypted 2
+category: Crypto
+value: 200
+flag: bcactf{x0r5_4nD_NXoR5_aNd_NnX0r5_0r_xOr}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+  Gerald and Gerald have just learned that Gerald has cracked their previous cypher.
+  Gerald scolds Gerald, saying that he shouldn't have given away the key.
+  Geral, therefore, decides to create a new cypher, hopefully one that Gerald can't crack.    
+hints:
+  - What does the plaintext start with?
+  - Notice anything about the key?
+files:
+  - src: circuit_2.dig
+  - src: Block.dig
+  - src: encrypted.txt
+authors:
+  - MichaelK522
+visible: true
