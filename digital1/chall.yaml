@@ -13,7 +13,7 @@ hints:
   - https://github.com/hneemann/Digital
 files:
   - src: circuit_1.dig
-  - src: enc.txt
+  - src: encrypted.txt
 authors:
   - MichaelK522
 visible: true

@@ -10,6 +10,7 @@ hints:
   - Maybe a command line tool will help?
 files:
   - src: story
+    ignore_missing: true
 authors:
   - micpap25
 visible: true
