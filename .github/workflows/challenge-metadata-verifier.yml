@@ -1,5 +1,5 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+# This workflow will verify any chall.yaml files it finds.
+# For more information see: https://github.com/BCACTF/bcactf-2.0/pull/23#discussion_r626116130
 
 name: Metadata verifier
 
