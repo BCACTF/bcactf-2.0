@@ -1,0 +1,11 @@
+name: Zip Problem
+category: Forensics
+value: 50
+flag: bcactf{z1p_1n51d3_4_z1p_4_3v3r}
+description: |-
+  Here's a zip, there's a zip. Zip zip everywhere.
+authors:
+  - akth3n3rd
+files:
+  - src: zipProblem/flag.zip
+visible: true
