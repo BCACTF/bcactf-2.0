@@ -5,7 +5,7 @@ name: Metadata verifier
 
 on:
   push:
-    branches: [ main, tooling/challenge-metadata-verifier ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
