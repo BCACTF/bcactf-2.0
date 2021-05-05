@@ -7,5 +7,5 @@ description: |-
 authors:
   - akth3n3rd
 files:
-  - src: zipProblem/flag.zip
+  - src: flag.zip
 visible: true
