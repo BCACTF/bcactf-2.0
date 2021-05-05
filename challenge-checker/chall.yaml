@@ -1,0 +1,17 @@
+name: Challenge Checker 
+category: Miscallaneous
+value: 150
+flag:
+    file: ./flag.txt
+description: |-
+    I made this challenge checker to automate away ed's job. Maybe it'll even give you a nice `./flag.txt`...
+hints:
+  - Ed likes his challenges served with delicious yams.
+files:
+  - src: chall.yaml
+  - src: requirements.txt
+  - src: verify.py
+authors:
+  - anli
+visible: false
+# TODO: deployment
