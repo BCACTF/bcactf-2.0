@@ -9,4 +9,5 @@ hints:
 authors:
   - Andrew
 visible: false
-# TODO: deploy (code.wasm, index.html, main.js)
+# TODO: deployment (code.wasm, index.html, main.js)
+# To re-compile, run wat2wasm code.wat > code.wasm
