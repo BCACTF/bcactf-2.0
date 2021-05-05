@@ -6,11 +6,11 @@ from Crypto.Cipher import ARC4
 from Crypto.Hash import SHA
 
 
-with open("flag", "r") as f:
+with open("flag.txt", "r") as f:
     flag = f.read().strip().encode("ascii")
 
-with open("key", "r") as f:
-    key = int(f.read()) #+ int(time.time() / 10)
+with open("key.txt", "r") as f:
+    key = int(f.read().strip())
 
 target_query = "Open sesame... Flag please!"
 
@@ -27,6 +27,7 @@ Make sure to not make any mistakes, though, or your keystreams might come out of
 PS: For security reasons, there are four characters you aren't allowed to encrypt. Sorry!
 """)
 
+bytes(key + int(time.time() / 10))
 tempkey = SHA.new(bytes(key + int(time.time() / 10))).digest()
 cipher = ARC4.new(tempkey)
 
