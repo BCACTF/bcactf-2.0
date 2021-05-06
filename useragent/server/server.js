@@ -3,7 +3,7 @@ const { readFileSync } = require("fs");
 const path = require("path");
 
 const app = express();
-//const flag = readFileSync("flag.txt", "utf-8");
+const flag = readFileSync("flag.txt", "utf-8");
 
 app.get("/",function (request,response){
     const agent = request.get("User-Agent");
@@ -18,7 +18,7 @@ app.get("/",function (request,response){
                 <h1>Welcome to the Stegosaurus Intelligence-6 Homepage</h1>
                 <h2>Are you Agent Gerald?</h2>
                 <img src="gerald.PNG" alt="agent gerald" style="width: 50%"></img>
-                   <h4> Welcome, Agent Gerald! Your flag is: bcactf{y0u_h@ck3d_5tegos@urus_1nt3lligence} </h4>
+                   <h4> Welcome, Agent Gerald! Your flag is: ${flag} </h4>
             </body>
         </html>`;
 
@@ -36,7 +36,7 @@ app.get("/",function (request,response){
         </html>`;
     }
 
-    response.send(no_u);
+    response.send(userthing);
         
 
 });
