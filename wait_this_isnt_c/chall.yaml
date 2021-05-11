@@ -1,25 +1,19 @@
-name: Example Problem
-category: Miscallaneous
-value: 100
-flag: bcactf{this_is_a_flag}
+name: Wait, this isn't C
+category: Reversing
+value: 150
+flag: bcactf{f0rtr4N_i5_c0oO0l}
 # Alternatively:
 # flag:
 #   file: ./flag.txt
 description: |-
-  Look at this example problem.
-  This is the problem description.
-  You will be able to add **markdown**!
-
-  Here is a separate paragraph.
-  Wow!
+  This just looks like a binary...
+  Lets try to decompile it...
+  Wait, this isn't C...
 hints:
-  - Have you tried turning it off and on again?
-  - Have you tried forcing an unexpected reboot?
+  - What is the original language, maybe look into that language?
+  - What do arrays start at? ;)
 files:
-  - src: file.txt
-  - src: a.txt
-    name: file2.txt # Optional display name
+  - src: flag_checker_1 
 authors:
-  - John Doe
-  - Jane Smith
+  - Michael Kasprzak
 visible: false
