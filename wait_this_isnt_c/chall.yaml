@@ -1,0 +1,25 @@
+name: Example Problem
+category: Miscallaneous
+value: 100
+flag: bcactf{this_is_a_flag}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+  Look at this example problem.
+  This is the problem description.
+  You will be able to add **markdown**!
+
+  Here is a separate paragraph.
+  Wow!
+hints:
+  - Have you tried turning it off and on again?
+  - Have you tried forcing an unexpected reboot?
+files:
+  - src: file.txt
+  - src: a.txt
+    name: file2.txt # Optional display name
+authors:
+  - John Doe
+  - Jane Smith
+visible: false
