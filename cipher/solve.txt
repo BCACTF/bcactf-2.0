@@ -1,0 +1,3 @@
+translate the octal into ascii
+use original caesar ciphor on the characters(shift of 3)
+choose whether a character is uppercase or lowercase based on Y's and N's
