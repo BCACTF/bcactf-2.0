@@ -135,7 +135,7 @@ check_flag:
 	call	puts	#
 # main.c:30: 		return 1;
 	mov	eax, 1	# _36,
-	jmp	.L6	#
+	jmp	.L14	#
 .L8:
 	#init stuff
 	mov	rax, QWORD PTR [rbp-16]	# stuff
