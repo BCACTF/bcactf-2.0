@@ -1,6 +1,6 @@
 name: Cipher Mishap 
 category: crypto
-value: 25
+value: 75
 flag: bcactf{Should_iT_Have_BeeN_Vigenere_Instead}
 description: |-
   My Caeser loving friend decided to send me a text file,
