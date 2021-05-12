@@ -13,7 +13,10 @@ hints:
   - What is the original language, maybe look into that language?
   - What do arrays start at? ;)
 files:
-  - src: flag_checker_1 
+  - src: flag_checker_1
+    ignore_missing: true
 authors:
   - MichaelK522
 visible: false
+
+# TODO: Compilation with gfortran
