@@ -1,0 +1,52 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.fancy-image {
+    background-color: #CCCCCC;
+    background-image: url(cookies.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.fill-screen {
+    min-height: 100vh;
+}
+
+.light {
+    display: block;
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+    padding: 16px;
+    background: #EEEEEE;
+    box-shadow:  10px 10px 20px #cacaca,
+             -10px -10px 20px #ffffff;
+    width: 125px;
+    height: 125px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.light:hover {
+    background: linear-gradient(145deg, #d6d6d6, #ffffff);
+}
+
+.light:focus {
+    background-color: #d6d6d6;
+}
+
+.light:active {
+    box-shadow: inset 10px 10px 20px #cacaca,
+        inset -10px -10px 20px #ffffff;
+}
+
+.light i {
+    color: darkorange;
+    font-size: 24px;
+}
+
+.light:hover i, .light:active i, .light:focus i {
+    color: darkorange;
+    font-size: 24px;
+}

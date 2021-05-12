@@ -1,0 +1,19 @@
+name: Digitally Encrypted 1
+category: Crypto
+value: 50
+flag: bcactf{that_was_pretty_simple1239152735}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+  Gerald has just learned about this program called Digital which allows him to create circuits.
+  Gerald wants to send messages to his friend, also named Gerald, but doesn't want Gerald (a third one) to know what they are saying.
+  Gerald, therefore, built this encryption circuit to prevent Gerald from reading his messages to Gerald. 
+hints:
+  - https://github.com/hneemann/Digital
+files:
+  - src: circuit_1.dig
+  - src: encrypted.txt
+authors:
+  - MichaelK522
+visible: true

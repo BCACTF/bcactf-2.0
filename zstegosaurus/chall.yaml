@@ -1,0 +1,18 @@
+name: Zstegosaurus
+category: Forensics
+value: 50
+flag: bcactf{h15_n@m3_i5nt_g3rard}
+description: |-
+  My friend forgot our pet zstegosaurus's name.
+  Luckily for him, I hid the dinosaur's name somewhere in this picture...but now I can't find it.
+  Can you help us?
+hints:
+  - The image should be black and white...right?
+  - Try opening the file in a hex editor. 
+  - The format for the flag is bcactf{flagName}
+files:
+  - src: zgerald.png
+    name: zstegosaurus.png
+authors:
+  - Zsofia Gordon
+visible: false
