@@ -1,18 +1,37 @@
 if (typeof window.WebAssembly === 'undefined') {
     alert('WebAssembly seems to not be implemented on your browser. Try using an updated version of Firefox, Chrome, or Safari. ');
     throw 'no wasm :(';
+}
 
+const fetchWASMCode = () => {
+    return new Promise((res, rej) => {
+        const req = new XMLHttpRequest();
+
+        req.onload = function () {
+            res(req.response);
+        }
+        req.onerror = (err) => {
+            console.warn('If you\'re seeing this logged, something broke');
+            rej(err)
+        }
+        req.open("GET", "./code.wasm");
+        req.responseType = "arraybuffer";
+        req.send();
+    });
+};
 
 let wasm = null;
-WebAssembly.instantiate(fetch('./code.wasm')).then(res => {
-  wasm = res;
-}).catch(err => {
-  console.warn('If you\'re seeing this logged, something broke');
-  throw err;
+fetchWASMCode().then(buffer => {
+    WebAssembly.instantiate(buffer).then(res => {
+        wasm = res;
+    }).catch(err => {
+        console.warn('If you\'re seeing this logged, something broke');
+        throw err;
+    })
 });
 
 
-const input = document.querySelector('input');
+const input = document.querySelector('input#password');
 const response = document.querySelector('p#response-text');
 
 document.querySelector('button').addEventListener('click', () => {
