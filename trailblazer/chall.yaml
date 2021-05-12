@@ -1,0 +1,17 @@
+name: Trailblazer
+category: Reversing
+value: 400
+flag: bcactf{now_thats_how_you_blaze_a_trail_9f8d3x8}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+    TODO
+hints:
+    TODO
+files:
+  - src: trailblazer
+authors:
+  - eiis1000
+visible: false
+# TODO: deployment
