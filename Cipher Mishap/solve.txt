@@ -1,0 +1,3 @@
+translate octal to ascii
+decode using Caesar Cipher(turn of three)
+use Y and N to decide whether a character is capital or not
