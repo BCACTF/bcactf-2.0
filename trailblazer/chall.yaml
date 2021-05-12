@@ -1,14 +1,15 @@
 name: Trailblazer
 category: Reversing
 value: 400
-flag: bcactf{now_thats_how_you_blaze_a_trail_9f8d3x8}
+flag: bcactf{now_thats_how_you_blaze_a_trail_9fd43x8}
 # Alternatively:
 # flag:
 #   file: ./flag.txt
 description: |-
-    TODO
+    To boldly go where no one has gone before...
 hints:
-    TODO
+  - The flag length has been specifically tuned to make everything work out.
+  - What is the standard way to return 0?
 files:
   - src: trailblazer
 authors:
