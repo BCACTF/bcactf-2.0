@@ -1,0 +1,22 @@
+name: Wait, this isn't C
+category: Reversing
+value: 150
+flag: bcactf{f0rtr4N_i5_c0oO0l}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+  This just looks like a binary...
+  Lets try to decompile it...
+  Wait, this isn't C...
+hints:
+  - What is the original language, maybe look into that language?
+  - What do arrays start at? ;)
+files:
+  - src: flag_checker_1
+    ignore_missing: true
+authors:
+  - MichaelK522
+visible: false
+
+# TODO: Compilation with gfortran
