@@ -1,15 +1,16 @@
 if (typeof window.WebAssembly === 'undefined') {
     alert('WebAssembly seems to not be implemented on your browser. Try using an updated version of Firefox, Chrome, or Safari. ');
     throw 'no wasm :(';
-
+}
 
 let wasm = null;
-WebAssembly.instantiate(fetch('./code.wasm')).then(res => {
-  wasm = res;
+fetch("./code.wasm").then(res => res.arrayBuffer()).then(buffer => WebAssembly.instantiate(buffer)).then(res => {
+    wasm = res;
 }).catch(err => {
-  console.warn('If you\'re seeing this logged, something broke');
-  throw err;
-});
+    console.warn('If you\'re seeing this logged, something broke');
+    throw err;
+})
+
 
 
 const input = document.querySelector('input');
@@ -20,11 +21,9 @@ document.querySelector('button').addEventListener('click', () => {
         const memory = new Uint8Array(wasm.instance.exports.memory.buffer);
         memory.set(new TextEncoder().encode(input.value + "\x00"));
 
-        const resultAddr = wasm.instance.exports.checkPassword(0);
+        const responseText = wasm.instance.exports.checkFlag(0) ? "Correct flag" : "Inorrect flag";
 
-        const end = memory.indexOf(0, resultAddr);
-
-        response.innerText = "Response: " + new TextDecoder().decode(memory.subarray(resultAddr, end));
+        response.innerText = responseText;
     } else {
         response.innerText = "Please try again in a few seconds";
     }
