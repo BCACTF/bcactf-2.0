@@ -8,8 +8,8 @@
 
 int generateNumber()
 {
-    // Make a number from 1 to 100
-    return (rand() % 100) + 1;
+    // Make a number from 1 to 9
+    return (rand() % 9) + 1;
 }
 
 void sleepNanos(int seconds, int nanos)
@@ -50,7 +50,7 @@ int main()
     puts("");
     puts("");
     puts("");
-    sleepNanos(1, 500000000);
+    sleepNanos(1, 0);
     puts("Welcome to the Lucky Lotto Slot Machine!");
     sleepNanos(1, 500000000);
     puts("Let's see if you're today's big winner!");
@@ -61,9 +61,8 @@ int main()
                          'o', 'p', 'q', 'r', 's', 't', 'u',
                          'v', 'w', 'x', 'y', 'z'};
     char c = alphabet[rand() % 26];
-    printf("Enter the key \"%c\" to pull the lever...\n", c);
-    while ((getchar()) != c)
-        ;
+    printf("Enter the letter \"%c\" to pull the lever...\n", c);
+    while ((getchar()) != c);
     system("clear");
     puts("Spinning...");
     sleepNanos(0, 500000000);
@@ -241,5 +240,5 @@ int main()
     {
         puts("Come back next time!");
     }
-    sleepNanos(1, 0);
+    sleepNanos(0, 500000000);
 }

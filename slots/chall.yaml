@@ -7,6 +7,7 @@ description: |-
 hints:
   - There's got to be a faster way than to connect manually, right?
   - Can you use a tool to make your computer connect for you?
+  - The flag is in the format `bcactf{...}`. Use that to your advantage when parsing output.
 authors:
   - micpap25
 visible: true
