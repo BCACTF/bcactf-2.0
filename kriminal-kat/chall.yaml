@@ -1,0 +1,23 @@
+name: "The Kase of the Kriminal Kat"
+category: Crypto
+value: 150
+flag: bcactf{cr4sh_th3_h4sh_2893jmv9s6}
+description: |-
+  Agent Gerald is on a Super Secret Mission™ to arrest the notorious Krimelord, the Kriminal Kitten™. 
+  Enraged that his adorableness makes it hard for many to take him seriously, that dastardly Kitten™
+  has been planning some terrible deeds. Gerald has found the secret website that the Kriminal Kitten Krime Kompany™
+  uses to chat and share files, but he needs to figure out how to sign in.
+
+  Gerald's team believes that the site uses Kriminal Recognition Technology™ to guess which evildoer is attempting to sign in. 
+  Since Gerald is not recognized, it seems to default to a random username.
+  Maybe you can help Agent Gerald log in?
+
+hints:
+  - If you're not sure why this is a crypto problem, brush up on your web exploitation.
+  - Can you recognize what is being done to the username and password when you press "Sign In"?
+  - I hear that Kriminal Kat™ has a cousin in cybersecurity. She's pretty good with passwords.
+  - 
+authors:
+  - micpap25
+visible: true
+#TODO: deployment 
