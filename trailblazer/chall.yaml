@@ -1,0 +1,18 @@
+name: Trailblazer
+category: Reversing
+value: 400
+flag: bcactf{now_thats_how_you_blaze_a_trail_9fd43x8}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+    To boldly go where no one has gone before...
+hints:
+  - What do you know about the flag?
+  - The flag length has been specifically tuned to make everything work out.
+  - What is the standard way to return 0?
+files:
+  - src: trailblazer
+authors:
+  - eiis1000
+visible: false
