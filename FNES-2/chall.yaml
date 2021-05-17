@@ -1,0 +1,15 @@
+name: FNES 2
+category: Cryptography
+value: 250
+flag:
+  file: ./flag.txt
+description: |-
+
+hints:
+
+files:
+  - src: fnes2.py
+authors:
+  - eiis1000
+visible: false
+# TODO: deployment (python file should be run on the server)
