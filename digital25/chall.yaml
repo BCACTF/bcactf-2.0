@@ -13,7 +13,7 @@ hints:
 files:
   - src: circuit_2.5.dig
   - src: Block2.dig
-  - src: enc.txt
+  - src: encypted.txt
 authors:
   - MichaelK522
 visible: true
