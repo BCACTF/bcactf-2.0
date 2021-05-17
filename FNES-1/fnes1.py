@@ -27,8 +27,7 @@ Make sure to not make any mistakes, though, or your keystreams might come out of
 PS: For security reasons, there are four characters you aren't allowed to encrypt. Sorry!
 """)
 
-bytes(key + int(time.time() / 10))
-tempkey = SHA.new(bytes(key + int(time.time() / 10))).digest()
+tempkey = SHA.new(int(key + time.time() / 10).to_bytes(64, 'big')).digest()[0:16]
 cipher = ARC4.new(tempkey)
 
 while True:
