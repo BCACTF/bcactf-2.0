@@ -1,0 +1,19 @@
+name: Digitally Encrypted 2.5
+category: Crypto
+value: 250
+flag: bcactf{Ju5t_4dd_4m0th2R_b10ck_43786583323}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+  Gerald has just learned that his old block cipher has been cracked.
+  Gerald is sad.
+  Gerald is also feeling lazy and decides to strenghten his cypher the easiest way he knows how. 
+hints:
+files:
+  - src: circuit_2.5.dig
+  - src: Block2.dig
+  - src: enc.txt
+authors:
+  - MichaelK522
+visible: true
