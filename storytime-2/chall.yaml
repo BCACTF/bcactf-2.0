@@ -1,0 +1,18 @@
+name: "Storytime: The Shocking Conclusion"
+category: Rev
+value: 75
+flag: bcactf{th4t_0th3r_dr4g0n_76fw8kc1lav}
+description: |-
+  I think this is my last story for this competition. (Didn't I only tell, like, two?)
+  This story is about a very famous dragon. If you stick around, maybe I'll give you a flag!
+hints:
+  - Would you be surprised to learn that there's a very famous dragon in cybersecurity?
+  - How can a compiled executable be analyzed?
+files:
+  - src: story2
+    ignore_missing: true
+authors:
+  - micpap25
+visible: true
+# TODO: compile
+# - compile as linux binary (ELF)
