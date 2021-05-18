@@ -13,7 +13,8 @@ with open("flag.txt", "r") as f:
 with open("key.txt", "r") as f:
     key = int(f.read().strip())
 
-target_query = "Abracadabra! I would like to kindly request one (1) flag."
+key_query = "I would like to kindly request one (1) flag"
+passphrase = "Abracadabra"
 
 print("""
 Welcome to your new and improved FNES... FNES 2!
@@ -24,7 +25,7 @@ Here are the steps:
 2. Friend A encodes a message and sends it to Friend B
 3. Friend B decodes the message, encodes their reply, and sends it to Friend A
 4. Friend A decodes the reply, rinse and repeat
-PS: For security reasons, there are still four characters you aren't allowed to encrypt. Sorry!
+PS: For security reasons, there are still some characters you aren't allowed to encrypt. Sorry!
 """)
 
 tempkey = SHA.new(int(key + time.time() / 10).to_bytes(64, 'big')).digest()[0:16]
@@ -43,7 +44,7 @@ while True:
     elif (l == "E"):
         print("What would you like to encrypt?")
         I = str.encode(input(">>> ").strip())
-        if (set(I.lower()) & set("flg!")): # You're not allowed to encrypt any of the characters in "flg!"
+        if (not set(I.lower()) & set("flgnq")): # You're not allowed to encrypt any of the characters in "flg!"
             print("You're never getting my flag!")
             exit()
         else: 
@@ -55,7 +56,7 @@ while True:
         I = input(">>> ").strip()
         try:
             m = str(unpad(cipher.decrypt(binascii.unhexlify(I)), 16))[2:-1]
-            if (m == target_query):
+            if (m[0:len(passphrase)] == passphrase and key_query in m):
                 print("Passphrase accepted. Here's your flag:")
                 print(str(flag)[2:-1])
                 exit()
