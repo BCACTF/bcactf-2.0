@@ -44,10 +44,10 @@ while True:
     elif (l == "E"):
         print("What would you like to encrypt?")
         I = str.encode(input(">>> ").strip())
-        if (not set(I.lower()) & set("flgnq")): # You're not allowed to encrypt any of the characters in "flg!"
+        if (not set(I.lower()) & set("flgnq")): # Disallowed characters changed to make the key query more difficult
             print("You're never getting my flag!")
             exit()
-        else: 
+        else:
             print("Here's your message:")
             c = str(binascii.hexlify(cipher.encrypt(pad(I, 16))))[2:-1]
             print(c)
@@ -65,4 +65,4 @@ while True:
                 print(m)
         except ValueError:
             print("I can't read that!")
-        
+
