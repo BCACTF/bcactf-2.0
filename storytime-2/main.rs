@@ -2,7 +2,7 @@ use std::{thread, time};
 
 fn main() {
 
-    let lines = 29;
+    let lines = 4;
 
     let mut nums : [u8; 0x25] = [0; 0x25];
 
