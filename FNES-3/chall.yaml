@@ -1,0 +1,20 @@
+name: FNES 3
+category: Cryptography
+value: 550
+flag: #TODO add flag
+description: |-
+    The final form of FNES. No key.txt, no flag.txt, no time-based seeding,
+    and no passphrases... Just raw, unadulterated elliptic curve Diffie-Hellman.
+
+    We've intercepted some communication between Alice and Bob, and 
+    nicely laid it out for you in a sequence diagram. Find the flag!
+hints:
+  - Did you really think you were getting a hint on a ECDHE problem?
+files:
+  - src: fnes3.py
+  - src: comm.png
+authors:
+  - eiis1000
+visible: false
+# TODO this one doesn't TECHNICALLY need deployment 
+# but it'd be nice if you could run this on the server anyways 
