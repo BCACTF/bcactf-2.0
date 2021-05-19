@@ -2,7 +2,7 @@ use std::{thread, time};
 
 fn main() {
 
-    let lines = 12;
+    let lines = 4;
 
     let flag = "bcactf{w0ol_m4k3s_str1ng_ziv4mk3ca91b}";
 
