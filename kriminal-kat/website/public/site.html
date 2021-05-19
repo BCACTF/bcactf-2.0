@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Kriminal Kove</title>
+    <meta name="description" content="Our Top-Secret Messaging App" />
+    <meta name="author" content="Kr1m1n4lK1tt3n" />
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0" />
+  </head>
+
+  <body>
+    <div class="page-content">
+      <h1 class="title">Welcome to the Kriminal Kove!</h1>
+      <div class="center-box">
+        <h2>
+          Our Kriminal Recognition Technology™ has successfully detected you.
+        </h2>
+        <h3>Please sign in with your approved password.</h3>
+        <form class="form" onsubmit="submitForm(); return 0;">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" disabled />
+          <br />
+          <label for="password">Password:</label>
+          <input type="text" id="password" name="password" />
+          <input type="submit" value="Sign In">
+        </form>
+        <h3 id="success" class="success-text"></h3>
+        <h3 id="error" class="error-text"></h3>
+      </div>
+    </div>
+    <img class="image" src="kriminal.jpg" />
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

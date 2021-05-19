@@ -2,13 +2,15 @@
   "name": "kriminal-kat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "micpap25",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "md5": "^2.3.0",
+    "socket.io": "^4.1.2"
   }
 }
