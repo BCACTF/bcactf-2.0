@@ -1,0 +1,17 @@
+name: Challenge Checker 
+category: Miscallaneous
+value: 200
+flag:
+    file: ./flag.txt
+description: |-
+    New version, better security, right?    
+hints:
+  - What's changed?
+files:
+  - src: chall.yaml
+  - src: requirements.txt
+  - src: verify.py
+authors:
+  - anli
+visible: false
+# TODO: deployment
