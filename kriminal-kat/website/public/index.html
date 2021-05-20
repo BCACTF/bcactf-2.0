@@ -8,7 +8,10 @@
     <meta name="description" content="Our Top-Secret Messaging App" />
     <meta name="author" content="Kr1m1n4lK1tt3n" />
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts.js"></script>
   </head>
 
   <body>
@@ -25,13 +28,12 @@
           <br />
           <label for="password">Password:</label>
           <input type="text" id="password" name="password" />
-          <input type="submit" value="Sign In">
+          <input type="submit" value="Sign In" />
         </form>
         <h3 id="success" class="success-text"></h3>
         <h3 id="error" class="error-text"></h3>
       </div>
     </div>
     <img class="image" src="kriminal.jpg" />
-    <script src="js/scripts.js"></script>
   </body>
 </html>
