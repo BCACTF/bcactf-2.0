@@ -2,15 +2,11 @@ import random
 import math
 import time
 import binascii
-from Crypto.Cipher import AES 
-from Crypto.Hash import SHA
-from Crypto.Util.Padding import pad, unpad
 
-
-p = 2**255 - 19
-a = 34534324
-b = 267562990728472881298781656145103402487842088313918623955114524186280435434
-
+p = 2**135 + 2**75 + 1
+a = 313370
+b = 12409401451673702436179381616844751057480 # discriminant is zero
+g = (313379, 9762458732130899649993884045943131856797, False) 
 
 def negp(P):
     x,y,z = P
@@ -52,23 +48,51 @@ def mulp(P, n):
             r = addp(r, P)
     return r
 
-
 print("""
-Welcome to your new and improved FNES... FNES 2!
-As before, if you and a friend both run this service at the same time,
-you should be able to send messages to each other!
+Welcome to the final iteration of FNES.
+The purpose of FNES is now to generate a shared secret using input from both parties.
 Here are the steps:
-1. Friends A and B connect to the server at the same time (you have about a five second margin)
-2. Friend A encodes a message and sends it to Friend B
-3. Friend B decodes the message, encodes their reply, and sends it to Friend A
-4. Friend A decodes the reply, rinse and repeat
-PS: For security reasons, there are still some characters you aren't allowed to encrypt. Sorry!
+1. Friends A and B both launch FNES 3
+2. A and B follow the instructions to generate a shared secret
+3. A and B can now pass messages back and forth as normal
+No more unencryptable characters, but you need to make sure to 
+not make any mistakes or your keystreams can come out of sync.
 """)
 
-g = (6338567613751034815419808245388791220143818116529749309763011972528582947444, 6338567613751034815419808245388791220143818116529749309763011972528582947444, False)
-print(g)
-print(mulp(g, 10000))
-
+print("Are you friend A or friend B?")
+l = input(">>> ").strip().upper()
+if (len(l) > 1):
+    print("You inputted more than one character...")
+elif (l == "A"):
+    print("Please enter a large random number to use as your secret key.")
+    aa = int(input(">>> ").strip())
+    A = mulp(g, aa)
+    if (A[2]):
+        print("That didn't work. Try again with a different key.")
+        exit()
+    print(f"Your public key is {A[:2]}. \nSend this to B. \nWhat is their public key?")
+    B = (int(input(">>> x = ").strip()), int(input(">>> y = ").strip()), False)
+    S = mulp(B, aa)
+    random.seed(S[0] + S[1])
+    print("Seeding complete.")
+elif (l == "B"):
+    print("Please enter a large random number to use as your secret key.")
+    aa = int(input(">>> ").strip())
+    A = mulp(g, aa)
+    if (A[2]):
+        print("That didn't work. Try again with a different key.")
+        exit()
+    print("What is A's public key?")
+    B = (int(input(">>> x = ").strip()), int(input(">>> y = ").strip()), False)
+    S = mulp(B, aa)
+    random.seed(S[0] + S[1])
+    print(f"Your public key is {A[:2]}. \nSend this to A.")
+    print("Seeding complete.")
+else:
+    print("That's not A or B!")
+    exit()
+    
+random.seed(10206173483832403717938242612204319869105 + 3154576072676174317143633891076787305807)
 
 while True:
     print("Would you like to encrypt (E), decrypt (D), or quit (Q)?")
@@ -81,25 +105,22 @@ while True:
     elif (l == "E"):
         print("What would you like to encrypt?")
         I = str.encode(input(">>> ").strip())
-        if (not set(I.lower()) & set("flgnq")): # Disallowed characters changed to make the key query more difficult
-            print("You're never getting my flag!")
-            exit()
-        else:
-            print("Here's your message:")
-            c = str(binascii.hexlify(cipher.encrypt(pad(I, 16))))[2:-1]
-            print(c)
+        print("Here's your message:")
+        i = int(binascii.hexlify(I), 16)
+        i ^= random.getrandbits(len(I) * 8)
+        i = hex(i)[2:]
+        if len(i) % 2 == 1:
+            i = '0' + i
+        print(i)
     elif (l == "D"):
         print("What was the message?")
         I = input(">>> ").strip()
         try:
-            m = str(unpad(cipher.decrypt(binascii.unhexlify(I)), 16))[2:-1]
-            if (m[0:len(passphrase)] == passphrase and key_query in m):
-                print("Passphrase accepted. Here's your flag:")
-                print(str(flag)[2:-1])
-                exit()
-            else:
-                print("Here's the decoded message:")
-                print(m)
+            m = int(I, 16)
+            m ^= random.getrandbits(4 * len(I))
+            m = str(binascii.unhexlify(hex(m)[2:]))[2:-1]
+            print("Here's the decoded message:")
+            print(m)
         except ValueError:
             print("I can't read that!")
 
