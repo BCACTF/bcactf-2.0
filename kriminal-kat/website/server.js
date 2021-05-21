@@ -24,7 +24,7 @@ io.on("connection", (socket) => {
       console.log("username and password are equal");
       socket.emit(
         "signInResponse",
-        // "failure",
+        "failure",
         "Nice try, but your username and password can't be the same!"
       );
       console.log("successfully emitted case 1");
@@ -32,7 +32,7 @@ io.on("connection", (socket) => {
       console.log("Correct answer");
       socket.emit(
         "signInResponse",
-        // "success",
+        "success",
         "You signed in successfully! Agent Gerald found this in the chat logs:\n" +
           flag
       );
@@ -41,7 +41,7 @@ io.on("connection", (socket) => {
       console.log("Wrong answer");
       socket.emit(
         "signInResponse",
-        // "failure",
+        "failure",
         "Incorrect Password! You might not be " + username + ", reanalyzing..."
       );
       console.log("successfully emitted case 3");

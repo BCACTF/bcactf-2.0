@@ -8,14 +8,13 @@ socket.on("username", (username) => {
 socket.on("signInResponse", (content) => {
     setTimeout(console.log("Recieved SignIn response: " + content), 1000);
   
-  
-//   if (type == "success") {
-//     document.getElementById("success").innerHTML = content;
-//     document.getElementById("error").innerHTML = "";
-//   } else {
-//     document.getElementById("error").innerHTML = content;
-//     document.getElementById("success").innerHTML = "";
-//   }
+    if (type == "success") {
+      document.getElementById("success").innerHTML = content;
+      document.getElementById("error").innerHTML = "";
+    } else {
+      document.getElementById("error").innerHTML = content;
+      document.getElementById("success").innerHTML = "";
+    }
 });
 
 function submitForm() {

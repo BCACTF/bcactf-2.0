@@ -151,14 +151,14 @@ Guru
 Craniometer
 Widdershins
 Mellivorous
-Fartlek
-Fubreapzz
+Farlek
+Fubreap_zz
 Loggerhead
 Oligochrome
 Craig
 Kazachoc
 Fricassee
-Trigamy
+Trittany
 Kwashiorkor
 Alopecia
 CrosstalkSkirt
@@ -358,7 +358,7 @@ Horrisonant
 Bumblebee
 HebinRillet
 BoriusMoue
-Lienal_sex
+Lienal_hex
 Inaniloquent
 Quicken
 Pontoon
