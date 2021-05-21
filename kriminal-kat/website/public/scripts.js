@@ -14,17 +14,16 @@ socket.on("signInResponse", (type, content) => {
   setTimeout(console.log("Recieved SignIn response: " + content), 1000);
 
   if (type == "success") {
-    document.getElementById("success").innerHTML = content;
-    document.getElementById("error").innerHTML = "";
+    document.getElementById("success").innerText = content;
+    document.getElementById("error").innerText = "";
   } else {
-    document.getElementById("error").innerHTML = content;
-    document.getElementById("success").innerHTML = "";
+    document.getElementById("error").innerText = content;
+    document.getElementById("success").innerText = "";
   }
 });
 
 function submitForm() {
   // Imply that md5 is being used here
-  // Ei
   console.log(document.getElementById("password").value.trim());
   socket.emit(
     "signInAttempt",
