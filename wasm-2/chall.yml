@@ -5,7 +5,7 @@ flag: bcactf{w4sm-w1z4rDry-Xc0wZ}
 description: |-
   - Similar to wasm protected site 1, but this time there is no password, only the flag.
   - Enter the flag, and the program will check it for you
-hints: |-
+hints:
   - What does the wasm do to compare each byte
 authors:
   - Andrew
