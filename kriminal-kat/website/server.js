@@ -1,18 +1,24 @@
 const express = require("express");
+const socketio = require("socket.io");
 const { readFileSync } = require("fs");
 const md5 = require("md5");
 
 const app = express();
-const socketio = require("socket.io");
-app.use(express.static(__dirname + "/public"));
+app.use("/", express.static(__dirname + "/public"));
 const port = process.env.PORT || 9000;
 const server = app.listen(port);
-const io = socketio(server);
+const io = socketio(server, {
+  cors: {
+    origin: "*",
+  },
+});
 
 const usernameFile = readFileSync("usernames.txt", "utf-8");
 const usernames = usernameFile.split("\n");
 
 const flag = readFileSync("flag.txt", "utf-8");
+
+// If usernames are being sent in real-time, close socket after enough time has passed
 
 io.on("connection", (socket) => {
   let username = usernames[Math.floor(Math.random() * usernames.length)].trim();
