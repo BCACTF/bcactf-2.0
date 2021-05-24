@@ -4,7 +4,9 @@
 #include <string.h>
 #include <time.h>
 #include <stdlib.h>
+#ifndef __INTELLISENSE__ 
 #include <unistd.h>
+#endif
 
 int generateNumber()
 {
