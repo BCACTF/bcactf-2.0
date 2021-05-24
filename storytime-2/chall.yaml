@@ -1,10 +1,10 @@
-name: "Storytime: The Shocking Conclusion"
+name: "Storytime: The Tragic Interlude"
 category: Rev
-value: 75
+value: 125
 flag: bcactf{th4t_0th3r_dr4g0n_76fw8kc1lav}
 description: |-
-  I think this is my last story for this competition. (Didn't I only tell, like, two?)
-  This story is about a very famous dragon. If you stick around, maybe I'll give you a flag!
+  I've got a really sad story for today. It's about a very famous dragon.
+  If you stick around, maybe I'll give you a flag!
 hints:
   - Would you be surprised to learn that there's a very famous dragon in cybersecurity?
   - How can the code within a compiled executable be analyzed?
