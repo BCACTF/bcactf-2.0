@@ -20,7 +20,7 @@ void sleepNanos(int seconds, int nanos)
 int main()
 {
 
-    int lines = 12;
+    int lines = 4;
 
     char* flag = "bcactf{w0ol_m4k3s_str1ng_ziv4mk3ca91b}";
 
