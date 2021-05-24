@@ -1,0 +1,16 @@
+name: "Storytime: The Shocking Conclusion"
+category: Rev
+value: 225
+flag: bcactf{h1dd3n_c0d3_1s_h1dd3n_238q49eruf5}
+description: |-
+  I think this is my last story for this competition. (Didn't I only tell, like, three?)
+  This one's a sing-along. Let's see how long we can keep it up!
+files:
+  - src: story3
+    ignore_missing: true
+authors:
+  - micpap25
+visible: true
+# TODO: compile
+# - compile as linux binary (ELF) and windows binary (PE32)
+# - figure out which is more interesting for this chall
