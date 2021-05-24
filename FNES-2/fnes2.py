@@ -44,7 +44,7 @@ while True:
     elif (l == "E"):
         print("What would you like to encrypt?")
         I = str.encode(input(">>> ").strip())
-        if (not set(I.lower()) & set("flgnq")): # Disallowed characters changed to make the key query more difficult
+        if (set(I.lower()) & set("flgnq")): # Disallowed characters changed to make the key query more difficult
             print("You're never getting my flag!")
             exit()
         else:
