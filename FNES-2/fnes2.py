@@ -28,7 +28,7 @@ Here are the steps:
 PS: For security reasons, there are still some characters you aren't allowed to encrypt. Sorry!
 """)
 
-tempkey = SHA.new(int(key + time.time() / 10).to_bytes(64, 'big')).digest()[0:16]
+tempkey = SHA.new(int(key + int(time.time() / 10)).to_bytes(64, 'big')).digest()[0:16]
 iv = int(time.time() / 9).to_bytes(64, 'big')[0:16]
 
 while True:
