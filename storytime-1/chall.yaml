@@ -16,4 +16,5 @@ authors:
   - micpap25
 visible: true
 # TODO: compile
-# - compile as windows binary
+# - compile as linux binary (ELF) and windows binary (PE32)
+# - figure out which is more interesting for this chall
