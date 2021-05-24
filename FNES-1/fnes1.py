@@ -40,7 +40,7 @@ while True:
         exit()
     elif (l == "E"):
         print("What would you like to encrypt?")
-        I = input(">>> ").strip()
+        I = input(">>> ").strip().encode('utf-8')
         if (set(I.lower()) & set("flg!")): # You're not allowed to encrypt any of the characters in "flg!"
             print("You're never getting my flag!")
             exit()
