@@ -1,4 +1,4 @@
-name: "Storytime: The First Chapter"
+name: "Storytime: The Opening Gambit"
 category: Rev
 value: 75
 flag: bcactf{w0ol_m4k3s_str1ng_ziv4mk3ca91b}
@@ -6,8 +6,9 @@ description: |-
   Gather around, it's time for a story! I've even included a reward at the end!
 hints:
   - I don't think that's the *whole* story.
-  - What can you make with wool?
+  - How can you look into a compiled executable file? 
   - Maybe a command line tool will help?
+  - What can you make with wool?
 files:
   - src: story
     ignore_missing: true
@@ -15,4 +16,5 @@ authors:
   - micpap25
 visible: true
 # TODO: compile
-# - compile as windows binary
+# - compile as linux binary (ELF) and windows binary (PE32)
+# - figure out which is more interesting for this chall

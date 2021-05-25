@@ -1,0 +1,14 @@
+name: Wasm Protected Site 2
+category: Webex
+value: 100
+flag: bcactf{w4sm-w1z4rDry-Xc0wZ}
+description: |-
+  - Similar to wasm protected site 1, but this time there is no password, only the flag.
+  - Enter the flag, and the program will check it for you
+hints:
+  - What does the wasm do to compare each byte
+authors:
+  - Andrew
+visible: false
+# TODO: deployment (code.wasm, index.html, main.js)
+# To re-compile, run wat2wasm code.wat > code.wasm
