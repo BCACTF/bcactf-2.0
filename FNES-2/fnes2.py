@@ -13,8 +13,8 @@ with open("flag.txt", "r") as f:
 with open("key.txt", "r") as f:
     key = int(f.read().strip())
 
-key_query = "I would like to kindly request one (1) flag"
 passphrase = "Abracadabra"
+key_query = "I would like to kindly request one (1) flag"
 
 print("""
 Welcome to your new and improved FNES... FNES 2!
@@ -57,8 +57,13 @@ while True:
         try:
             m = str(unpad(cipher.decrypt(binascii.unhexlify(I)), 16))[2:-1]
             if (m[0:len(passphrase)] == passphrase and key_query in m):
-                print("Passphrase accepted. Here's your flag:")
+                print("\nPassphrase accepted. Here's your flag:\n")
                 print(str(flag)[2:-1])
+                try:
+                    with open("advertisement.txt", "r") as ff:
+                        print(ff.read())
+                except:
+                    pass
                 exit()
             else:
                 print("Here's the decoded message:")
