@@ -1,0 +1,13 @@
+name: Little e
+category: Crypto
+value: 50
+flag: bcactf{R54_N0T_50_S3CUR3_33}
+
+description: |-
+  Gerald's favorite prime is 3 and made it his public exponent; he keeps insisting that it's secure. Help me prove him wrong.
+
+files:
+  - src: encrypted.txt
+authors:
+  - akth3n3rd
+visible: true
