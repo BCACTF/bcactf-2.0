@@ -1,0 +1,13 @@
+name: #TODO: Can't think of one :(
+category: Forensics
+value: 300
+flag: bcactf{h1d1ng_1n_5p4c35_2956F3ED}
+
+description: |-
+  Gerald's hates the winter and can't wait for spring.
+
+files:
+  - src: chall.pdf
+authors:
+  - akth3n3rd
+visible: true
