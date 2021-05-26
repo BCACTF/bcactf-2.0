@@ -4,9 +4,14 @@ value: 200
 flag:
   file: ./server/flag.txt
 description: |-
-  I made the ultimate polling service! Il supporte tout les langues...
+  I made the ultimate polling service!
+  Il supporte tout les langues.
+  Это потому, что на сайте используются передовые технологии локализации.
+  ¿Puedes leer esto?
+  أنا متأكد من أنني لا أستطيع.
+  立即开始！
 hints:
-  - How is localization implemented?
+  - How is the localisation/localization implemented?
   - Check out RFC 7519 perhaps
 files:
   - server/package.json
