@@ -1,0 +1,90 @@
+
+Section 3. Score Cancellation and Disciplinary Measures
+
+ a. Score Cancellation and Disciplinary Measures. In the event that College
+    Board or ETS determines that your scores are invalid under section 3(b)
+    below, or you have engaged in Misconduct under section 3(c) below, we may,
+    in our sole discretion, take one or more of the following measures
+    (“Measures”): deny you the right to a test administration, decline to score
+    your test, cancel your scores, ban you from taking future College Board
+    assessments (including, without limitation, the SAT, CLEP Exam or any future
+    AP exams), and/or share information with others as set forth in section 3(f)
+    below.
+
+    CAUTION! THE CONSEQUENCES OF CHEATING ON THE AP EXAM ARE SEVERE.
+
+    ALL INSTITUTIONS TO WHICH YOU SEND AP SCORES MAY BE NOTIFIED OF YOUR
+    MISCONDUCT.
+     
+ b. Invalid Scores. We may cancel your scores and/or take any of the other
+    Measures described above if after following the procedures set forth in this
+    section, we determine, in our sole discretion, that there is substantial
+    evidence that your scores are invalid (“Invalid Scores”). Examples of
+    evidence of Invalid Scores include, without limitation, discrepant
+    handwriting, unusual answer patterns, similar essays, or other evidence that
+    indicates these Terms and Conditions may have been violated. Before
+    canceling your scores under this Invalid Scores section, we will notify you
+    in writing (via email if an email address is available) and provide you with
+    an opportunity to submit written information to us to help resolve our
+    inquiry. If you opt for a further review by a College Board review panel,
+    and it confirms, in its sole discretion, that your scores are invalid, we
+    will offer you 2 options: voluntary score cancellation or arbitration as set
+    forth in Section 8 below. This process is referred to as the “Score Validity
+    Process”. The arbitration option is available only for tests administered in
+    the United States and U.S. Territories.
+     
+ c. Misconduct. Notwithstanding section 3(b) above, if we determine, in our sole
+    discretion, that there is overwhelming evidence that you violated these
+    Terms and Conditions (“Misconduct”), the Score Validity Process will not
+    apply, and we may cancel your scores and/or take any of the Measures
+    described above. Examples of Misconduct might include having someone else
+    assist you during the exam, having someone else take the test for you,
+    giving assistance to another test taker during the exam, or plagiarizing,
+    which includes submitting an exam with any material other than the exclusive
+    product of your own work, or that includes any text, content, graphics,
+    pictures, or other content from a third-party source. Misconduct may be
+    established in various ways, including, without limitation, by evidence
+    discovered after the administration.
+     
+ d. Testing Irregularities. We may cancel your scores if we determine, in our
+    sole discretion, that any testing irregularity occurred (collectively,
+    “Testing Irregularities”). Examples of Testing Irregularities include
+    problems, irregular circumstances, or events associated with the
+    administration of a test, and may affect one test taker or groups of test
+    takers. Such problems include, without limitation, administrative errors
+    (e.g., using accommodations not approved by College Board or defective
+    equipment), network outages, system errors, evidence of possible
+    preknowledge of secure test content, and disruptions of test administrations
+    caused by events such as natural disasters, epidemics, wars, riots, civil
+    disturbances, or other emergencies. When Testing Irregularities occur, we
+    may cancel an entire administration or individual registrations, decline to
+    score all or part of the test, or cancel scores. We may do this regardless
+    of whether or not you caused the Testing Irregularities, benefited from
+    them, or violated these Terms and Conditions. We may, in our sole
+    discretion, give you a refund. This is the sole remedy that may be available
+    to you as a result of Testing Irregularities.
+     
+ e. Test Taker Reporting Misconduct or Suspicious Behavior. You may
+    confidentially report any suspected violation of these Terms and Conditions,
+    or any suspicion concerning the security of an AP Exam administration, by
+    immediately emailing the AP Hotline at
+    collegeboardtestsecurity@collegeboard.org.
+     
+ f. College Board Sharing Information with Third Parties. We may share the
+    results of test security investigations (including, without limitation,
+    those relating to Misconduct described above, and other disciplinary-related
+    information), with third parties, including with your teacher, school, any
+    score recipient, college, higher education institution or agency,
+    scholarship organization, admissions office, potential score recipient,
+    government agency in the United States or abroad, parents, legal guardians,
+    or law enforcement. College Board may also share such information with third
+    parties that have a legitimate reason for knowing the information or who may
+    be able to assist College Board in its investigation or who may be
+    conducting their own investigation. College Board may respond to inquiries
+    from any institution to which you submitted a score. If you publicize any
+    review, investigation, or decision of College Board, College Board may make
+    any and all details of such matter public.
+
+Shamelessly copied from
+https://apstudents.collegeboard.org/ap-2020-2021/about-2021-ap-exams/terms-conditions
+And take your flag: bcactf{bca_is_taking_APs_in_june_aaaaaaaa_wish_past_me_luck}
