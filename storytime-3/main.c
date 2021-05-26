@@ -112,7 +112,7 @@ int FUN_2310136() {
 }
 
 int FUN_2300612() {
-    puts("74 68 65 20 73 65 76 65 6e 74 68 20 6d 69 6e 75 74 65");
+    puts("74 68 65 20 73 65 63 6f 6e 64 20 6d 69 6e 75 74 65");
 }
 
 int FUN_2364432() {
@@ -126,11 +126,11 @@ int FUN_2364432() {
 }
 
 int FUN_2302136() {
-    
-
     // TODO: Make it so this is initialized in a similar way as storytime-2,
     // and has a deciphering function based on the current time.
-    // Must be 9:03 to decipher properly.
+    // Must be 9:02 to decipher properly.
+
+    // bcactf{h1dd3n_c0d3_1s_h1dd3n_2c8d}
 
     int nums[0x25] = {0};
 
@@ -161,7 +161,7 @@ int FUN_2302136() {
     nums[0x02] = 0xbf;
     nums[0x13] = 0xbe;
     nums[0x15] = 0xa5;
-    nums[0x00] = 0xc5;
+    nums[0x00] = 0x105;
     nums[0x20] = 0x22;
     nums[0x0b] = 0xa9;
     nums[0x1f] = 0x89;
@@ -174,8 +174,16 @@ int FUN_2302136() {
 
     char flag[0x25] = {' '};
 
+    time_t now = time(NULL);
+    struct tm *tm_struct = localtime(&now);
+
+    int hour = tm_struct->tm_hour;
+    int minute = tm_struct->tm_min;
+
+    printf("%d\n%d\n", hour, minute);
+
     for (int i = 0; i < 0x25; i++)
     {
-        flag[i] = (char)((nums[i] >> 1) + (i));
+        flag[i] = (char)((nums[i] >> minute) + (hour));
     }
 }
