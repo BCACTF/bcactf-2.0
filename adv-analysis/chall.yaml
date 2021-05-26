@@ -1,0 +1,23 @@
+name: Advanced Math Analysis
+category: Binary
+value: 200
+flag:
+  file: ./flag.txt
+description: |-
+  The advanced course covers the same content as the non-advanced course and then some.
+  Specifically, it also teaches some units on logic and geometry.
+
+  Now, I'm personally not the biggest fan of geometry, so I'll spare you from that.
+  But you'll definitely need to spend some time *logic*ing this challenge out!
+hints:
+  - You can't send anything after the honor pledge... or could you sneak something in?
+  - What characters will `gets` read up to? What characters will `strcmp` read up to?
+  - No free function addresses here! This is the advanced class, google it yourself.
+files:
+  - src: src.c
+    name: adv-analysis.c
+  - src: adv-analysis
+    ignore_missing: true
+authors:
+  - Edward Feng
+# TODO: deployment
