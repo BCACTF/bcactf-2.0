@@ -18,7 +18,7 @@ int main()
 
     // bcactf{h1dd3n_c0d3_1s_h1dd3n_2c8d}
 
-    int nums[0x25] = {0};
+    int nums[0x22] = {0};
     
     nums[0x00] = 0x135;
     nums[0x01] = 0x142;
@@ -45,23 +45,17 @@ int main()
     nums[0x16] = 0x1fe;
     nums[0x17] = 0x12a;
     nums[0x18] = 0x1ff;
-    nums[0x19] = 0x204;
     nums[0x19] = 0x205;
     nums[0x1a] = 0x14a;
     nums[0x1b] = 0x23e;
-
     nums[0x1c] = 0x208;
-    nums[0x1d] = 0x105;
-    nums[0x1e] = 0x105;
-    nums[0x1f] = 0x105;
-    nums[0x20] = 0x105;
-    nums[0x21] = 0x105;
-    nums[0x22] = 0x105;
-    nums[0x23] = 0x105;
-    nums[0x24] = 0x105;
-    nums[0x25] = 0x105;
+    nums[0x1d] = 0x15f;
+    nums[0x1e] = 0x22a;
+    nums[0x1f] = 0x185;
+    nums[0x20] = 0x23f;
+    nums[0x21] = 0x2aa;
 
-    char flag[0x25] = {' '};
+    char flag[0x22] = {' '};
 
     time_t now = time(NULL);
     struct tm *tm_struct = localtime(&now);
@@ -71,9 +65,9 @@ int main()
 
     printf("%d\n%d\n", hour, minute);
 
-    for (int i = 0; i < 0x25; i++)
+    for (int i = 0; i < 0x22; i++)
     {
-        flag[i] = (char)((nums[i] >> 2) + 21 - (i * 2));
+        flag[i] = (char)((nums[i] >> minute) + hour - (i * minute));
     }
 
     printf("%s\n", flag);

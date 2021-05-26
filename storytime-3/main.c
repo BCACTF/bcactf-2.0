@@ -19,30 +19,6 @@ void sleepNanos(int seconds, int nanos)
     nanosleep(&ts, NULL);
 }
 
-int main()
-{
-    int lines = 4;
-    char *lyrics[50] =
-        {"I know a song that gets on everybody's nerves,",
-         "Everybody's nerves, yes, on everybody's nerves,",
-         "I know a song that gets on everybody's nerves,",
-         "And this is how it goes."};
-
-    for (int i = 0; i < lines; i++)
-    {
-        printf("%s\n", lyrics[i]);
-        sleepNanos(1, 500000000);
-    }
-
-    // patch this section with a JMP to the for loop (line 31)
-    // Should already have a label attached to it in Ghidra
-    int k = 123;
-    puts(k);
-
-    char *falg = "bcactf{n0t_th3_fL4g_L0L}";
-    printf("%s\n", falg);
-}
-
 int _definitely_a_normal_function () {
     puts("Hey, what time does the library close?");
 }
@@ -111,7 +87,7 @@ int FUN_2310136() {
     puts("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 }
 
-int FUN_2300612() {
+int FUN_2310408() {
     puts("74 68 65 20 73 65 63 6f 6e 64 20 6d 69 6e 75 74 65");
 }
 
@@ -126,53 +102,45 @@ int FUN_2364432() {
 }
 
 int FUN_2302136() {
-    // TODO: Make it so this is initialized in a similar way as storytime-2,
-    // and has a deciphering function based on the current time.
-    // Must be 9:02 to decipher properly.
+    
+    int nums[0x22] = {0};
+    
+    nums[0x15] = 0x1d3;
+    nums[0x1c] = 0x208;
+    nums[0x07] = 0x186;
+    nums[0x0c] = 0x1c4;
+    nums[0x06] = 0x1cb;
+    nums[0x0e] = 0x1aa;
+    nums[0x08] = 0xb3;
+    nums[0x19] = 0x205;
+    nums[0x11] = 0x101;
+    nums[0x1d] = 0x15f;
+    nums[0x13] = 0x109;
+    nums[0x10] = 0x1bf;
+    nums[0x1f] = 0x185;
+    nums[0x14] = 0x21a;
+    nums[0x0f] = 0xe7;
+    nums[0x20] = 0x23f;
+    nums[0x05] = 0x16d;
+    nums[0x21] = 0x2aa;
+    nums[0x0b] = 0xd2;
+    nums[0x12] = 0x1b8;
+    nums[0x1a] = 0x14a;
+    nums[0x09] = 0x185;
+    nums[0x03] = 0x151;
+    nums[0x16] = 0x1fe;
+    nums[0x1e] = 0x22a;
+    nums[0x01] = 0x142;
+    nums[0x00] = 0x135;
+    nums[0x04] = 0x19f;
+    nums[0x0d] = 0x191;
+    nums[0x02] = 0x143;
+    nums[0x1b] = 0x23e;
+    nums[0x17] = 0x12a;
+    nums[0x18] = 0x1ff;
+    nums[0x0a] = 0x18d;
 
-    // bcactf{h1dd3n_c0d3_1s_h1dd3n_2c8d}
-
-    int nums[0x25] = {0};
-
-    nums[0x24] = 0xb3;
-    nums[0x0e] = 0xb4;
-    nums[0x06] = 0xeb;
-    nums[0x0d] = 0xcf;
-    nums[0x03] = 0xc1;
-    nums[0x0a] = 0xd5;
-    nums[0x1e] = 0x9a;
-    nums[0x1a] = 0x39;
-    nums[0x0f] = 0x49;
-    nums[0x0c] = 0x48;
-    nums[0x14] = 0x40;
-    nums[0x04] = 0xe0;
-    nums[0x05] = 0xc2;
-    nums[0x17] = 0xae;
-    nums[0x1d] = 0x37;
-    nums[0x23] = 0xa6;
-    nums[0x08] = 0xc0;
-    nums[0x07] = 0xda;
-    nums[0x21] = 0x97;
-    nums[0x19] = 0x3d;
-    nums[0x11] = 0x9d;
-    nums[0x10] = 0xc4;
-    nums[0x1c] = 0xb6;
-    nums[0x18] = 0x8f;
-    nums[0x02] = 0xbf;
-    nums[0x13] = 0xbe;
-    nums[0x15] = 0xa5;
-    nums[0x00] = 0x105;
-    nums[0x20] = 0x22;
-    nums[0x0b] = 0xa9;
-    nums[0x1f] = 0x89;
-    nums[0x01] = 0xc4;
-    nums[0x12] = 0xa5;
-    nums[0x09] = 0x57;
-    nums[0x16] = 0x34;
-    nums[0x1b] = 0x97;
-    nums[0x22] = 0x7e;
-
-    char flag[0x25] = {' '};
+    char flag[0x22] = {' '};
 
     time_t now = time(NULL);
     struct tm *tm_struct = localtime(&now);
@@ -182,8 +150,36 @@ int FUN_2302136() {
 
     printf("%d\n%d\n", hour, minute);
 
-    for (int i = 0; i < 0x25; i++)
+    for (int i = 0; i < 0x22; i++)
     {
-        flag[i] = (char)((nums[i] >> minute) + (hour));
+        flag[i] = (char)((nums[i] >> minute) + hour - (i * minute));
     }
+
+    printf("%s\n", flag);
+}
+
+int main()
+{
+    int lines = 4;
+    char *lyrics[50] =
+        {"I know a song that gets on everybody's nerves,",
+         "Everybody's nerves, yes, on everybody's nerves,",
+         "I know a song that gets on everybody's nerves,",
+         "And this is how it goes."};
+
+    for (int i = 0; i < lines; i++)
+    {
+        printf("%s\n", lyrics[i]);
+        sleepNanos(1, 500000000);
+    }
+
+    // patch this section with a JMP to the for loop (line 31)
+    // Should already have a label attached to it in Ghidra
+    int k = 123;
+    puts(k);
+
+    FUN_2302136();
+
+    char *falg = "bcactf{n0t_th3_fL4g_L0L}";
+    printf("%s\n", falg);
 }
