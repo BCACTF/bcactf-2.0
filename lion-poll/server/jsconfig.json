@@ -1,0 +1,16 @@
+{
+    "include": [
+        "**.js"
+    ],
+    "compilerOptions": {
+        "checkJs": true,
+        "target": "es2020",
+        "module": "es2020",
+        "moduleResolution": "node",
+        "strictNullChecks": true,
+        "resolveJsonModule": true,
+        "lib": [
+            "es2020"
+        ]
+    }
+}

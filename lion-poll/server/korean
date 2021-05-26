@@ -1,0 +1,7 @@
+{
+    "question": "당신은 차입니까?",
+    "y": "예",
+    "n": "아니",
+    "language": "언어",
+    "direction": "ltr"  
+}
