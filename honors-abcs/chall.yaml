@@ -1,0 +1,22 @@
+name: Honors ABCs
+category: Binary
+value: 75
+flag: bcactf{now_i_know_my_A_B_Cs!!_next_time_wont_you_cheat_with_me??}
+description: |-
+  Here at BCA, we don't deal with normal classes.
+  Everything is at the honors level or above!
+  Let's start by learning about the alphabet.
+
+  And by learning, we obviously mean testing.
+  Don't cheat!
+hints:
+  - The response variable is only 50 characters long. What happens if you ignore that?
+  - Try compiling the program. Are there any warnings?
+files:
+  - src: src.c
+    name: honors-abcs.c
+  - src: honors-abcs
+    ignore_missing: true
+authors:
+  - Edward Feng
+# TODO: deployment
