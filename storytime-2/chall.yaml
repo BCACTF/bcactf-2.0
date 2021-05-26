@@ -1,0 +1,18 @@
+name: "Storytime: The Tragic Interlude"
+category: Rev
+value: 125
+flag: bcactf{th4t_0th3r_dr4g0n_76fw8kc1lav}
+description: |-
+  I've got a really sad story for today. It's about a very famous dragon.
+  If you stick around, maybe I'll give you a flag!
+hints:
+  - Would you be surprised to learn that there's a very famous dragon in cybersecurity?
+  - How can the code within a compiled executable be analyzed?
+files:
+  - src: story2
+    ignore_missing: true
+authors:
+  - micpap25
+visible: true
+# TODO: compile
+# - compile as linux binary (ELF)
