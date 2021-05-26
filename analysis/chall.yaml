@@ -1,0 +1,27 @@
+name: Math Analysis
+category: Binary
+value: 150
+flag:
+  file: ./flag.txt
+description: |-
+  Congratulations, you've graduated from letters!
+  Now, let's move on to numbers.
+
+  From the BCA Course Catalog:
+  > Analysis I includes linear and quadratic functions, polynomials, inequalities,
+  > functions, exponential and logarithmic functions, conic sections, and geometry.
+
+  That's a lot of cool stuff!
+  I think you'll have tons of fun learning about functions in this class!
+hints:
+  - If you did your ABCs, you should at least see the vulnerability.
+  - You can't change your grades anymore, but what else can you overwrite to cheat?
+  - Functions, eh? Pass stuff in, get stuff out, simple enough. But how do computers see them?
+files:
+  - src: src.c
+    name: analysis.c
+  - src: analysis
+    ignore_missing: true
+authors:
+  - Edward Feng
+# TODO: deployment
