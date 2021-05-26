@@ -11,7 +11,7 @@ description: |-
   أنا متأكد من أنني لا أستطيع.
   立即开始！
 
-  (The flag is stored in flag.txt.)
+  (The flag is stored in `flag.txt`.)
 hints:
   - How is the localisation/localization implemented?
   - Check out RFC 7519 perhaps
