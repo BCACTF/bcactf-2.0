@@ -16,8 +16,12 @@ hints:
   - How is the localisation/localization implemented?
   - Check out RFC 7519 perhaps
 files:
-  - server/package.json
-  - server/server.js
+  -
+    src: server/package.json
+    name: package.json
+  -
+    src: server/server.js
+    name: server.js
 authors:
   - anli
 visible: false
