@@ -51,7 +51,7 @@ io.on("connection", (socket) => {
         "Incorrect Password! You might not be " + username + ", reanalyzing..."
       );
       console.log("successfully emitted case 3");
-      username = usernames[Math.floor(Math.random() * usernames.length)];
+      username = usernames[Math.floor(Math.random() * usernames.length)].trim();
       socket.emit("username", username);
     }
   });
