@@ -39,12 +39,8 @@ int main()
     int k = 123;
     puts(k);
 
-
-    // TODO: Make it so this is initialized in a similar way as storytime-2,
-    // and has a deciphering function based on the current time.
-    // Must be 9:07 to decipher properly.
-    char *flag = "bcactf{h1dd3n_c0d3_1s_h1dd3n_238q49eruf5}";
-    printf("%s\n", flag);
+    char *falg = "bcactf{n0t_th3_fL4g_L0L}";
+    printf("%s\n", falg);
 }
 
 int _definitely_a_normal_function () {
@@ -119,7 +115,7 @@ int FUN_2300612() {
     puts("74 68 65 20 73 65 76 65 6e 74 68 20 6d 69 6e 75 74 65");
 }
 
-int _flag_XvX() {
+int FUN_2364432() {
     puts("iknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnerves");
     puts("iknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnerves");
     puts("iknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnerves");
@@ -127,4 +123,59 @@ int _flag_XvX() {
     puts("iknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnerves");
     puts("iknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnerves");
     puts("iknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnerves");
+}
+
+int FUN_2302136() {
+    
+
+    // TODO: Make it so this is initialized in a similar way as storytime-2,
+    // and has a deciphering function based on the current time.
+    // Must be 9:03 to decipher properly.
+
+    int nums[0x25] = {0};
+
+    nums[0x24] = 0xb3;
+    nums[0x0e] = 0xb4;
+    nums[0x06] = 0xeb;
+    nums[0x0d] = 0xcf;
+    nums[0x03] = 0xc1;
+    nums[0x0a] = 0xd5;
+    nums[0x1e] = 0x9a;
+    nums[0x1a] = 0x39;
+    nums[0x0f] = 0x49;
+    nums[0x0c] = 0x48;
+    nums[0x14] = 0x40;
+    nums[0x04] = 0xe0;
+    nums[0x05] = 0xc2;
+    nums[0x17] = 0xae;
+    nums[0x1d] = 0x37;
+    nums[0x23] = 0xa6;
+    nums[0x08] = 0xc0;
+    nums[0x07] = 0xda;
+    nums[0x21] = 0x97;
+    nums[0x19] = 0x3d;
+    nums[0x11] = 0x9d;
+    nums[0x10] = 0xc4;
+    nums[0x1c] = 0xb6;
+    nums[0x18] = 0x8f;
+    nums[0x02] = 0xbf;
+    nums[0x13] = 0xbe;
+    nums[0x15] = 0xa5;
+    nums[0x00] = 0xc5;
+    nums[0x20] = 0x22;
+    nums[0x0b] = 0xa9;
+    nums[0x1f] = 0x89;
+    nums[0x01] = 0xc4;
+    nums[0x12] = 0xa5;
+    nums[0x09] = 0x57;
+    nums[0x16] = 0x34;
+    nums[0x1b] = 0x97;
+    nums[0x22] = 0x7e;
+
+    char flag[0x25] = {' '};
+
+    for (int i = 0; i < 0x25; i++)
+    {
+        flag[i] = (char)((nums[i] >> 1) + (i));
+    }
 }
