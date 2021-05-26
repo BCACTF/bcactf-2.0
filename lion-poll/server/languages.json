@@ -1,0 +1,70 @@
+[
+    {
+        "id": "afrikaans",
+        "name": "Afrikaans"
+    },
+    {
+        "id": "arabic",
+        "name": "اَلْعَرَبِيَّةُ‎"
+    },
+    {
+        "id": "cat",
+        "name": "Meow"
+    },
+    {
+        "id": "chinesesimplified",
+        "name": "中文 (简体)"
+    },
+    {
+        "id": "chinesetraditional",
+        "name": "中文 (繁體)"
+    },
+    {
+        "id": "czech",
+        "name": "Čeština"
+    },
+    {
+        "id": "english",
+        "name": "English"
+    },
+    {
+        "id": "esperanto",
+        "name": "Esperanto"
+    },
+    {
+        "id": "french",
+        "name": "Français"
+    },
+    {
+        "id": "german",
+        "name": "Deutsch"
+    },
+    {
+        "id": "hebrew",
+        "name": "עִבְרִית‎"
+    },
+    {
+        "id": "italian",
+        "name": "Italiano‎"
+    },
+    {
+        "id": "japanese",
+        "name": "日本語"
+    },
+    {
+        "id": "korean",
+        "name": "한국어"
+    },
+    {
+        "id": "russian",
+        "name": "Русский язык"
+    },
+    {
+        "id": "spanish",
+        "name": "Español"
+    },
+    {
+        "id": "tokipona",
+        "name": "Toki Pona"
+    }
+]

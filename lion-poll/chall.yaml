@@ -1,0 +1,30 @@
+name: L10N Poll
+category: Webex
+value: 200
+flag:
+  file: ./server/flag.txt
+description: |-
+  I made the ultimate polling service!
+  Il supporte tout les langues.
+  Это потому, что на сайте используются передовые технологии локализации.
+  ¿Puedes leer esto?
+  أنا متأكد من أنني لا أستطيع.
+  立即开始！
+
+  (The flag is stored in `flag.txt`.)
+hints:
+  - How is the localisation/localization implemented?
+  - Check out RFC 7519 perhaps
+  - Take a close look at the package.json...
+files:
+  -
+    src: server/package.json
+    name: package.json
+  -
+    src: server/server.js
+    name: server.js
+authors:
+  - anli
+visible: false
+
+# TODO: Deployment
