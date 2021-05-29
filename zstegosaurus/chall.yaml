@@ -8,11 +8,11 @@ description: |-
   Can you help us?
 hints:
   - The image should be black and white...right?
-  - Try opening the file in a hex editor. 
+  - Try opening the file in a hex editor.
   - The format for the flag is bcactf{flagName}
 files:
   - src: zgerald.png
     name: zstegosaurus.png
 authors:
   - Zsofia Gordon
-visible: false
+visible: true

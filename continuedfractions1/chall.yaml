@@ -11,4 +11,4 @@ files:
   - src: numbers.txt
 authors:
   - micpap25
-visible: false
+visible: true

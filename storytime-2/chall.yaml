@@ -8,11 +8,12 @@ description: |-
 hints:
   - Would you be surprised to learn that there's a very famous dragon in cybersecurity?
   - How can the code within a compiled executable be analyzed?
+deploy:
+  build:
+    build: .
 files:
   - src: story2
-    ignore_missing: true
+    container: build
 authors:
   - micpap25
 visible: true
-# TODO: compile
-# - compile as linux binary (ELF)

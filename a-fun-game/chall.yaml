@@ -9,10 +9,12 @@ description: |-
 hints:
   - Is it possible to modify the variable storing your points?
   - What does a program like GameConqueror or CheatEngine do?
+deploy:
+  build:
+    build: .
 files:
-  - src: Game.cs
+  - src: Game.exe
+    container: build
 authors:
   - Krish Arora
-visible: false
-
-# TODO: compile
+visible: true

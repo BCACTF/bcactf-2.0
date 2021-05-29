@@ -2,16 +2,17 @@ name: Wait, this isn't C 2 (The Sequel)
 category: Reversing
 value: 400
 flag: bcactf{m4tRlce5_aRe_co0l}
-# Alternatively:
-# flag:
-#   file: ./flag.txt
 description: |-
   Hmmmm, I hear this language is great for like matrices and stuff
   Maybe I could use that to check my flags
 hints:
   - Try reading documentantion to see what unknown functions do.
+deploy:
+  build:
+    build: .
 files:
-  - src: flag_checker_2 
+  - src: flag_checker_2
+    container: build
 authors:
   - MichaelK522
-visible: false
+visible: true

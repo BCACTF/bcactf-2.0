@@ -25,6 +25,6 @@ files:
     name: server.js
 authors:
   - anli
-visible: false
+visible: true
 
 # TODO: Deployment

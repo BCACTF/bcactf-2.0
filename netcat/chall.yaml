@@ -7,7 +7,10 @@ description: |-
 hints:
   - If you don't have it, [install netcat](https://nmap.org/ncat).
   - You'll need to run the command from the terminal.
+deploy:
+  nc:
+    build: .
+    expose: 9999
 authors:
   - Edward Feng
 visible: true
-# TODO: deployment

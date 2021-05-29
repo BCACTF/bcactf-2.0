@@ -4,7 +4,7 @@ value: 200
 flag:
   file: ./server/flag.txt
 description: |-
-    This publishing site is running a writing competition! Can you win the flag?
+  This publishing site is running a writing competition! Can you win the flag?
 hints:
   - No SQL to be found here...
   - There are multiple exploits here.
@@ -12,7 +12,7 @@ authors:
   - anli
 files:
   - src: server/server.js
-visible: false
+visible: true
 
 # TODO: Deployment (note: uses puppeteer)
 # TODO: Rate-limiting/captchas

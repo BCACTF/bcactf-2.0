@@ -10,11 +10,14 @@ description: |-
 hints:
   - How do computers store numbers?
   - How do computers store *negative* numbers?
+deploy:
+  nc:
+    build: .
+    expose: 9999
 files:
   - src: src.c
     name: bca-mart.c
   - src: bca-mart
-    ignore_missing: true
+    container: nc
 authors:
   - Edward Feng
-# TODO: deployment

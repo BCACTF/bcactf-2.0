@@ -12,11 +12,15 @@ description: |-
 hints:
   - The response variable is only 50 characters long. What happens if you ignore that?
   - Try compiling the program. Are there any warnings?
+deploy:
+  nc:
+    build: .
+    expose: 9999
 files:
   - src: src.c
     name: honors-abcs.c
   - src: honors-abcs
-    ignore_missing: true
+    container: nc
 authors:
   - Edward Feng
-# TODO: deployment
+visible: true

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from yaml import load
 from termcolor import cprint
 from pathlib import Path

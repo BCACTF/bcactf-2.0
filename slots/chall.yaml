@@ -3,12 +3,15 @@ category: Miscellaneous
 value: 100
 flag: bcactf{y0u_g0t_1ucKy_af23dd97g64n}
 description: |-
-  Can you get three-of-a-kind on this slot machine? Let's find out! 
+  Can you get three-of-a-kind on this slot machine? Let's find out!
 hints:
   - There's got to be a faster way than to connect manually, right?
   - Can you use a tool to make your computer connect for you?
   - The flag is in the format `bcactf{...}`. Use that to your advantage when parsing output.
+deploy:
+  nc:
+    build: .
+    expose: 9999
 authors:
   - micpap25
 visible: true
-# TODO: deploy

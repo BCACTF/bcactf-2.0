@@ -10,6 +10,6 @@ hints:
   - What's on the table?
 authors:
   - anli
-visible: false
+visible: true
 
 # TODO: Deployment
