@@ -10,6 +10,10 @@ hints:
   - Are the inputs sanitized?
 authors:
   - Yusuf
+deploy:
+  web:
+    build: .
+    expose: 54321
 visible: false
 
 # TODO: Deployment
