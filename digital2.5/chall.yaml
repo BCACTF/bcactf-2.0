@@ -1,5 +1,5 @@
 name: Digitally Encrypted 2.5
-category: Crypto
+category: crypto
 value: 250
 flag: bcactf{Ju5t_r3P1Ace_tHe_0r_w1Th_4n_4nD427}
 # Alternatively:
@@ -14,7 +14,7 @@ hints:
 files:
   - src: circuit_2.5.dig
   - src: Block2.dig
-  - src: enc.txt
+  - src: encrypted.txt
 authors:
   - MichaelK522
 visible: true
