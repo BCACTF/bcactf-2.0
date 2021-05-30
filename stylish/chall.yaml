@@ -14,7 +14,10 @@ files:
   - src: server/server.js
   - src: server/passcode.js
   - src: server/visit.js
+deploy:
+  web:
+    build: .
+    expose: 1337
 visible: true
 
-# TODO: Deployment (note: uses puppeteer)
 # TODO: Rate-limiting/captchas

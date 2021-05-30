@@ -19,5 +19,4 @@ deploy:
     expose: 1337
 visible: true
 
-# TODO: Deployment (note: uses puppeteer)
 # TODO: Rate-limiting/captchas
