@@ -10,7 +10,10 @@ hints:
   - What is a way webpages know what kind of browser you're using?
 authors:
   - Zsofia Gordon
+deploy:
+  web:
+    build: .
+    expose: 2562
 visible: true
-#TODO: deployment
 #TODO: uwu
 
