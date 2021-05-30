@@ -23,7 +23,7 @@ int _definitely_a_normal_function () {
     puts("Hey, what time does the library close?");
 }
 
-int flagO_o() {
+int flag_O_o() {
     puts("bcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactf");
     puts("abcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactf");
     puts("cabcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactfbcactf");
@@ -46,7 +46,7 @@ int flag_UwU() {
 }
 
 int flag_IoI() {
-    puts("eveileb I ,MP 01 dna 9 neewteB");
+    puts("DG fwl wgt yhch izzrozW");
 }
 
 int _flag_XvX() {
@@ -141,44 +141,44 @@ int FUN_2364432() {
     puts("iknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongtha");
 }
 
-int FUN_2302136() {
+int FUN_2302136(int a, int b, int c, int d, int e, int f, int g, int h, int j, int k, int l, int m, int n, int o, int p, int q, int r, int s, int t, int u, int v, int w, int x, int y, int z, int A, int B, int C, int D, int E, int F, int G, int H, int J) {
     
     int nums[0x22] = {0};
     
-    nums[0x15] = 0x1d3;
-    nums[0x1c] = 0x208;
-    nums[0x07] = 0x186;
-    nums[0x0c] = 0x1c4;
-    nums[0x06] = 0x1cb;
-    nums[0x0e] = 0x1aa;
-    nums[0x08] = 0xb3;
-    nums[0x19] = 0x205;
-    nums[0x11] = 0x101;
-    nums[0x1d] = 0x15f;
-    nums[0x13] = 0x109;
-    nums[0x10] = 0x1bf;
-    nums[0x1f] = 0x185;
-    nums[0x14] = 0x21a;
-    nums[0x0f] = 0xe7;
-    nums[0x20] = 0x23f;
-    nums[0x05] = 0x16d;
-    nums[0x21] = 0x2aa;
-    nums[0x0b] = 0xd2;
-    nums[0x12] = 0x1b8;
-    nums[0x1a] = 0x14a;
-    nums[0x09] = 0x185;
-    nums[0x03] = 0x151;
-    nums[0x16] = 0x1fe;
-    nums[0x1e] = 0x22a;
-    nums[0x01] = 0x142;
-    nums[0x00] = 0x135;
-    nums[0x04] = 0x19f;
-    nums[0x0d] = 0x191;
-    nums[0x02] = 0x143;
-    nums[0x1b] = 0x23e;
-    nums[0x17] = 0x12a;
-    nums[0x18] = 0x1ff;
-    nums[0x0a] = 0x18d;
+    nums[0x15] = a;
+    nums[0x1c] = b;
+    nums[0x07] = c;
+    nums[0x0c] = d;
+    nums[0x06] = e;
+    nums[0x0e] = f;
+    nums[0x08] = g;
+    nums[0x19] = h;
+    nums[0x11] = j;
+    nums[0x1d] = k;
+    nums[0x13] = l;
+    nums[0x10] = m;
+    nums[0x1f] = n;
+    nums[0x14] = o;
+    nums[0x0f] = p;
+    nums[0x20] = q;
+    nums[0x05] = r;
+    nums[0x21] = s;
+    nums[0x0b] = t;
+    nums[0x12] = u;
+    nums[0x1a] = v;
+    nums[0x09] = w;
+    nums[0x03] = x;
+    nums[0x16] = y;
+    nums[0x1e] = z;
+    nums[0x01] = A;
+    nums[0x00] = B;
+    nums[0x04] = C;
+    nums[0x0d] = D;
+    nums[0x02] = E;
+    nums[0x1b] = F;
+    nums[0x17] = G;
+    nums[0x18] = H;
+    nums[0x0a] = J;
 
     char flag[0x22] = {' '};
 
@@ -187,8 +187,6 @@ int FUN_2302136() {
 
     int hour = tm_struct->tm_hour;
     int minute = tm_struct->tm_min;
-
-    printf("%d\n%d\n", hour, minute);
 
     for (int i = 0; i < 0x22; i++)
     {
@@ -207,20 +205,22 @@ int main()
          "I know a song that gets on everybody's nerves,",
          "And this is how it goes."};
 
-    for (int i = 0; i < lines; i++)
+    time_t now = time(NULL);
+    struct tm *tm_struct = localtime(&now);
+
+    while (tm_struct->tm_hour < 25)
     {
-        printf("%s\n", lyrics[i]);
-        sleepNanos(1, 500000000);
+        for (int i = 0; i < lines; i++) {
+            printf("%s\n", lyrics[i]);
+            sleepNanos(1, 500000000);
+        }
     }
 
-    // patch this section with a JMP to the for loop (line 210)
-    // Should already have a label attached to it in Ghidra
-
-    int k = 123;
-    printf("%d\n", k);
+    // patch with leave return, c9 c3
+    printf("%d\n", 123);
 
     char *falg = "bcactf{n0t_th3_fL4g_L0L}";
     printf("%s\n", falg);
 
-    FUN_2302136();
+    FUN_2302136(0x1d3, 0x208, 0x186, 0x1c4, 0x1cb, 0x1aa, 0xb3, 0x205, 0x101, 0x15f, 0x109, 0x1bf, 0x185, 0x21a, 0xe7, 0x23f, 0x16d, 0x2aa, 0xd2, 0x1b8, 0x14a, 0x185, 0x151, 0x1fe, 0x22a, 0x142, 0x135, 0x19f, 0x191, 0x143, 0x23e, 0x12a, 0x1ff, 0x18d);
 }
