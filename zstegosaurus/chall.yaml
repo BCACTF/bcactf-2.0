@@ -1,5 +1,6 @@
 name: Zstegosaurus
-category: Forensics
+categories:
+  - foren
 value: 50
 flag: bcactf{h15_n@m3_i5nt_g3rard}
 description: |-

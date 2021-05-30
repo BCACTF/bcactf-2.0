@@ -1,5 +1,6 @@
 name: "Welcome to the Casino"
-category: Miscellaneous
+categories:
+  - misc
 value: 100
 flag: bcactf{y0u_g0t_1ucKy_af23dd97g64n}
 description: |-

@@ -1,5 +1,6 @@
 name: Honors ABCs
-category: Binary
+categories:
+  - binex
 value: 75
 flag: bcactf{now_i_know_my_A_B_Cs!!_next_time_wont_you_cheat_with_me??}
 description: |-

@@ -1,5 +1,6 @@
 name: "Storytime: The Tragic Interlude"
-category: Rev
+categories:
+  - rev
 value: 125
 flag: bcactf{th4t_0th3r_dr4g0n_76fw8kc1lav}
 description: |-

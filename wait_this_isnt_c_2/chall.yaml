@@ -1,5 +1,6 @@
 name: Wait, this isn't C 2 (The Sequel)
-category: Reversing
+categories:
+  - rev
 value: 400
 flag: bcactf{m4tRlce5_aRe_co0l}
 description: |-

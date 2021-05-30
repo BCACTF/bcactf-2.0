@@ -1,5 +1,6 @@
 name: Wait, this isn't C
-category: Reversing
+categories:
+  - rev
 value: 150
 flag: bcactf{f0rtr4N_i5_c0oO0l}
 description: |-

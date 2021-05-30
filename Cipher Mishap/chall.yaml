@@ -1,5 +1,6 @@
 name: Cipher Mishap 
-category: crypto
+categories:
+  - crypto
 value: 75
 flag: bcactf{Should_iT_Have_BeeN_Vigenere_Instead}
 description: |-

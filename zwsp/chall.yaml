@@ -1,5 +1,6 @@
 name: More than Meets the Eye
-category: Forensics
+categories:
+  - foren
 value: 50
 flag: bcactf{z3r0_w1dth_jungl3_j82axH4}
 description: |-

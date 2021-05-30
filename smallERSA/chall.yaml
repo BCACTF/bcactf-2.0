@@ -1,5 +1,6 @@
 name: Little e
-category: Crypto
+categories:
+  - crypto
 value: 100
 flag: bcactf{R54_N0T_50_S3CUR3_33}
 description: |-

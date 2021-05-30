@@ -1,5 +1,6 @@
 name: Agent Gerald
-category: Webex
+categories:
+  - webex
 value: 50
 flag: flag.txt
 description: |-

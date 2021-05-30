@@ -1,5 +1,6 @@
 name: Trailblazer
-category: Reversing
+categories:
+  - rev
 value: 400
 flag: bcactf{now_thats_how_you_blaze_a_trail_9fd43x8}
 description: |-

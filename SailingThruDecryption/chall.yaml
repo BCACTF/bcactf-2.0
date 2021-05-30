@@ -1,5 +1,6 @@
 name: Sailing Thru Decryption
-category: Crypto
+categories:
+  - crypto
 value: 75
 flag: bcactf{1s_h1s_n4me_g3r4rd?}
 description: |-

@@ -1,5 +1,6 @@
 name: L10N Poll
-category: Webex
+categories:
+  - webex
 value: 200
 flag:
   file: ./server/flag.txt

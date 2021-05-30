@@ -1,5 +1,6 @@
 name: Digitally Encrypted 1
-category: Crypto
+categories:
+  - crypto
 value: 50
 flag: bcactf{that_was_pretty_simple1239152735}
 description: |-

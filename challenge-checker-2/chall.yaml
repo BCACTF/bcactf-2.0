@@ -1,5 +1,6 @@
 name: Challenge Checker 2 
-category: Miscallaneous
+categories:
+  - misc
 value: 200
 flag:
   file: ./flag.txt

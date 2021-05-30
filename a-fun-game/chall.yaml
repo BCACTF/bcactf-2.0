@@ -1,5 +1,6 @@
 name: A Fun Game
-category: Rev
+categories:
+  - rev
 value: 75
 flag: bcactf{h0p3fu1ly_y0U_d1dNt_actUa1ly_tYpe_1000_1ett3rs}
 description: |-

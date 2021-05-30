@@ -1,5 +1,6 @@
 name: BCA Mart
-category: Binary
+categories:
+  - binex
 value: 75
 flag:
   file: ./flag.txt

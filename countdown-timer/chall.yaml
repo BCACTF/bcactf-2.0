@@ -1,5 +1,6 @@
 name: Countdown Timer
-category: Webex
+categories:
+  - webex
 value: 75
 flag:
   file: ./f
