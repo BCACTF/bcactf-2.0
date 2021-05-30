@@ -1,5 +1,6 @@
 name: Math Analysis
-category: Binary
+categories:
+  - binex
 value: 150
 flag:
   file: ./flag.txt
