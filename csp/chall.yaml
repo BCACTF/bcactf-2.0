@@ -13,6 +13,10 @@ authors:
   - anli
 files:
   - src: server/server.js
+deploy:
+  web:
+    build: .
+    expose: 1337
 visible: true
 
 # TODO: Deployment (note: uses puppeteer)
