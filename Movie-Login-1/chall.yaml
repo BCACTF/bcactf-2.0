@@ -1,0 +1,19 @@
+name: Movie-Login-1
+categories:
+  - webex
+value: 75
+flag:
+  bcactf{s0_y0u_f04nd_th3_fl13r?}
+description: |-
+  I heard a new movie was coming out... apparently it's supposed to be the SeQueL to "Gerard's First Dance"? Is there any chance you can help me find the flyer?
+hints:
+  - Are the inputs sanitized?
+authors:
+  - Yusuf
+deploy:
+  web:
+    build: .
+    expose: 54321
+visible: false
+
+# TODO: Deployment

@@ -1,0 +1,13 @@
+{
+    "include": [
+        "server.js"
+    ],
+    "compilerOptions": {
+        "checkJs": true,
+        "target": "es2020",
+        "module": "commonJS",
+        "moduleResolution": "node",
+        "strictNullChecks": true,
+        "lib": ["es2020"]
+    }
+}
