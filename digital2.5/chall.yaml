@@ -8,7 +8,7 @@ flag: bcactf{Ju5t_r3P1Ace_tHe_0r_w1Th_4n_4nD427}
 description: |-
   Gerald has just learned that his old block cipher has been cracked.
   Gerald is sad.
-  Gerald is also feeling lazy and decides to strenghten his cypher by just changing some gates out. 
+  Gerald is also feeling lazy and decides to strengthen his cypher by just changing some gates out. 
 hints:
   - When does AND preserve information
 files:
