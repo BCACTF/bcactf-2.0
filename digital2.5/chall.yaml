@@ -1,5 +1,6 @@
 name: Digitally Encrypted 2.5
-category: crypto
+categories: 
+ - crypto
 value: 250
 flag: bcactf{Ju5t_r3P1Ace_tHe_0r_w1Th_4n_4nD427}
 # Alternatively:
