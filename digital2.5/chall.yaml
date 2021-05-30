@@ -10,7 +10,7 @@ description: |-
   Gerald is sad.
   Gerald is also feeling lazy and decides to strengthen his cypher by just changing some gates out. 
 hints:
-  - When does AND preserve information
+  - When does AND preserve information?
 files:
   - src: circuit_2.5.dig
   - src: Block2.dig
