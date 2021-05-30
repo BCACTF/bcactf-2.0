@@ -1,5 +1,6 @@
 name: Advanced Math Analysis
-category: Binary
+categories:
+  - binex
 value: 200
 flag:
   file: ./flag.txt
