@@ -1,5 +1,6 @@
 name: FNES 2
-category: Cryptography
+categories:
+  - crypto
 value: 350
 flag:
   file: ./flag.txt
