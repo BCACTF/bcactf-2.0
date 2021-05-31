@@ -1,0 +1,21 @@
+name: "FNES 2.5: Enterprise Automation"
+categories:
+  - crypto
+other_categories:
+  - webex
+value: 400
+flag:
+  file: ./flag.txt
+description: |-
+  In collaboration with the Friendly Neighborhood Encryption Service, we're releasing a new home automation system for all your firendly neighborhood enterprise needs! Try a demo here:
+hints:
+  - How do websites know who you are?
+  - What's on the table?
+authors:
+  - anli
+  - eiis1000
+deploy:
+  web:
+    build: .
+    expose: 1337
+visible: true
