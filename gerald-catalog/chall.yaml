@@ -1,0 +1,21 @@
+name: Gerald Catalog
+categories:
+  - webex
+value: 400
+flag:
+  file: ./server/flag.txt
+description: |-
+  Spotted a wild Gerald? Catalog them with the Official\* Gerald Catalog!
+
+  Use a Chromium-based browser for the best experience!
+
+  \* *The statements given in this problem description should not be construed as an endorsement from Gerald, Gerard, Zsofia, or any related entities.
+hints:
+  - How are push notifications implemented?
+authors:
+  - anli
+deploy:
+  web:
+    build: .
+    expose: 1337
+visible: true
