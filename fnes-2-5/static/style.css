@@ -27,7 +27,7 @@ body.logged-in .fancy-image {
     background: #222222;
     box-shadow:  13px 13px 26px #070707,
              -13px -13px 26px #1b1b1b;
-    width: 400px;
+    max-width: 400px;
     height: 200px;
     margin-top: 16px;
     margin-bottom: 16px;
