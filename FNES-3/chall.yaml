@@ -1,5 +1,6 @@
 name: FNES 3
-category: Cryptography
+categories:
+  - crypto
 value: 600
 flag: bcactf{you_absolute_madlad_you_broke_ECDHE!-31337-h4x0r}
 description: |-
