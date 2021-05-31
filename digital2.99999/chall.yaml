@@ -12,6 +12,7 @@ description: |-
   When Gerald gets home, he is eager to start prototyping a new encryption circuit with what he just learned.
   Maybe now he will be able to send messages to Gerald without Gerald listening in.
 hints:
+  - You can mouse over components to see what they do.
   - Look at the little bits.
 files:
   - src: circuit_2.99999.dig
