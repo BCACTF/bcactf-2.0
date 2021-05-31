@@ -18,40 +18,36 @@ body.logged-in .fancy-image {
     min-height: 100vh;
 }
 
-.light {
+.flagmachine {
     display: block;
     border-radius: 10px;
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 16px;
-    background: #EEEEEE;
-    box-shadow:  10px 10px 20px #cacaca,
-             -10px -10px 20px #ffffff;
-    width: 125px;
-    height: 125px;
+    background: #222222;
+    box-shadow:  13px 13px 26px #070707,
+             -13px -13px 26px #1b1b1b;
+    width: 400px;
+    height: 200px;
     margin-top: 16px;
     margin-bottom: 16px;
 }
 
-.light:hover {
-    background: linear-gradient(145deg, #d6d6d6, #ffffff);
+.flagmachine:hover {
+    background: linear-gradient(145deg, #242424, #1f1f1f);
+    color: white;
 }
 
-.light:focus {
-    background-color: #d6d6d6;
+.flagmachine:focus {
+    background-color: #333333;
 }
 
-.light:active {
-    box-shadow: inset 10px 10px 20px #cacaca,
-        inset -10px -10px 20px #ffffff;
+.flagmachine:active {
+    box-shadow: inset 10px 10px 20px #070707,
+            inset -10px -10px 20px #1b1b1b;
 }
 
-.light i {
-    color: darkorange;
+.flagmachine i {
     font-size: 24px;
-}
-
-.light:hover i, .light:active i, .light:focus i {
-    color: darkorange;
-    font-size: 24px;
+    color: cornflowerblue;
 }

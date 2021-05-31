@@ -7,18 +7,31 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link href="/static/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body {% if username %}class="logged-in"{% endif %}>
     <div class="container-fluid">
         <div class="row">
             <div class="col-4 fancy-image fill-screen"></div>
             <div class="col p-5 d-flex align-items-center fill-screen">
                 <div>
                     <h1>Generic Enterprise Automation System <small class="text-muted">Now With Friendly Neighborhood Encryption Service™!</small></h1>
+                    {% if username %}
+                    <p>You are currently Authenticated™ as <strong>{{username}}</strong>.</p>
+                    <a class="flagmachine" href="/flagmachine/on">
+                        <div><i class="bi bi-gear-fill"></i></div>
+                        <div><strong>Enterprise™ Industrial™ Flag™ Production™ Machine™</strong></div>
+                        <div class="text-muted">Click to turn on</div>
+                    </a>
+                    {% endif %}
                     <div>
+                        {% if username %}
+                        <a href="/logout" class="btn btn-danger">Log out</a>
+                        {% else %}
                         <a href="/login" class="btn btn-primary">Log in as guest</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
