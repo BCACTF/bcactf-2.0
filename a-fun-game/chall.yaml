@@ -7,6 +7,7 @@ description: |-
   A really fun game where you have to type the correct letter 1000 times to get the flag!
   It won't take that long, right?
   It's not like there's another way to do it...
+  Note, The executable is built for Linux and can be run with `mono Game.exe`
 hints:
   - Is it possible to modify the variable storing your points?
   - What does a program like GameConqueror or CheatEngine do?
