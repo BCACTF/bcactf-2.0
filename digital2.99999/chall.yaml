@@ -1,14 +1,16 @@
-name: Digitally Encrypted 2.99999
-category: crypto
+name: Digitally Encrypted 2.99999...
+categories: 
+ - crypto
+ - rev
 value: 350
 flag: bcactf{4r3nt_R3g1sTers_4Nd_5tufF_co01_2}
 # Alternatively:
 # flag:
 #   file: ./flag.txt
 description: |-
-  - Gerald, Gerald, and Gerald were sitting in their electronics class when their teacher introduced registers and drivers (also known as controlled buffers) and all these other weird things.
-  - When Gerald gets home, he is eager to start prototyping a new encryption circuit with what he just learned.
-  - Maybe now he will be able to send messages to Gerald without Gerald listening in.
+  Gerald, Gerald, and Gerald were sitting in their electronics class when their teacher introduced registers and drivers (also known as controlled buffers) and all these other weird things.
+  When Gerald gets home, he is eager to start prototyping a new encryption circuit with what he just learned.
+  Maybe now he will be able to send messages to Gerald without Gerald listening in.
 hints:
   - Look at the little bits.
 files:
