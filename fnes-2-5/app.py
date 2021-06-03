@@ -24,7 +24,7 @@ def home():
 @app.route("/login")
 def login():
     contents = dumps({"name": "vampire", "admin": False})
-    print(contents)
+    # TODO: Create token with contents of contents
     token = ""
     response = redirect("/", code=303)
     response.set_cookie("enterprise-grade-token", token)
