@@ -12,7 +12,6 @@ hints:
 files:
   - src: rt3.sage
   - src: enc.txt
-  - src: gen.txt
 authors:
   - eiis1000
   - MichaelK522
