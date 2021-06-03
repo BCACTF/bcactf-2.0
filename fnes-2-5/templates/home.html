@@ -20,6 +20,9 @@
                     <h1>Generic Enterprise Automation System <small class="text-muted">Now With Friendly Neighborhood Encryption Service™!</small></h1>
                     {% if username %}
                     <p>You are currently Authenticated™ as <strong>{{username}}</strong>.</p>
+                    {% if is_admin %}
+                    <p class="text-warning"><strong>You are an administrator!</strong></p>
+                    {% endif %}
                     <a class="flagmachine" href="/flagmachine/on">
                         <div><i class="bi bi-gear-fill"></i></div>
                         <div><strong>Enterprise™ Industrial™ Flag™ Production™ Machine™</strong></div>
