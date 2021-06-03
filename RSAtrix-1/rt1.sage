@@ -10,4 +10,4 @@ P = MS(s.matrix())
 
 def encrypt(m):
 	M = m * P
-	return M^e
+	return (M^e).list()
