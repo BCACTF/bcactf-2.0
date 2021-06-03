@@ -10,6 +10,7 @@ hints:
   - What happens when you take powers of a conjugated matrix? 
 files:
   - src: rt2.sage
+  - src: enc.txt
 authors:
   - eiis1000
   - MichaelK522
