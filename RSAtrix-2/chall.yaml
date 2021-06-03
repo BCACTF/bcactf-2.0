@@ -1,0 +1,17 @@
+name: RSAtrix 2
+categories:
+  - crypto
+value: 250
+flag: bcactf{permutation-conjugation-magic-3x876oeu}
+description: |-
+  Sure, you saw our first prototype, but you could obviously see it was just RSA slapped on a permutation matrix. Will you still be able to decode our messages if we conjugate our generator first?
+hints:
+  - Here, "conjugating a matrix" means performing a similarity transformation.
+  - What happens when you take powers of a conjugated matrix? 
+files:
+  - src: rt2.sage
+authors:
+  - eiis1000
+  - MichaelK522
+visible: true
+# TODO deployment
