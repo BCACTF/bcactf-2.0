@@ -1,0 +1,14 @@
+{
+    "include": [
+        "**.js"
+    ],
+    "compilerOptions": {
+        "checkJs": true,
+        "target": "es2016",
+        "module": "es6",
+        "lib": [
+            "es2016",
+            "dom"
+        ]
+    }
+}

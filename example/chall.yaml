@@ -1,5 +1,6 @@
 name: Example Problem
-category: Miscallaneous
+categories:
+  - misc
 value: 50
 flag: bcactf{this_is_a_flag}
 # Alternatively:

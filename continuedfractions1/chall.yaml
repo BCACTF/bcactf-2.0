@@ -1,5 +1,6 @@
 name: It's All Coming Together
-category: Crypto
+categories:
+  - crypto
 value: 100
 flag: bcactf{c0nv3rg3d_0r_n3v3r3nd1ng?_jvnai23b15cxkl}
 description: |-
@@ -11,4 +12,4 @@ files:
   - src: numbers.txt
 authors:
   - micpap25
-visible: false
+visible: true

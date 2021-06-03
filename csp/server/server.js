@@ -15,7 +15,7 @@ db.ensureIndex({
     expireAfterSeconds: 10 * 60
 }, () => {})
 
-const browser = puppeteer.launch({args: ["--incognito"]});
+const browser = puppeteer.launch({args: ["--incognito", "--no-sandbox"]});
 
 const secret = randomFillSync(Buffer.alloc(60)).toString("base64");
 console.log(`Secret: ${secret}`);

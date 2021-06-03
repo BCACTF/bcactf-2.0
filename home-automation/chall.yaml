@@ -1,5 +1,6 @@
 name: Home Automation
-category: Webex
+categories:
+  - webex
 value: 50
 flag:
   file: ./server/flag.txt
@@ -10,6 +11,8 @@ hints:
   - What's on the table?
 authors:
   - anli
-visible: false
-
-# TODO: Deployment
+deploy:
+  web:
+    build: .
+    expose: 1337
+visible: true

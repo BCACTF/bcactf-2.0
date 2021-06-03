@@ -1,15 +1,18 @@
 name: Countdown Timer
-category: Webex
+categories:
+  - webex
 value: 75
 flag:
   file: ./f
 description: |-
   Get the flag once the countdown timer reaches zero!
   However, the minimum time you can set for the countdown is 100 days, so you might be here for a while.
+deploy:
+  web:
+    build: .
+    expose: 80
 hints:
   - Can you manipulate a website's JavaScript?
 authors:
   - Krish Arora
-visible: false
-
-# TODO: Deployment
+visible: true

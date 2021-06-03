@@ -1,5 +1,6 @@
 name: Stylish
-category: Webex
+categories:
+  - webex
 value: 200
 flag:
   file: ./server/flag.txt
@@ -13,7 +14,10 @@ files:
   - src: server/server.js
   - src: server/passcode.js
   - src: server/visit.js
-visible: false
+deploy:
+  web:
+    build: .
+    expose: 1337
+visible: true
 
-# TODO: Deployment (note: uses puppeteer)
 # TODO: Rate-limiting/captchas

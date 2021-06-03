@@ -1,5 +1,6 @@
 name: "Storytime: The Opening Gambit"
-category: Rev
+categories:
+  - rev
 value: 75
 flag: bcactf{w0ol_m4k3s_str1ng_ziv4mk3ca91b}
 description: |-
@@ -9,11 +10,12 @@ hints:
   - How can you look into a compiled executable file? 
   - Maybe a command line tool will help?
   - What can you make with wool?
+deploy:
+  build:
+    build: .
 files:
   - src: story
-    ignore_missing: true
+    container: build
 authors:
   - micpap25
 visible: true
-# TODO: compile
-# - compile as linux binary (ELF)

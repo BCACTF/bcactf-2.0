@@ -1,18 +1,22 @@
 name: Challenge Checker 
-category: Miscallaneous
+categories:
+  - misc
 value: 100
 flag:
-    file: ./flag.txt
+  file: ./flag.txt
 description: |-
-    I made this challenge checker to automate away ed's job. Maybe you can get a flag if you give it enough delicious yams... 
+  I made this challenge checker to automate away ed's job. Maybe you can get a flag if you give it enough delicious yams...
 hints:
   - Try looking up some documentation.
   - Can you get a shell?
+deploy:
+  nc:
+    build: .
+    expose: 9999
 files:
   - src: chall.yaml
   - src: requirements.txt
   - src: verify.py
 authors:
   - anli
-visible: false
-# TODO: deployment
+visible: true
