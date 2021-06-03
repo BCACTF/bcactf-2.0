@@ -1,7 +1,7 @@
 name: Completely Secure Publishing
 categories:
   - webex
-value: 400
+value: 450
 flag:
   file: ./server/flag.txt
 description: |-

@@ -1,7 +1,7 @@
 name: L10N Poll
 categories:
   - webex
-value: 300
+value: 350
 flag:
   file: ./server/flag.txt
 description: |-
