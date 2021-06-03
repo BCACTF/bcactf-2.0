@@ -23,7 +23,7 @@ def home():
 
 @app.route("/login")
 def login():
-    contents = dumps({"name": "vampire", "admin": False})
+    contents = dumps({"name": "Enterprise Vampire", "admin": False})
     # TODO: Create token with contents of contents
     token = ""
     response = redirect("/", code=303)
