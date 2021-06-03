@@ -1,7 +1,7 @@
 name: Wasm Protected Site 1
 categories:
   - webex
-value: 50
+value: 150
 flag: bcactf{w4sm-m4g1c-xRz5}
 description: |-
   - Check out my super safe website! Enter the password to get the flag
