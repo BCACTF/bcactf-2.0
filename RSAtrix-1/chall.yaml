@@ -9,6 +9,7 @@ hints:
   - How do you decode messages encoded in RSA?
 files:
   - src: rt1.sage
+  - src: enc.txt
 authors:
   - eiis1000
   - MichaelK522
