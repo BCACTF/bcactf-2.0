@@ -43,13 +43,13 @@ while True:
         exit()
     elif (l == "E"):
         print("What would you like to encrypt?")
-        I = str.encode(input(">>> ").strip())
+        I = input(">>> ").strip()
         if (set(I.lower()) & set("flgnq")): # Disallowed characters changed to make the key query more difficult
             print("You're never getting my flag!")
             exit()
         else:
             print("Here's your message:")
-            c = str(binascii.hexlify(cipher.encrypt(pad(I, 16))))[2:-1]
+            c = str(binascii.hexlify(cipher.encrypt(pad(str.encode(I), 16))))[2:-1]
             print(c)
     elif (l == "D"):
         print("What was the message?")
