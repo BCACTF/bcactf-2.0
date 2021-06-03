@@ -13,4 +13,4 @@ G = C * P * C^-1
 
 def encrypt(m):
 	M = m * G
-	return M^e
+	return (M^e).list()
