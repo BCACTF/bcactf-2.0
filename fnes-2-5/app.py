@@ -1,14 +1,38 @@
 from flask import Flask, render_template, request, redirect, make_response
 from json import loads, dumps
+import secrets
+import random
+import math
+import time
+import binascii
+from Crypto.Cipher import AES 
+from Crypto.Hash import SHA
+from Crypto.Util.Padding import pad, unpad
 
 app = Flask(__name__)
 
 with open("flag.txt", "r") as file:
     flag = file.read()
 
+with open("key.txt", "r") as f:
+    key = SHA.new(int(f.read().strip()).to_bytes(64, 'big')).digest()[0:16]
+
+def encrypt(msg: str):
+    iv = secrets.token_bytes(16)
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    ct = cipher.encrypt(pad(msg.encode('utf-8'), 16))
+    iv_enc = AES.new(key[3:] + b'tmp', AES.MODE_ECB).encrypt(iv)
+    return binascii.hexlify(iv_enc + ct).decode("ascii")
+
+def decrypt(token: str):
+    ive = binascii.unhexlify(token[:32])
+    ct = binascii.unhexlify(token[32:])
+    iv = AES.new(key[3:] + b'tmp', AES.MODE_ECB).decrypt(ive)
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    return unpad(cipher.decrypt(ct), 16).decode("ascii", errors='ignore')
+
 def check_token(token: str):
-    # TODO: Set contents to contents of token, or just throw an error if something's wrong
-    contents = '{"name":"vampire","admin":false}'
+    contents = decrypt(token)
     return loads(contents)
 
 @app.route("/")
@@ -24,8 +48,7 @@ def home():
 @app.route("/login")
 def login():
     contents = dumps({"name": "Enterprise Vampire", "admin": False})
-    # TODO: Create token with contents of contents
-    token = ""
+    token = encypt(contents)
     response = redirect("/", code=303)
     response.set_cookie("enterprise-grade-token", token)
     return response
