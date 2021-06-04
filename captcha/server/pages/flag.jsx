@@ -40,7 +40,7 @@ export default function FlagPage() {
                     setSuccess("?");
                     setAnswer([false, false, false, false, false, false, false, false, false]);
                 }
-            }} className="vertical-align-middle mr-2 border-primary bg-white d-inline-block" style={{border: "blue 2px solid", width: "25px", height: "25px", textAlign: "center"}}>{success}</a>
+            }} className="vertical-align-middle mr-2 border-primary bg-white d-inline-block" style={{border: "blue 2px solid", width: "25px", height: "25px", textAlign: "center", lineHeight: "21px"}}>{success}</a>
             <span className="vertical-align-middle">I'm totally not a robot</span>
             <span className="text-secondary ml-2"><small>1Captcha</small></span>
         </div>
