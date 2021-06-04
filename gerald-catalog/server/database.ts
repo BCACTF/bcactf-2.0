@@ -6,6 +6,7 @@ export interface Gerald {
     name: string;
     caption?: string;
     copyrightClaim?: CopyrightClaim;
+    subscription?: PushSubscription;
 }
 
 export interface CopyrightClaim {
@@ -13,10 +14,12 @@ export interface CopyrightClaim {
 }
 
 export class DB {
-    constructor(private flag: string) {}
-
     private users: Record<string, {password: string, geraldIDs: string[]}> = {};
     private geralds: Record<string, Gerald> = {};
+
+    constructor(private flag: string) {
+        this.createUser("sdf", "sdf");
+    }
     
     public createUser(username: string, password: string): boolean {
         if (this.users[username]) return false;
@@ -48,9 +51,9 @@ export class DB {
         return this.users[username].password === password;
     }
 
-    public getGeralds(username: string): Gerald[] | undefined {
+    public getGeralds(username: string): (Gerald & {id: string})[] | undefined {
         if (!this.users[username]) return;
-        return this.users[username].geraldIDs.map(id => this.geralds[id]);
+        return this.users[username].geraldIDs.map(id => ({...this.geralds[id], id}));
     }
 
     public addGerald(gerald: Gerald, username: string): string | undefined {
@@ -64,5 +67,14 @@ export class DB {
 
     public getGerald(id: string): Gerald | undefined {
         return this.geralds[id];
+    }
+
+    public ownsGerald(username: string, id: string): boolean {
+        if (!this.users[username]) return false;
+        return this.users[username].geraldIDs.includes(id);
+    }
+
+    public setSubscription(id: string, subscription: PushSubscription | undefined) {
+        this.geralds[id].subscription = subscription;
     }
 }

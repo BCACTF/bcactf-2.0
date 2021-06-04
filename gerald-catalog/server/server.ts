@@ -45,13 +45,20 @@ router.get("/", async (ctx) => {
 });
 
 router.get("/login", async ctx => {
-    ctx.body = "Coming soon.";
+    await render(ctx, "login.hbs", {
+        flash: ctx.session!.flash
+    });
 });
 
 router.post("/login", passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/geralds",
     failureRedirect: "/login",
+    failureFlash: "Incorrect username or password."
 }));
+
+router.get("/register", async ctx => {
+    await render(ctx, "register.hbs");
+});
 
 router.post("/register", async ctx => {
     const username: unknown = ctx.request.body.username;
@@ -87,11 +94,19 @@ router.post("/register", async ctx => {
 router.get("/logout", async ctx => {
     // @ts-ignore
     ctx.logout();
-    ctx.redirect("/");
+    ctx.redirect("/login");
 });
 
 router.get("/geralds", async ctx => {
-    ctx.body = "Coming soon."
+    if (!ctx.state.user) {
+        ctx.redirect("/login");
+        return;
+    }
+
+    await render(ctx, "geralds.hbs", {
+        geralds: db.getGeralds(ctx.state.user),
+        username: ctx.state.user
+    });
 });
 
 router.get("/gerald/:id", async (ctx) => {
@@ -125,6 +140,20 @@ app.keys = [secretKey];
 
 app.use(bodyParser());
 app.use(session({}, app));
+app.use(async (ctx, next) => {
+    let didUpdateFlash = false;
+    try {
+        ctx.flash = (type: any, message: any) => {
+            ctx.session!.flash = { type, message };
+            didUpdateFlash = true;
+        };
+        await next();
+    } finally {
+        if (ctx.session!.flash && !didUpdateFlash) {
+            delete ctx.session!.flash;
+        }
+    }
+});
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(router.routes());
