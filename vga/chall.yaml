@@ -1,0 +1,18 @@
+name: This is just a bunch of numbers
+categories: 
+ - Forensics
+value: 225
+flag: bcactf{I_MiSs_Vga_iT_wAs_PrettY_cooL_ig}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+  - Our spies believe that a flag was being transferred and were able to tap the communication.
+  - Can you find the flag that was transmitted?
+hints:
+  - What kind of information could this be?
+files:
+  - src: streams.zip 
+authors:
+  - Michael Kasprzak
+visible: false
