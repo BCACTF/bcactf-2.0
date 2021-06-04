@@ -8,7 +8,7 @@ import { readFile } from 'fs/promises';
 import { DB } from './database';
 import bodyParser from 'koa-bodyparser';
 import { compile } from 'handlebars';
-import { sendNotifications } from './notify';
+import { sendNotifications, validateSubscription } from './notify';
 import { randomBytes } from 'crypto';
 import session from 'koa-session';
 import passport from 'koa-passport';
@@ -113,11 +113,14 @@ router.get("/gerald/:id", async (ctx) => {
     const id: string = ctx.params.id;
     const gerald = db.getGerald(id);
     if (gerald) {
-        if (gerald.copyrightClaim && ctx.ip !== "127.0.0.1" && ctx.ip !== "::1") {
+        if (gerald.copyrightClaim && ctx.ip !== "127.0.0.1" && ctx.ip !== "::1" && ctx.ip !== "::ffff:127.0.0.1") {
             ctx.throw(451, "Geralds with active copyright claims can only be viewed by an on-site administrator.");
         } else {
             await sendNotifications(id, gerald);
-            ctx.body = "Coming soon.";
+            await render(ctx, "gerald.hbs", {
+                gerald,
+                image: gerald.caption ? `/gerald.png?caption=${encodeURIComponent(gerald.caption)}` : "/gerald.png"
+            });
         }
     }
 });
@@ -134,6 +137,84 @@ router.get("/gerald.png", async (ctx) => {
     } else {
         await send(ctx, "gerald.PNG");
     }
+});
+
+router.get("/add", async ctx => {
+    await render(ctx, "add.hbs", {
+        username: ctx.state.user,
+        maxLength: maxCaptionLength
+    });
+});
+
+router.post("/add", async ctx => {
+    if (!ctx.state.user) {
+        ctx.throw(401, "not logged in");
+        return;
+    }
+
+    const name: unknown = ctx.request.body.name;
+    const caption: unknown = ctx.request.body.caption;
+
+    if (typeof name !== "string") {
+        ctx.throw(400, "name must be a string");
+        return;
+    }
+
+    if (typeof caption !== "string" && typeof caption !== "undefined") {
+        ctx.throw(400, "caption must be a string");
+        return;
+    }
+
+    if (caption && caption.length > maxCaptionLength) {
+        ctx.throw(400, "caption is too long");
+    }
+
+    const id = db.addGerald({name, caption}, ctx.state.user);
+    if (!id) {
+        ctx.throw(500, "an error occurred");
+        return;
+    }
+
+    ctx.redirect(`/geralds`);
+});
+
+router.put("/gerald/:id/subscription", async ctx => {
+    if (!ctx.state.user) {
+        ctx.throw(401, "not logged in");
+        return;
+    }
+
+    const id: string = ctx.params.id;
+    if (!db.getGerald(id)) return;
+    if (!db.ownsGerald(ctx.state.user, id)) {
+        ctx.throw(403, "this gerald is not your gerald");
+        return;
+    }
+
+    const subscription = validateSubscription(ctx.request.body);
+    if (!subscription) {
+        ctx.throw(400, "invalid subscription");
+        return;
+    }
+
+    db.setSubscription(id, subscription);
+    ctx.body = "ok";
+});
+
+router.delete("/gerald/:id/subscription", async ctx => {
+    if (!ctx.state.user) {
+        ctx.throw(401, "not logged in");
+        return;
+    }
+
+    const id: string = ctx.params.id;
+    if (!db.getGerald(id)) return;
+    if (!db.ownsGerald(ctx.state.user, id)) {
+        ctx.throw(403, "this gerald is not your gerald");
+    }
+    
+    db.setSubscription(id, undefined);
+    ctx.body = "ok";
 });
 
 app.keys = [secretKey];

@@ -6,4 +6,7 @@ window.addEventListener("load", _ => {
     document.querySelectorAll(".mdc-text-field").forEach(field => {
         mdc.textField.MDCTextField.attachTo(field);
     });
+    document.querySelectorAll(".mdc-switch").forEach(s => {
+        mdc.switchControl.MDCSwitch.attachTo(s);
+    });
 });

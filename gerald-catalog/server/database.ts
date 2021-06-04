@@ -6,20 +6,23 @@ export interface Gerald {
     name: string;
     caption?: string;
     copyrightClaim?: CopyrightClaim;
-    subscription?: PushSubscription;
+    subscription?: Subscription;
 }
 
 export interface CopyrightClaim {
     claimant: string;
 }
 
+export interface Subscription {
+    endpoint: string;
+    keys: {auth: string, p256dh: string};
+}
+
 export class DB {
     private users: Record<string, {password: string, geraldIDs: string[]}> = {};
     private geralds: Record<string, Gerald> = {};
 
-    constructor(private flag: string) {
-        this.createUser("sdf", "sdf");
-    }
+    constructor(private flag: string) {}
     
     public createUser(username: string, password: string): boolean {
         if (this.users[username]) return false;
@@ -74,7 +77,7 @@ export class DB {
         return this.users[username].geraldIDs.includes(id);
     }
 
-    public setSubscription(id: string, subscription: PushSubscription | undefined) {
+    public setSubscription(id: string, subscription: Subscription | undefined) {
         this.geralds[id].subscription = subscription;
     }
 }

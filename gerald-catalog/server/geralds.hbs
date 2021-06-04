@@ -36,6 +36,14 @@
                             <div class="mdc-button__ripple"></div>
                             <span class="mdc-button__label">View</span>
                         </a>
+                        <div class="mdc-switch">
+                            <div class="mdc-switch__track"></div>
+                            <div class="mdc-switch__thumb-underlay">
+                                <div class="mdc-switch__thumb"></div>
+                                <input type="checkbox" id="{{id}}" class="mdc-switch__native-control notification-control" role="switch" {{#if subscription}}checked{{/if}}>
+                            </div>
+                        </div>
+                        <label style="margin-left: 0.5rem;" class="mdc-typography--caption" for="{{id}}">Notify me when this Gerald is viewed</label>
                     </div>
                 </div>
                 {{/each}}
@@ -48,5 +56,6 @@
         </main>
         <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
         <script src="/script.js"></script>
+        <script src="/geralds.js"></script>
     </body>
 </html>
