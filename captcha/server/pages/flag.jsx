@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { Button, Col, Container, Overlay, Popover, Row } from 'react-bootstrap';
+import Link from 'next/link';
 
 async function load(challenge, answer) {
     let headers = {"Content-Type": "application/json"};
@@ -30,7 +31,7 @@ export default function FlagPage() {
                 width: fit-content;
             }
         `}</style>
-        <div className="bg-light border p-3 rounded d-flex justify-content-center align-items-center captcha-box">
+        <div className="bg-light border p-3 rounded d-flex justify-content-center align-items-center captcha-box mb-5">
             <a ref={target} href="#" onClick={async e => {
                 e.preventDefault();
                 if (success === "") {
@@ -94,5 +95,6 @@ export default function FlagPage() {
                 </div>
             </Popover>}
         </Overlay>
+        <Link href="/docs"><a className="text-secondary">Check out our API documentation!</a></Link>
     </Container>;
 }
