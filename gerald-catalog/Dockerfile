@@ -18,5 +18,6 @@ WORKDIR /usr/src/app/server
 RUN npm run build --if-present
 
 # Expose port and run server
+ENV VAPID_PRIVATE_KEY=jbB5Tus4T0EFGgOkTk05E663DzaE7T7EYwf4vNRrR7A
 EXPOSE 1337
 CMD ["npm", "start"]
