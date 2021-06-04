@@ -2,6 +2,7 @@ import random
 import math
 import time
 import binascii
+import secrets
 from Crypto.Cipher import AES 
 from Crypto.Hash import SHA
 from Crypto.Util.Padding import pad, unpad
@@ -13,8 +14,7 @@ with open("flag.txt", "r") as f:
 with open("key.txt", "r") as f:
     key = int(f.read().strip())
 
-passphrase = "Abracadabra"
-key_query = "I would like to kindly request one (1) flag"
+target_query = "Open sesame... Flag please!"
 
 print("""
 Welcome to your new and improved FNES... FNES 2!
@@ -29,11 +29,8 @@ PS: For security reasons, there are still some characters you aren't allowed to 
 """)
 
 tempkey = SHA.new(int(key + int(time.time() / 10)).to_bytes(64, 'big')).digest()[0:16]
-iv = int(time.time() / 9).to_bytes(64, 'big')[0:16]
 
 while True:
-    cipher = AES.new(tempkey, AES.MODE_CBC, iv) # This is just for your convenience so stuff doesn't come out of sync
-    # If the above is actually a security vulnerability, and you exploit it, send me a DM :)
     print("Would you like to encrypt (E), decrypt (D), or quit (Q)?")
     l = input(">>> ").strip().upper()
     if (len(l) > 1):
@@ -44,19 +41,24 @@ while True:
     elif (l == "E"):
         print("What would you like to encrypt?")
         I = input(">>> ").strip()
-        if (set(I.lower()) & set("flgnq")): # Disallowed characters changed to make the key query more difficult
+        if (set(I.lower()) & set("flg!nsm")): # Disallowed characters changed to make the target query more difficult
             print("You're never getting my flag!")
             exit()
         else:
+            iv = secrets.token_bytes(16)
+            cipher = AES.new(tempkey, AES.MODE_CBC, iv)
+            c = str(binascii.hexlify(iv + cipher.encrypt(pad(str.encode(I), 16))))[2:-1]
             print("Here's your message:")
-            c = str(binascii.hexlify(cipher.encrypt(pad(str.encode(I), 16))))[2:-1]
             print(c)
     elif (l == "D"):
         print("What was the message?")
         I = input(">>> ").strip()
+        iv = I[:32]
+        I = I[32:]
         try:
+            cipher = AES.new(tempkey, AES.MODE_CBC, binascii.unhexlify(iv))
             m = str(unpad(cipher.decrypt(binascii.unhexlify(I)), 16))[2:-1]
-            if (m[0:len(passphrase)] == passphrase and key_query in m):
+            if (m == target_query):
                 print("\nPassphrase accepted. Here's your flag:\n")
                 print(str(flag)[2:-1])
                 try:
