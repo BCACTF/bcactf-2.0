@@ -23,7 +23,7 @@ function randomBool(): boolean {
 function timeLimit(stage: number) {
     if (stage === 0) return 120;
     if (stage === 1) return 30;
-    return Math.min(Math.max(3, 13 - stage), 10);
+    return Math.min(Math.max(2, 13 - stage), 10);
 }
 
 const image1 = loadImage("1.png");
