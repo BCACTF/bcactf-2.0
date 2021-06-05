@@ -2,7 +2,8 @@ name: Agent Gerald
 categories:
   - webex
 value: 125
-flag: flag.txt
+flag: 
+  file: ./server/flag.txt
 description: |-
   Agent Gerald is a spy in SI-6 (Stegosaurus Intelligence-6). We need you to infiltrate this
   top-secret SI-6 webpage, but it looks like it can only be accessed by Agent Gerald's special browser...
