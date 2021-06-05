@@ -6,7 +6,7 @@ categories:
 value: 275
 flag: "bcactf{111l1l1l1l1l1l111l1ll11l1lll1l1l1l1llll1111lll1l1l1l1l_ok_ill_stop_now}"
 description: |-
-  1'm not a robot.
+  I'm tota1ly not a robot.
 hints:
   - All you need to do is to solve the CAPTCHA.
   - Try looking at their documentation.
