@@ -1,6 +1,6 @@
 name: This is just a bunch of numbers
 categories: 
- - Forensics
+ - foren
 value: 225
 flag: bcactf{I_MiSs_Vga_iT_wAs_PrettY_cooL_ig}
 # Alternatively:
