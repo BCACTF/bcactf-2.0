@@ -19,6 +19,6 @@ RUN npm run build --if-present
 
 # Expose port and run server
 ENV CAPTCHA_CHALLENGE_KEY=0967b1eeeae0ce24b825a1108cdecd94
-ENV CAPTCHA_FLAG="bcactf{111l1l1l1l1l1l111l1ll11l1lll1l1l1l1llll1111lll1l1l1l1l_ok_ill_stop_now}"
+ENV CAPTCHA_FLAG="bcactf{synthetic_cdo_returns_111l1l1l1l1l1l111l1ll11l1lll1l1l1l1llll1111lll1l1l1l1l}"
 EXPOSE 3000
 CMD ["npm", "start"]

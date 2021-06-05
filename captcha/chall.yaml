@@ -3,8 +3,8 @@ categories:
   - misc
   - webex
   - foren
-value: 275
-flag: "bcactf{111l1l1l1l1l1l111l1ll11l1lll1l1l1l1llll1111lll1l1l1l1l_ok_ill_stop_now}"
+value: 300
+flag: "bcactf{synthetic_cdo_returns_111l1l1l1l1l1l111l1ll11l1lll1l1l1l1llll1111lll1l1l1l1l}"
 description: |-
   I'm tota1ly not a robot.
 hints:
