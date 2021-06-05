@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { CompactEncrypt } from 'jose/jwe/compact/encrypt';
 import { compactDecrypt } from 'jose/jwe/compact/decrypt';
-import { createCanvas } from 'canvas';
+import { createCanvas, loadImage } from 'canvas';
 import randomColor from 'randomcolor';
 
 const challengeKey = Buffer.from(process.env.CAPTCHA_CHALLENGE_KEY!, "hex");
@@ -21,9 +21,13 @@ function randomBool(): boolean {
 }
 
 function timeLimit(stage: number) {
-    if (stage < 2) return 120;
+    if (stage === 0) return 120;
+    if (stage === 1) return 30;
     return Math.min(Math.max(3, 13 - stage), 10);
 }
+
+const image1 = loadImage("1.png");
+const imagel = loadImage("l.png");
 
 async function generateImage(input: boolean): Promise<string> {
     const canvas = createCanvas(64, 64);
@@ -31,10 +35,11 @@ async function generateImage(input: boolean): Promise<string> {
     const lightBackground = randomBool();
     ctx.fillStyle = randomColor({luminosity: lightBackground ? "light" : "dark"});
     ctx.fillRect(0, 0, 64, 64);
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.drawImage(input ? (await image1) : (await imagel), Math.floor(Math.random() * 48), Math.floor(Math.random() * 32));
+    ctx.globalCompositeOperation = "destination-over";
     ctx.fillStyle = randomColor({luminosity: lightBackground ? "dark" : "light"});
-    ctx.font = "32px 'Times New Roman'";
-    ctx.textAlign = "start";
-    ctx.fillText(input ? "1" : "l", Math.floor(Math.random() * 50), 24 + Math.floor(Math.random() * 40));
+    ctx.fillRect(0, 0, 64, 64);
     return canvas.toDataURL();
 }
 
