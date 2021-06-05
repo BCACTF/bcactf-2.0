@@ -1,5 +1,6 @@
 name: "Storytime: The Shocking Conclusion"
-category: Rev
+categories:
+  - rev
 value: 225
 flag: bcactf{h1dd3n_c0d3_1s_h1dd3n_2c8d}
 description: |-
