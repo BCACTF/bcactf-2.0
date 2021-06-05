@@ -17,4 +17,4 @@ authors:
 visible: true
 # TODO: compile
 # - compile as linux binary (ELF)
-# - change the puts(123) line in the executable to a JMP back to the for loop
+# - follow the comment at line 219
