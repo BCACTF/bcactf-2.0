@@ -1,7 +1,7 @@
 name: Wasm Protected Site 2
 categories:
   - webex
-value: 100
+value: 225
 flag: bcactf{w4sm-w1z4rDry-Xc0wZ}
 description: |-
   - Similar to wasm protected site 1, but this time there is no password, only the flag.

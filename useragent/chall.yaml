@@ -1,7 +1,7 @@
 name: Agent Gerald
 categories:
   - webex
-value: 50
+value: 125
 flag: 
   file: ./server/flag.txt
 description: |-
