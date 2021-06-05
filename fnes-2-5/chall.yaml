@@ -14,6 +14,8 @@ hints:
 authors:
   - anli
   - eiis1000
+files:
+  - src: app.py
 deploy:
   web:
     build: .
