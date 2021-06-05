@@ -7,6 +7,7 @@ description: |-
   This one's a sing-along. Let's see how long we can keep it up!
 hints:
   - Why might some code not be visible in your decompiler?
+  - Weird, there's data in the file that doesn't look like it's being used...
 files:
   - src: story3
     ignore_missing: true
