@@ -9,8 +9,8 @@ flag:
 description: |-
   In collaboration with the Friendly Neighborhood Encryption Service, we're releasing a new home automation system for all your firendly neighborhood enterprise needs! Try a demo here:
 hints:
-  - How do websites know who you are?
-  - What's on the table?
+  - Make sure to solve Home Automation and FNES 2 first!
+  - What do you control about the ciphertext?
 authors:
   - anli
   - eiis1000
