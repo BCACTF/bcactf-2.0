@@ -21,7 +21,7 @@ document.querySelector('button').addEventListener('click', () => {
         const memory = new Uint8Array(wasm.instance.exports.memory.buffer);
         memory.set(new TextEncoder().encode(input.value + "\x00"));
 
-        const responseText = wasm.instance.exports.checkFlag(0) ? "Correct flag" : "Inorrect flag";
+        const responseText = wasm.instance.exports.checkFlag(0) ? "Correct flag" : "Incorrect flag";
 
         response.innerText = responseText;
     } else {
