@@ -15,6 +15,3 @@ files:
 authors:
   - micpap25
 visible: true
-# TODO: compile
-# - compile as linux binary (ELF)
-# - follow the comment at line 219
