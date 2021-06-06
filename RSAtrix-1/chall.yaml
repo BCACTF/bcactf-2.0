@@ -1,0 +1,17 @@
+name: RSAtrix 1
+categories:
+  - crypto
+value: 100
+flag: bcactf{just-rsa-with-matrices-9385dax}
+description: |-
+  RSA, RSA, RSA. After so many RSA problems, they all start to look the same. But what looks different? Matrices! After a lot of detailed R&D, we're proud to present RSAtrix, the world's first* matrix RSA system!
+hints:
+  - How do you decode messages encoded in RSA?
+files:
+  - src: rt1.sage
+  - src: enc.txt
+authors:
+  - eiis1000
+  - MichaelK522
+visible: true
+# TODO deployment
