@@ -12,7 +12,6 @@ export default function Index() {
             <Navbar.Brand>1Captcha</Navbar.Brand>
             <Nav className="ml-auto">
                 <Link passHref href="/flag"><Nav.Link>Flag</Nav.Link></Link>
-                <Link passHref href="/docs"><Nav.Link>API Documentation</Nav.Link></Link>
             </Nav>
         </Navbar>
         <div style={{ backgroundPosition: "center", backgroundSize: "cover", backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://upload.wikimedia.org/wikipedia/commons/5/51/Artificial_Intelligence%2C_AI.jpg)"}}>
@@ -42,7 +41,6 @@ export default function Index() {
             <Container className="py-5 d-flex flex-column justify-content-start align-items-center text-center">
                 <h3>Blockchain, machine learning, etc.</h3>
                 <p><Link passHref href="/waitlist"><Button variant="primary">Join the waitlist</Button></Link></p>
-                <p><Link href="/docs"><a>Read the API documentation</a></Link></p>
             </Container>
         </div>
         <Container className="py-3 text-secondary">
