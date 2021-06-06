@@ -11,7 +11,6 @@ hints:
   - Weird, there's data in the file that doesn't look like it's being used...
 files:
   - src: story3
-    ignore_missing: true
 authors:
   - micpap25
 visible: true
