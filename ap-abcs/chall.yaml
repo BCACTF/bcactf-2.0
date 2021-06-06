@@ -11,11 +11,14 @@ hints:
   - Decimal? Hex? What do those mean, and why should I care?
   - How <del>exactly</del> ex[*ASCII*](https://en.wikipedia.org/wiki/ASCII) are characters stored, anyways?
   - What is "endianness"? Is that like, the Ender Dragon or something?
+deploy:
+  nc:
+    build: .
+    expose: 9999
 files:
   - src: src.c
     name: ap-abcs.c
   - src: ap-abcs
-    ignore_missing: true
+    container: nc
 authors:
   - Edward Feng
-# TODO: deployment
