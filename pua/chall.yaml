@@ -1,0 +1,17 @@
+name: "􈠩􌗆􊚚􇧀􈓩􎜠􌆒􃿚􇧀"
+categories:
+  - crypto
+value: 125
+flag:
+  file: ./flag.txt
+description: |-
+  Here's some enciphered text. Find the flag.
+hints:
+  - The characters are all the same... or are they?
+  - How many different characters are there?
+  - Those repeating characters look interesting...
+files:
+  - src: ciphertext.md
+authors:
+  - anli
+visible: true
