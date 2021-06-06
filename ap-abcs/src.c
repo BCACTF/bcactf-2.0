@@ -70,7 +70,9 @@ int main() {
             break;
         if (response[i] != correct[i])
             break;
-        
+
+        if (i == 0)
+            score = 1;
         if (i == 7 || i == 14 || i == 20 || i == 24)
             ++score;
     }
