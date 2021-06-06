@@ -18,6 +18,7 @@ int purchase(char *item, int cost) {
         } else {
             puts("Sorry, but you don't have enough money.");
             puts("Sucks to be you I guess.");
+            amount = 0;
         }
     } else {
         puts("I'm sorry, but we don't put up with pranksters.");
