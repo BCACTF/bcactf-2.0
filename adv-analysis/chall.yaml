@@ -14,11 +14,14 @@ hints:
   - You can't send anything after the honor pledge... or could you sneak something in?
   - What characters will `gets` read up to? What characters will `strcmp` read up to?
   - No free function addresses here! This is the advanced class, google it yourself.
+deploy:
+  nc:
+    build: .
+    expose: 9999
 files:
   - src: src.c
     name: adv-analysis.c
   - src: adv-analysis
-    ignore_missing: true
+    container: nc
 authors:
   - Edward Feng
-# TODO: deployment
