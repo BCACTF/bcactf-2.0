@@ -18,11 +18,14 @@ hints:
   - If you did your ABCs, you should at least see the vulnerability.
   - You can't change your grades anymore, but what else can you overwrite to cheat?
   - Functions, eh? Pass stuff in, get stuff out, simple enough. But how do computers see them?
+deploy:
+  nc:
+    build: .
+    expose: 9999
 files:
   - src: src.c
     name: analysis.c
   - src: analysis
-    ignore_missing: true
+    container: nc
 authors:
   - Edward Feng
-# TODO: deployment
