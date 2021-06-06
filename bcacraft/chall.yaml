@@ -1,0 +1,15 @@
+name: "BCACraft 2.0"
+categories:
+  - foren
+value: 275
+flag: bcactf{MINE_DIAAAMOOONNDDSSS!!_rj57tf-58459423485584JU689JUf}
+description: |-
+  Check out my Minecraft world! The flag is conveniently located in a barrel block. If you can find it, of course...
+hints:
+  - "Better get familiar with this wiki article: https://minecraft.fandom.com/wiki/Chunk_format"
+  - "https://github.com/jaquadro/NBTExplorer/releases or https://pypi.org/project/anvil-parser/"
+files:
+  - src: bcacraft.tar.gz 
+authors:
+  - anli
+visible: true 
