@@ -18,4 +18,4 @@ files:
   - src: wires.zip 
 authors:
   - Michael Kasprzak
-visible: false
+visible: true
