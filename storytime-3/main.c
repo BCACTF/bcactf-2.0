@@ -45,10 +45,6 @@ int flag_UwU() {
     puts("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 }
 
-int flag_IoI() {
-    puts("DG fwl wgt yhch izzrozW");
-}
-
 int _flag_XvX() {
     puts("iknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnerves");
     puts("iknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnervesiknowasongthatgetsoneverybodysnerves");
@@ -195,12 +191,11 @@ int FUN_2302136(int a, int b, int c, int d, int e, int f, int g, int h, int j, i
     time_t now = time(NULL);
     struct tm *tm_struct = localtime(&now);
 
-    int hour = tm_struct->tm_hour;
     int minute = tm_struct->tm_min;
 
     for (int i = 0; i < 0x22; i++)
     {
-        flag[i] = (char)((nums[i] >> minute) + hour - (i * minute));
+        flag[i] = (char)((nums[i] >> minute) + 21 - (i * minute));
     }
 
     printf("%s\n", flag);
@@ -208,6 +203,8 @@ int FUN_2302136(int a, int b, int c, int d, int e, int f, int g, int h, int j, i
 
 int main()
 {
+    FUN_2302136(0x1d3, 0x208, 0x186, 0x1c4, 0x1cb, 0x1aa, 0xb3, 0x205, 0x101, 0x15f, 0x109, 0x1bf, 0x185, 0x21a, 0xe7, 0x23f, 0x16d, 0x2aa, 0xd2, 0x1b8, 0x14a, 0x185, 0x151, 0x1fe, 0x22a, 0x142, 0x135, 0x19f, 0x191, 0x143, 0x23e, 0x12a, 0x1ff, 0x18d);
+
     int lines = 4;
     char *lyrics[50] =
         {"I know a song that gets on everybody's nerves,",
