@@ -1,0 +1,18 @@
+name: Stargazing
+categories:
+  - foren
+value: 250
+flag: bcactf{I_LVE_ASTRLGY}
+description: |-
+  My friend and I went stargazing and he started coming up with all these new constellations of animals.
+  I personally didn't see anything, just looked like a bunch of points to me.
+  Although, I might have noticed a message in those stars.
+
+  Once you get the message, seperate words with an `_` and wrap in `bcactf{...}` in order to submit the flag.
+hints:
+  - All the letters in the message have the same case
+files:
+  - src: constellations.txt
+authors:
+  - MichaelK522
+visible: true
