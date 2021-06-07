@@ -55,7 +55,7 @@ Here are the steps:
 1. Friends A and B both launch FNES 3
 2. A and B follow the instructions to generate a shared secret
 3. A and B can now pass messages back and forth as normal
-No more unencryptable characters, but you need to make sure to 
+No more unencryptable characters, but you need to make sure to
 not make any mistakes or your keystreams can come out of sync.
 """)
 
@@ -91,8 +91,6 @@ elif (l == "B"):
 else:
     print("That's not A or B!")
     exit()
-    
-random.seed(10206173483832403717938242612204319869105 + 3154576072676174317143633891076787305807)
 
 while True:
     print("Would you like to encrypt (E), decrypt (D), or quit (Q)?")
