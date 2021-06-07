@@ -70,7 +70,7 @@ elif (l == "A"):
     if (A[2]):
         print("That didn't work. Try again with a different key.")
         exit()
-    print(f"Your public key is {A[:2]}. \nSend this to B. \nWhat is their public key?")
+    print(f"Your public key is x={A[0]}, y={A[1]}. \nSend this to B. \nWhat is their public key?")
     B = (int(input(">>> x = ").strip()), int(input(">>> y = ").strip()), False)
     S = mulp(B, aa)
     random.seed(S[0] + S[1])
@@ -86,7 +86,7 @@ elif (l == "B"):
     B = (int(input(">>> x = ").strip()), int(input(">>> y = ").strip()), False)
     S = mulp(B, aa)
     random.seed(S[0] + S[1])
-    print(f"Your public key is {A[:2]}. \nSend this to A.")
+    print(f"Your public key is x={A[0]}, y={A[1]}. \nSend this to A.")
     print("Seeding complete.")
 else:
     print("That's not A or B!")
