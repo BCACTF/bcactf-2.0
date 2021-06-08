@@ -31,7 +31,7 @@ There's only one catch: you can only receive the trace of the resulting matrices
 """)
 
 while True:
-	print("Would you like to print the traces of your stored matrices (P), multiply two matrices (M), \nmultiply a matrix by a constant (C), take a matrix power (X), or quit (Q)?")
+	print("Would you like to print the traces of your stored matrices (P), add two matrices (A), \nmultiply two matrices (M), multiply a matrix by a constant (C), take a matrix power (X), or quit (Q)?")
 	try:
 		l = input(">>> ").strip().upper()
 		if (len(l) > 1):
@@ -43,6 +43,21 @@ while True:
 			print("Here the traces of your matrices:")
 			for k in mats:
 				print(k + ": " + str(mats[k].trace())	)
+		elif (l == "A"):
+			print("What is the name of the first matrix you would like to add?")
+			A = input(">>> ").strip()
+			print("What is the name of the second matrix you would like to add?")
+			B = input(">>> ").strip()
+			C = mats[A]+mats[B]
+			print("The trace of their sum is: " + str(C.trace()))
+			print("Would you like to save this matrix? (Y/N)")
+			I = input(">>> ").strip().upper()
+			if I == "N":
+				continue
+			print("What would you like the name of the matrix to be?")
+			N = input(">>> ").strip()
+			mats[N] = C
+			print("Matrix saved.")
 		elif (l == "M"):
 			print("What is the name of the first matrix you would like to multiply?")
 			A = input(">>> ").strip()
