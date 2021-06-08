@@ -1,0 +1,17 @@
+name: RSAtrix 3
+categories:
+  - crypto
+value: 300
+flag: 
+  file: ./flag.txt
+description: |-
+  We've concluded that all our problems are the result of you whippersnappers having too much information at your disposal. As a result, we've stored the encoded message in a secret vault in this beta run. Enjoy the calculator demo!
+hints:
+  - Make sure to read the hints from the previous RSAtrix problems, since you might not have found the intended solution...
+  - Using the techniques from the previous problems, you need to manipulate the matrix into a form where the trace is useful. 
+files:
+  - src: rt3.sage
+authors:
+  - eiis1000
+  - MichaelK522
+visible: true
