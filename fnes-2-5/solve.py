@@ -15,7 +15,7 @@ with open("flag.txt", "r") as f:
 with open("key.txt", "r") as f:
     key = int(f.read().strip())
 """
-target_query = "k\",\"admin\":true}"
+target_query = b"\",\"admin\":true}"
 key = 1234
 
 print("""
@@ -38,6 +38,7 @@ hrq = b'44db9805bc07be2dcf63c52889b59b256e395ea456d8cf405f8d2957bb5759d6b4c8e16f
 def decrypt(I):
     r = requests.get("http://ed.ward.li:5000/", cookies={"enterprise-grade-token":I.decode("ascii")})
     if r.status_code != 500:
+        print(
         print(r.status_code)
     if r.status_code > 400:
         return -1
@@ -57,7 +58,7 @@ def TD(I):
 
 
 """ # modified not actually true anymore
->>> nn = int(binascii.hexlify(pad(b'Open sesame... Flag please!',16)[:16]),16)
+>>> nn = int(binascii.hexlify(pad(target_query,16)[:16]),16)
 144062367998332532977264151438989526277
 >>> oo = int('10'*16,16)
 >>> mm = int('1331358226112515603a80f4b23f38ee',16)
