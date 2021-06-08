@@ -6,10 +6,11 @@ flag:
   file: ./flag.txt
 description: |-
   Here's some enciphered text. Find the flag.
+  
+  Note: The flag is all-lowercase.
 hints:
   - The characters are all the same... or are they?
   - How many different characters are there?
-  - Those repeating characters look interesting...
 files:
   - src: ciphertext.md
 authors:
