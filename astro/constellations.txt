@@ -15,18 +15,16 @@ Constellation 2: The Tasteful Sheep
 
 Constellation 3: The Solid Colt
 
-1: 	ι Dra	
-2: 	HIP 76568 	
-3: 	θ Boo	
+1: 	θ Dra	
+2: 	DQ Dra	
+3: 	HIP 79255	
+4: 	HIP 76598	
 
 Constellation 4: The Free Cougar
 
-1: 	λ Boo	
-2: 	33 Boo	
-3: 	HIP 69350
-	
-2: 	33 Boo	
-4: 	γ Boo	
+1: 	ι Dra	
+2: 	HIP 76568 	
+3: 	θ Boo	
 
 Constellation 5: The Ossified Doe
 
@@ -66,11 +64,11 @@ Constellation 9: The Innocent Coati
 
 Constellation 10: The Quarrelsome Lemur
 
-1: 	θ UMa	
-2: 	10 UMa	
-3: 	31 Lyn	
-4: 	10 UMa	
-5: 	31 Lyn	
+1: 	18 Lyn	
+2: 	HIP 37701 	 
+3: 	HIP 35136	 
+4: 	HIP 33085 	 
+5: 	UY Lyn	
 
 Constellation 11: The Ugly Turtle
 
