@@ -1,5 +1,5 @@
 name: Digitally Encrypted 3
-category: 
+categories: 
  - rev
  - crypto
 value: 425
@@ -12,7 +12,6 @@ description: |-
   - Gerald thinks its spelled "cypher". Gerald thinks its spelled "cipher". And Gerald agrees with Gerald.
   - Gerald is content with winning the debate. All this talk reminds him about his old encryption circuits.
   - He decides he'll try making a new and better one.
-hints:
 files:
   - src: circuit_3.dig
   - src: Block4.dig
