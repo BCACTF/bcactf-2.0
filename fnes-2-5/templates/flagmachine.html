@@ -13,7 +13,7 @@
 <body>
     <div class="container-fluid p-5">
         <p>{{message}}</p>
-        <p><a class="btn btn-primary" href="/">I Understand™</a></p>
+        {% if hidebutton %}{% else %}<p><a class="btn btn-primary" href="/">I Understand™</a></p>{% endif %}
     </div>
 </body>
 

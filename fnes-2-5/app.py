@@ -33,7 +33,10 @@ def decrypt(token: str):
 
 def check_token(token: str):
     contents = decrypt(token)
-    return loads(contents)
+    try:
+        return loads(contents)
+    except:
+        return None
 
 @app.route("/")
 def home():
@@ -41,6 +44,8 @@ def home():
     token = request.cookies.get("enterprise-grade-token")
     if token is not None:
         user = check_token(token)
+        if user is None:
+            return render_template("flagmachine.html", message="At Generic Enterprise™, We have Standards™. That's why we require all input Data™ to be strictly valid JSON.", hidebutton=True), 400
         return render_template("home.html", username=user["name"], is_admin=user["admin"])
     else:
         return render_template("home.html")
@@ -48,6 +53,7 @@ def home():
 @app.route("/login")
 def login():
     contents = dumps({"name": "Enterprise Vampire", "admin": False})
+    contents = "{"
     token = encrypt(contents)
     response = redirect("/", code=303)
     response.set_cookie("enterprise-grade-token", token)
@@ -63,8 +69,10 @@ def logout():
 def turn_flagmachine_on():
     token = request.cookies.get("enterprise-grade-token")
     if token is None:
-        return render_template("flagmachine.html", message="At Generic Enterprise™, We Care about Security and Privacy. That's why we require you to Authenticate™ first before modifying any Enterprise™ Industrial™-Grade Settings™.")
+        return render_template("flagmachine.html", message="At Generic Enterprise™, We Care about Security and Privacy. That's why we require you to Authenticate™ first before modifying any Enterprise™ Industrial™-Grade Settings™."), 401
     user = check_token(token)
+    if user is None:
+        return render_template("flagmachine.html", message="At Generic Enterprise™, We have Standards™. That's why we require all input Data™ to be strictly valid JSON."), 400
     if user["admin"]:
         return render_template("flagmachine.html", message=flag)
     else:
