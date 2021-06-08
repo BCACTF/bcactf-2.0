@@ -1,4 +1,4 @@
-name: This is just a bunch of numbers
+name: Cable Castaways
 categories: 
  - foren
 value: 225
@@ -7,12 +7,15 @@ flag: bcactf{I_MiSs_Vga_iT_wAs_PrettY_cooL_ig}
 # flag:
 #   file: ./flag.txt
 description: |-
-  - Our spies believe that a flag was being transferred and were able to tap the communication.
-  - Can you find the flag that was transmitted?
+    In today's backyard adventure, we found a cable running through the bushes! 
+    We followed it as far as we could, but after half a mile it seemed to go underground. 
+    Removing the wire's protective casing revealed 5 labeled wires, 3 of which were colored and all of which had a single letter.
+    Thanks to generous Nick Jr. funding we bought an 8-channel oscilloscope and probed all the wires. Can you help us figure out what was sent?
 hints:
-  - What kind of information could this be?
+  - The colors were red, green, and blue, which matched the letters r, g, b.
+  - What is RGBHV?
 files:
-  - src: streams.zip 
+  - src: wires.zip 
 authors:
   - Michael Kasprzak
-visible: false
+visible: true
