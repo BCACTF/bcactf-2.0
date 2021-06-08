@@ -81,8 +81,8 @@ b'4c5140fc167250761147f5ca8c0108b8dee784a384e65433932fd3b6b88af257' + b'0'*32
 
 
 
-def brk():
-    c = hrq[:32] + b'1'*32 + b'0'#*32 + b'0'
+def brk(inp):
+    c = hrq[:32] + b'0'*32 +str(inp).encode("utf-8")*32 + b'0'
     for i in range(16):
         print(i+1)
         ret = -1
@@ -91,7 +91,7 @@ def brk():
             if k == 256:
                 print("failed")
                 return -1
-            print((c[-65:-33],binascii.hexlify(TD(c[:-1]))))
+            print((c[-65:-33],binascii.hexlify(TD(c[:-1]))), end="\r")
             ret = decrypt(c[:-1])
             if ret == -1:
                 t = c[-3 + -2*i:-2 + -2*i] + c[-2 + -2*i:-1 + -2*i]
@@ -118,4 +118,4 @@ def brk():
                 break
     return c, decrypt(c[:-1])
 
-brk()
+brk(0)
