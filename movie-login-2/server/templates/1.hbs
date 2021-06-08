@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../server.js"></script>
+    <!--fix title add a better one-->
+    <title>Higher-Tech Login Page</title>
+
+    <style>
+        body{
+            background-color: #d6d6d6;
+        }
+
+        .container{
+            max-width: 30%;
+            min-height: 50%;
+            background-color: aliceblue;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        html, body, .main-container{
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class = "valign-wrapper main-container" style="text-align: center;">
+    <div class = "container">
+        <div class = "row" id = "flyerwords">
+            <h4>Upcoming Flyers...</h4>
+        </div>
+
+<!--    TODO: ADD IMAGE HERE OF FLYER       -->
+        <div class = "row">
+            <img src = "images/poster.png" alt="What">
+        </div>
+        <div class = "row">
+            <h6 style="text-align: center">Don't tell me you found this again...</h6>
+        </div>
+        <div class = "row">
+            <p style="text-align: center">{{flag}}</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
