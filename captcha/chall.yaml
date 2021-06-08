@@ -1,0 +1,24 @@
+name: 1Captcha
+categories:
+  - misc
+tags:
+  - webex
+  - foren
+value: 300
+flag: "bcactf{synthetic_cdo_returns_111l1l1l1l1l1l111l1ll11l1lll1l1l1l1llll1111lll1l1l1l1l}"
+description: |-
+  I'm tota1ly not a robot.
+hints:
+  - All you need to do is to solve the CAPTCHA.
+  - Try looking at their documentation.
+files:
+  -
+    src: server/pages/api/challenge.ts
+    name: challenge.ts
+authors:
+  - anli
+deploy:
+  web:
+    build: .
+    expose: 3000
+visible: true
