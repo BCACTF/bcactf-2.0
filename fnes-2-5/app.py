@@ -53,7 +53,6 @@ def home():
 @app.route("/login")
 def login():
     contents = dumps({"name": "Enterprise Vampire", "admin": False})
-    contents = "{"
     token = encrypt(contents)
     response = redirect("/", code=303)
     response.set_cookie("enterprise-grade-token", token)
