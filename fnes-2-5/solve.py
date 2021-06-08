@@ -36,9 +36,9 @@ tempkey = SHA.new(int(key).to_bytes(64, 'big')).digest()[0:16]
 hrq = b'44db9805bc07be2dcf63c52889b59b256e395ea456d8cf405f8d2957bb5759d6b4c8e16fc07f212b52b0157fc8808de4831adbf51a88e3997222fb38b4b3e939'
 
 def decrypt(I):
-    r = requests.get("http://ed.ward.li:5000/", cookies={"enterprise-grade-token":I.decode("ascii")})
+    r = requests.get("http://localhost:5000/", cookies={"enterprise-grade-token":I.decode("ascii")})
     if r.status_code != 500:
-        print(
+        print()
         print(r.status_code)
     if r.status_code > 400:
         return -1
