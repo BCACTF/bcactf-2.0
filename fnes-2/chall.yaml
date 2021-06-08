@@ -1,0 +1,22 @@
+name: FNES 2
+categories:
+  - crypto
+value: 350
+flag:
+  file: ./flag.txt
+description: |-
+    After FNES got cracked, my friend enlisted his ex-girlfriend
+    to help him improve his service. She majored in cryptography,
+    so it should theoretically be quite a bit better now. Unless
+    she installed a backdoor, that is...
+hints:
+  - I think his ex's name was Pythia...
+deploy:
+  nc:
+    build: .
+    expose: 9999
+files:
+  - src: fnes2.py
+authors:
+  - eiis1000
+visible: true
