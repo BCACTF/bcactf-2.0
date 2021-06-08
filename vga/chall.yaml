@@ -1,0 +1,21 @@
+name: Cable Castaways
+categories: 
+ - foren
+value: 225
+flag: bcactf{I_MiSs_Vga_iT_wAs_PrettY_cooL_ig}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+description: |-
+    In today's backyard adventure, we found a cable running through the bushes! 
+    We followed it as far as we could, but after half a mile it seemed to go underground. 
+    Removing the wire's protective casing revealed 5 labeled wires, 3 of which were colored and all of which had a single letter.
+    Thanks to generous Nick Jr. funding we bought an 8-channel oscilloscope and probed all the wires. Can you help us figure out what was sent?
+hints:
+  - The colors were red, green, and blue, which matched the letters r, g, b.
+  - What is RGBHV?
+files:
+  - src: wires.zip 
+authors:
+  - Michael Kasprzak
+visible: true
