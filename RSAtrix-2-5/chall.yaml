@@ -7,7 +7,7 @@ flag:
 description: |-
   We've concluded that all our problems are the result of you whippersnappers having too much information at your disposal. As a result, we've stored the encoded message in a secret vault in this beta run. Enjoy the calculator demo!
 hints:
-  - Make sure to read the hints from the previous RSAtrix problems, since you might not have found the intended solution...
+  - Make sure to read the hints from the previous RSAtrix problems; they're just as relevant now as they were before.
   - Using the techniques from the previous problems, you need to manipulate the matrix into a form where the trace is useful. 
 files:
   - src: rt3.sage
