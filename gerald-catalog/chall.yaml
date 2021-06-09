@@ -28,7 +28,7 @@ files:
   - src: server/register.hbs
   - src: server/server.ts
   - src: server/tsconfig.json
-deploy:
+deploy: # Must be deployed with HTTPS and host networking mode
   web:
     build: .
     expose: 1337
