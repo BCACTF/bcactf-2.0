@@ -1,5 +1,6 @@
 name: Movie-Login-2
-category: Webex
+categories:
+  - webex
 value: 150
 flag:
   bcactf{h0w_d1d_y0u_g3t_h3r3_th1s_t1m3?!?}
