@@ -1,0 +1,35 @@
+name: Gerald Catalog
+categories:
+  - webex
+value: 450
+flag:
+  file: ./server/flag.txt
+description: |-
+  Spotted a wild Gerald? Catalog them with the Official\* Gerald Catalog!
+
+  Use Firefox or a Chromium-based browser for the best experience!
+
+  \* *The statements given in this problem description should not be construed as an endorsement from Gerald, Gerard, Zsofia, or any related entities.
+hints:
+  - Ooh, the site has notifications! I wonder what that could mean...
+authors:
+  - anli
+files:
+  - src: server/add.hbs
+  - src: server/database.ts
+  - src: server/gerald.hbs
+  - src: server/gerald.PNG
+  - src: server/image.ts
+  - src: server/index.hbs
+  - src: server/login.hbs
+  - src: server/notify.ts
+  - src: server/package-lock.json
+  - src: server/package.json
+  - src: server/register.hbs
+  - src: server/server.ts
+  - src: server/tsconfig.json
+deploy: # Must be deployed with HTTPS and host networking mode
+  web:
+    build: .
+    expose: 1337
+visible: true
