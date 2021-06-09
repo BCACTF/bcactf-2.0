@@ -1,0 +1,24 @@
+name: AP ABCs
+categories:
+  - binex
+value: 100
+flag: bcactf{bca_is_taking_APs_in_june_aaaaaaaa_wish_past_me_luck}
+description: |-
+  Oh wow, they put a freshman in AP ABCs?
+  Never thought I'd see this happen.
+  Anyways, good luck, and make sure to not cheat on your AP test!
+hints:
+  - Decimal? Hex? What do those mean, and why should I care?
+  - How <del>exactly</del> ex[*ASCII*](https://en.wikipedia.org/wiki/ASCII) are characters stored, anyways?
+  - What is "endianness"? Is that like, the Ender Dragon or something?
+deploy:
+  nc:
+    build: .
+    expose: 9999
+files:
+  - src: src.c
+    name: ap-abcs.c
+  - src: ap-abcs
+    container: nc
+authors:
+  - Edward Feng
