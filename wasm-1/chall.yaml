@@ -1,6 +1,8 @@
 name: Wasm Protected Site 1
 categories:
   - webex
+tags:
+  - rev
 value: 100
 flag: bcactf{w4sm-m4g1c-xRz5}
 description: |-

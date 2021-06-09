@@ -1,7 +1,7 @@
 name: Stargazing
 categories:
   - foren
-value: 250
+value: 200
 flag: bcactf{I_LUV_ASTRLGY}
 description: |-
   My friend and I went stargazing and he started coming up with all these new constellations of animals.

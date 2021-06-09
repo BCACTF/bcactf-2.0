@@ -1,7 +1,7 @@
 name: Example Problem
 categories:
   - misc
-value: 50
+value: 25
 flag: bcactf{this_is_a_flag}
 # Alternatively:
 # flag:
@@ -13,15 +13,13 @@ description: |-
 
   Here is a separate paragraph.
   Wow!
+  
+  Take your flag: bcactf{this_is_a_flag}
 hints:
   - Have you tried turning it off and on again?
   - Have you tried forcing an unexpected reboot?
-files:
-  - src: file.txt
-  - src: a.txt
-    name: file2.txt # Optional display name
 authors:
   - John Doe
   - Jane Smith
-visible: false
+visible: true
 # TODO: deployment

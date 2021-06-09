@@ -3,7 +3,7 @@ categories:
   - crypto
 tags:
   - webex
-value: 400
+value: 425
 flag:
   file: ./flag.txt
 description: |-

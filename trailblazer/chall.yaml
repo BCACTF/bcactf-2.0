@@ -1,7 +1,7 @@
 name: Trailblazer
 categories:
   - rev
-value: 400
+value: 450
 flag: bcactf{now_thats_how_you_blaze_a_trail_9fd43x8}
 description: |-
   To boldly go where no one has gone before...

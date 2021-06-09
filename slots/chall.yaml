@@ -1,7 +1,7 @@
 name: "Welcome to the Casino"
 categories:
   - misc
-value: 100
+value: 125
 flag: bcactf{y0u_g0t_1ucKy_af23dd97g64n}
 description: |-
   Can you get three-of-a-kind on this slot machine? Let's find out!

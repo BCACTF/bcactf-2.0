@@ -1,7 +1,9 @@
 name: Digitally Encrypted 1
 categories:
+  - rev
+tags:
   - crypto
-value: 50
+value: 75
 flag: bcactf{that_was_pretty_simple1239152735}
 description: |-
   Gerald has just learned about this program called Digital which allows him to create circuits.

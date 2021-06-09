@@ -1,6 +1,8 @@
 name: Sailing Thru Decryption
 categories:
   - crypto
+tags:
+  - foren
 value: 75
 flag: bcactf{1s_h1s_n4me_g3r4rd?}
 description: |-

@@ -1,7 +1,7 @@
 name: Zstegosaurus
 categories:
   - foren
-value: 50
+value: 75
 flag: bcactf{h15_n@m3_i5nt_g3rard}
 description: |-
   My friend forgot our pet zstegosaurus's name.

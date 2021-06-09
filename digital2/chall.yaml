@@ -1,7 +1,9 @@
 name: Digitally Encrypted 2
 categories:
+  - rev
+tags:
   - crypto
-value: 200
+value: 150
 flag: bcactf{x0r5_4nD_NXoR5_aNd_NnX0r5_0r_xOr}
 description: |-
   Gerald and Gerald have just learned that Gerald has cracked their previous cypher.

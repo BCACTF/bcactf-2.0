@@ -1,7 +1,7 @@
 name: Wait, this isn't C 2 (The Sequel)
 categories:
   - rev
-value: 400
+value: 350
 flag: bcactf{m4tRlce5_aRe_co0l}
 description: |-
   Hmmmm, I hear this language is great for like matrices and stuff

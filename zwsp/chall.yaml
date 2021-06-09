@@ -1,7 +1,7 @@
 name: More than Meets the Eye
 categories:
   - foren
-value: 50
+value: 100
 flag: bcactf{z3r0_w1dth_jungl3_j82axH4}
 description: |-
   My friend just sent me this file, but it looks pretty empty. Are you able to see anything?
