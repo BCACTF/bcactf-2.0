@@ -10,6 +10,8 @@ files:
   - src: chall.zip
 authors:
   - akth3n3rd
+hints:
+  - A quick google search of "Free/Fast Zip password cracker" will help find the right command
 visible: true
 # Exploit: 
 #1. ``fcrackzip -b -D -p ~/rockyou.txt -u ./chall.zip ``
