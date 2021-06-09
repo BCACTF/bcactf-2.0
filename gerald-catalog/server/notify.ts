@@ -23,14 +23,14 @@ export function validateSubscription(data: unknown): Subscription | undefined {
     if (typeof keys.auth !== "string") return;
     if (typeof keys.p256dh !== "string") return;
 
-    /* try {
+    try {
         const url = new URL(subscription.endpoint);
         if (url.port !== "80" && url.port !== "443" && url.port !== "") return;
         if (bannedHosts.includes(url.host)) return;
         if (url.protocol !== "http:" && url.protocol !== "https:") return;
     } catch (e) {
         return;
-    } */
+    }
 
     return {endpoint: subscription.endpoint, keys: {auth: keys.auth, p256dh: keys.p256dh}};
 }
