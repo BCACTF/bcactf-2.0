@@ -1,8 +1,9 @@
 name: Digitally Encrypted 3
 categories: 
  - rev
+tags:
  - crypto
-value: 425
+value: 400
 flag: bcactf{w45nt_tHls_Fun_7423505843fauiehy}
 # Alternatively:
 # flag:
