@@ -17,7 +17,7 @@ export default function Index() {
         <div style={{ backgroundPosition: "center", backgroundSize: "cover", backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://upload.wikimedia.org/wikipedia/commons/5/51/Artificial_Intelligence%2C_AI.jpg)"}}>
             <Container className="py-5 text-white">
                 <h1>Introducing 1Captcha</h1>
-                <p>Traditional captchas are broken. It's time for a paradigm shift in captcha solving.</p>
+                <p>Traditional captchas are broken. It's time for a paradigm shift.</p>
                 <Link passHref href="/waitlist"><Button variant="dark">Join the waitlist</Button></Link>
             </Container>
         </div>
