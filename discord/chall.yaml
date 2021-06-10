@@ -1,0 +1,13 @@
+name: Obligatory Discord Problem
+categories:
+  - misc
+value: 25
+flag: "bcactf{is_too_sanity_checks_two_much?}"
+description: |-
+  Come join our Discord to hang out with other players! Plus you might even get a flag, who knows...
+
+  [https://bcactf.com/discord](https://bcactf.com/discord)
+authors:
+  - eiis1000
+  - anli
+visible: true
