@@ -1,0 +1,21 @@
+name: Gerald's New Job
+categories:
+  - foren
+value: 100
+flag: bcactf{g3rald_15_a_ma5ter_p01y1ot_0769348}
+description: |-
+  Being a secret agent didn't exactly work out for Gerald.
+  He's been training to become a translator for dinosaurs going on vacation, and he just got his traslator's licence. But 
+  when he sees it, it doesn't seem to belong to him... can you help him find his licence?
+hints:
+  - Gerald had to know a lot of languages to become a translator. He knows there's a word for that...
+files:
+  -
+    src: /image/flag.pdf
+    name: gerald.pdf
+authors:
+  - Zsofia Gordon
+
+#TODO: deploy
+#TODO: uwu
+
