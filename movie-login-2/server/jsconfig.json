@@ -8,6 +8,7 @@
         "module": "commonJS",
         "moduleResolution": "node",
         "strictNullChecks": true,
-        "lib": ["es2020"]
+        "lib": ["es2020"],
+        "resolveJsonModule": true
     }
 }
