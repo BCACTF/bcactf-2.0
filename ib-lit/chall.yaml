@@ -1,7 +1,7 @@
 name: IB Literature
 categories:
   - binex
-value: 100
+value: 200
 flag: bcactf{so_uhh_in_both_of_these_texts_uhh_the_authors_talk_about_umm_society_uh_yeah}
 description: |-
   IB.

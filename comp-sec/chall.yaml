@@ -1,7 +1,7 @@
 name: Computer Security
 categories:
   - binex
-value: 100
+value: 300
 flag:
   file: ./flag.txt
 description: |-
