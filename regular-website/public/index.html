@@ -29,6 +29,7 @@
             background-image: linear-gradient(135deg, red, orange, yellow, green, blue, purple);
             font-weight: 800;
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             animation-name: fancy-title;
             animation-duration: 3s;
@@ -97,8 +98,8 @@
         <h1 class="text-center mb-3">A Regular Website</h1>
         <p>And here's some content. Isn't this site amazing? The other day I took a walk around my house. It was quite the walk. There we go that's some content. Leave a comment if you liked it.</p>
         <form>
-            <textarea class="form-control" placeholder="Your comment"></textarea>
-            <input type="submit" class="btn btn-primary text-center" name="text" value="Submit comment" />
+            <textarea class="form-control" placeholder="Your comment" name="text"></textarea>
+            <input type="submit" class="btn btn-primary text-center" value="Submit comment" />
         </form>
     </form>
 </body>

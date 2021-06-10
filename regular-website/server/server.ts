@@ -26,7 +26,6 @@ router.post("/", async ctx => {
     }
 
     const sanitized = text.replace(/<[\s\S]*>/g, "XSS DETECTED!!!!!!");
-
     const page = await (await browser).newPage();
     await page.setJavaScriptEnabled(true);
     try {
