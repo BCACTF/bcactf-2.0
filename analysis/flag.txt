@@ -1,0 +1,1 @@
+bcactf{challenges_are_just_functions_mapping_from_coffee_to_points}
