@@ -1,0 +1,14 @@
+name: Easy RSA 2
+categories:
+  - crypto
+value: 75
+flag: bcactf{rsa_factoring}
+description: |-
+  Gerald's homework is getting trickier. He isn't getting the primes anymore. Help me find the plaintext
+authors:
+  - akth3n3rd
+hint:
+  - We love alpertron
+files:
+  - src: enc.txt
+visible: true
