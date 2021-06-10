@@ -11,4 +11,8 @@ hints:
   - What does the system pick up on?
 authors:
   - Yusuf
+files:
+  -
+    src: server/server.js
+    name: server.js
 visible: true
