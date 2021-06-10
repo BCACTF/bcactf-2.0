@@ -1,0 +1,29 @@
+name: Discrete Mathematics
+categories:
+  - binex
+value: 200
+flag:
+  file: ./flag.txt
+description: |-
+  BCA's top-level math track!
+  We have proofs, trig, parametric, polar, linear algebra, calculus, ...
+  You'll just have to demonstrate your skills before getting the flag.
+hints:
+  - You can't just jump to the flag function directly.
+  - What happens when you jump to some function? It runs that code. What happens when it returns?
+deploy:
+  nc:
+    build: .
+    expose: 9999
+files:
+  - src: src.c
+    name: discrete.c
+  - src: discrete
+    container: nc
+authors:
+  - Edward Feng
+
+# Answers:
+# logic: FFFT or TFTT
+# algebra: 3, -17, 12
+# functions: 2, -8, 6
