@@ -1,7 +1,7 @@
 name: Home Automation
 categories:
   - webex
-value: 100
+value: 75
 flag:
   file: ./server/flag.txt
 description: |-
