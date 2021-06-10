@@ -4,8 +4,9 @@ categories:
 value: 350
 flag: bcactf{m4tRlce5_aRe_co0l}
 description: |-
-  Hmmmm, I hear this language is great for like matrices and stuff
-  Maybe I could use that to check my flags
+  Hmmmm, I hear this language is great for like matrices and stuff... 
+
+  Maybe I could use that to check my flags...
 hints:
   - Try reading documentantion to see what unknown functions do.
 deploy:
