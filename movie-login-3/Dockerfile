@@ -2,7 +2,7 @@ FROM node:16
 
 # Copy package files
 WORKDIR /usr/src/app
-COPY server/pckage*.json ./server/
+COPY server/package*.json ./server/
 
 # Install dependencies
 WORKDIR /usr/src/app/server
@@ -18,4 +18,4 @@ RUN npm run build --if-present
 
 # Expose port and run server
 EXPOSE 54321
-CMD ["npm", "start"]a
+CMD ["npm", "start"]
