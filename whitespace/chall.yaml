@@ -2,9 +2,9 @@ name: Java Winter Wonderland
 categories:
   - foren
 value: 175
-flag: Gerald's hates the winter and can't wait for spring.
+flag: bcactf{its_whitespace_not_java_smh}
 description: |-
-  Gerald's hates the winter and can't wait for spring. Please help me find the flag in this java file for his Algorithms Class
+  Gerald hates the winter and can't wait for spring. Please help me find the flag in this Java file for his Algorithms Class.
 authors:
   - akth3n3rd
 hint:
