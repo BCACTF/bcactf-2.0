@@ -1,0 +1,81 @@
+The IB defines plagiarism “as the representation, intentionally or
+unintentionally, of the ideas, words or work of another person without proper,
+clear and explicit acknowledgment” (General regulations: Diploma Programme).
+This includes the use of translated materials. It is the most common form of
+student academic misconduct identified by or reported to the IB.
+
+Plagiarism is not a new phenomenon and occurred before large quantities of
+information from all over the world could be accessed via the internet. It is
+not always due to a devious behaviour. Students can plagiarize accidently
+because they ignore the referencing technicalities, although many people would
+respect any attempt to indicate an idea came from someone else. There are
+students who knowingly plagiarize content from others and some try to hide it
+through poor paraphrasing or word substitution.
+
+When plagiarism occurs in coursework or examinations, the validity of the
+assessment outcome is called into question, and widespread plagiarism will lead
+to a mistrust in results. To maintain high levels of confidence in any
+assessment system, all stakeholders participating in the teaching and learning
+journey of students should instruct them in the technical skills required to
+master referencing while understanding the need to be transparent in the way
+they have built any piece of work.
+
+Students need to understand how knowledge is constructed and to develop their
+own thinking while showing an honest behaviour by giving credit where credit is
+due. Technical skills of referencing are important and students should have the
+opportunity to master these techniques during their learning journey. But
+understanding the principle of academic integrity in any educational endeavour
+comes first.
+
+There are many reasons why students plagiarize.
+
+•Perceived lack of interest by their teachers; why should students invest their
+time in writing something that may not receive attention?
+
+•Poor or irrelevant tasks; students will not engage with a task if they do not
+see the connection with their learning or career goals.
+
+•Need to succeed; the imperative notion that high grades are expected for all
+tasks.
+
+•Lack of confidence in their abilities; students feel unprepared or incapable to
+meet the task requirements.
+
+•Poor time management; students may procrastinate in completing a task and
+choose to copy the work of others to produce something on time.
+
+•No fear of consequences; students may not care about being caught or may be
+willing to take the risk just to “beat the system”.
+
+Many educational institutions have acquired plagiarism detection software on the
+assumption that it will act as a deterrent and decrease plagiarism cases.
+However, these systems become redundant if the students truly understand what
+the purpose of their education is. Plagiarism detection software should not be a
+substitution for responsible and purposeful teaching.
+
+There is the belief among some scholars that the internet is exacerbating the
+problem of plagiarism due to the easy access to information. With a culture of
+“cut and paste” and blurred ownership lines it may be easy for students to
+assume that the information available on the internet is free to use without
+acknowledgment.
+
+However, plagiarism varies greatly and can stretch from word-for-word, or
+verbatim copying, to poor paraphrasing attempts through simple word
+substitution. Copying work is not restricted to published text on the internet
+or elsewhere, but can include the reuse of work submitted in past examination
+sessions by the same or other student(s) that might not be published. Copying
+pieces of art such as paintings and music is also considered plagiarism as is
+copying computer programming codes. Plagiarism even occurs when students
+memorize text and then reproduce it in written or oral examinations or when a
+source is translated and used in the target language of the assessment.
+
+The above is from:
+https://www.ibo.org/contentassets/76d2b6d4731f44ff800d0d06d371a892/academic-integrity-policy-english.pdf
+
+Again, what a lovely URL.
+
+Anways...
+
+Have a flag:
+
+bcactf{so_uhh_in_both_of_these_texts_uhh_the_authors_talk_about_umm_society_uh_yeah}
