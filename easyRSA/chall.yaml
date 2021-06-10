@@ -1,0 +1,12 @@
+name: Easy RSA
+categories:
+  - crypto
+value: 50
+flag: bcactf{RSA_IS_EASY_AFTER_ALL}
+description: |-
+  As part of his CTF101 class, Gerald needs to find the plaintext that his teacher encrypted. Can you help him do his homework. ( It's definetely not cheating ;) ) 
+authors:
+  - akth3n3rd
+files:
+  - src: enc.txt
+visible: true
