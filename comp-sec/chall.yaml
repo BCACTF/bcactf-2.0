@@ -1,0 +1,29 @@
+name: Computer Security
+categories:
+  - binex
+value: 100
+flag:
+  file: ./flag.txt
+description: |-
+  Hello to all the BCA students taking the Computer Security elective!
+  (And hello to all the other lovely faces out there as well!)
+
+  The compsec elective has been following *Hacking: TAOE*.
+  It's a pretty good book, but let's face it, Ubuntu 7.04 is pretty old.
+  So, I've changed it slightly and compiled it on a modern system!
+
+  The flag is located in a file called `flag.txt`.
+hints:
+  - You'll need to mix up the lessons from the english and math courses! Englath? Mish?
+  - There's no code here that opens the file. You'll need to supply that yourself.
+deploy:
+  nc:
+    build: .
+    expose: 9999
+files:
+  - src: src.c
+    name: notesearch.c
+  - src: notesearch
+    container: nc
+authors:
+  - Edward Feng
