@@ -1,5 +1,6 @@
 name: TODO #TODO: Can't think of one :(
-category: Forensics
+categories:
+  - foren
 value: 300
 flag: bcactf{h1d1ng_1n_5p4c35_2956F3ED}
 
