@@ -4,7 +4,9 @@ const path = require('path');
 const logger = require('morgan');
 const PORT = 54321;
 const sqlite = require('sqlite3').verbose();
+var banlist = require('./denylist.json');
 let db;
+
 
 function createDB(req, res) {
     // creates the in-memory db
@@ -34,10 +36,8 @@ function insertValues(req, res) {
             return console.log(err.message);
         }
         console.log('Inserted Properly');
-
-        let denylist = ["and", "1", "0", "true", "false", "/", "*", "=", "xor", "null", "is"];
-        for(var i = 0; i < denylist.length; i++){
-            if (req.body.Username.toLowerCase().includes(denylist[i]) || req.body.Password.toLowerCase().includes(denylist[i])){
+        for(var i = 0; i < banlist.length; i++){
+            if (req.body.Username.toLowerCase().includes(banlist[i]) || req.body.Password.toLowerCase().includes(banlist[i])){
                 res.render('2', {injection : true});
                 return;
             }

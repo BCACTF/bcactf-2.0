@@ -7,7 +7,9 @@ description: |-
   I think the final addition to the Gerard series is coming out! I heard the last few movies got their poster leaked. I'm pretty sure they've increased their security, though. Could you help me find the poster again?
 hints:
   - Does there seem to be anything different about this problem?
-  - Are there any new keywords being detected?
+  - How can you get around the new keywords being detected?
+files:
+  - src: server/denylist.json
 authors:
   - Yusuf
 visible: false
