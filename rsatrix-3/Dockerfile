@@ -16,6 +16,7 @@ COPY rt3.sage .
 COPY flag.txt .
 
 RUN chown -R root:root /home/ctf
+RUN chown ctf:ctf /home/ctf
 RUN chmod +x rt3.sage
 
 USER ctf

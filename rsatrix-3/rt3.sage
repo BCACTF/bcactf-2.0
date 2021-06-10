@@ -1,3 +1,4 @@
+#!/usr/bin/env -S sage --nodotsage
 import binascii
 
 p = 2118785735523620955301512231868734231925640292462405499978976981762557161416662496081983014179663
@@ -28,80 +29,80 @@ Welcome to the RSAtrix demo calculator!
 Here, you can define matrix variables in terms of sums, products, or powers of matrices.
 You can also multiply a matrix by a constant.
 There's only one catch: you can only receive the trace of the resulting matrices!
-""")
+""", flush=True)
 
 while True:
-	print("Would you like to print the traces of your stored matrices (P), add two matrices (A), \nmultiply two matrices (M), multiply a matrix by a constant (C), take a matrix power (X), or quit (Q)?")
+	print("Would you like to print the traces of your stored matrices (P), add two matrices (A), \nmultiply two matrices (M), multiply a matrix by a constant (C), take a matrix power (X), or quit (Q)?", flush=True)
 	try:
 		l = input(">>> ").strip().upper()
 		if (len(l) > 1):
-			print("You inputted more than one character...")
+			print("You inputted more than one character...", flush=True)
 		elif (l == "Q"):
-			print("We hope you enjoyed!")
+			print("We hope you enjoyed!", flush=True)
 			exit()
 		elif (l == "P"):
-			print("Here the traces of your matrices:")
+			print("Here the traces of your matrices:", flush=True)
 			for k in mats:
-				print(k + ": " + str(mats[k].trace())	)
+				print(k + ": " + str(mats[k].trace()), flush=True)
 		elif (l == "A"):
-			print("What is the name of the first matrix you would like to add?")
+			print("What is the name of the first matrix you would like to add?", flush=True)
 			A = input(">>> ").strip()
-			print("What is the name of the second matrix you would like to add?")
+			print("What is the name of the second matrix you would like to add?", flush=True)
 			B = input(">>> ").strip()
 			C = mats[A]+mats[B]
-			print("The trace of their sum is: " + str(C.trace()))
-			print("Would you like to save this matrix? (Y/N)")
+			print("The trace of their sum is: " + str(C.trace()), flush=True)
+			print("Would you like to save this matrix? (Y/N)", flush=True)
 			I = input(">>> ").strip().upper()
 			if I == "N":
 				continue
-			print("What would you like the name of the matrix to be?")
+			print("What would you like the name of the matrix to be?", flush=True)
 			N = input(">>> ").strip()
 			mats[N] = C
-			print("Matrix saved.")
+			print("Matrix saved.", flush=True)
 		elif (l == "M"):
-			print("What is the name of the first matrix you would like to multiply?")
+			print("What is the name of the first matrix you would like to multiply?", flush=True)
 			A = input(">>> ").strip()
-			print("What is the name of the second matrix you would like to multiply?")
+			print("What is the name of the second matrix you would like to multiply?", flush=True)
 			B = input(">>> ").strip()
 			C = mats[A]*mats[B]
-			print("The trace of their product is: " + str(C.trace()))
-			print("Would you like to save this matrix? (Y/N)")
+			print("The trace of their product is: " + str(C.trace()), flush=True)
+			print("Would you like to save this matrix? (Y/N)", flush=True)
 			I = input(">>> ").strip().upper()
 			if I == "N":
 				continue
-			print("What would you like the name of the matrix to be?")
+			print("What would you like the name of the matrix to be?", flush=True)
 			N = input(">>> ").strip()
 			mats[N] = C
-			print("Matrix saved.")
+			print("Matrix saved.", flush=True)
 		elif (l == "C"):
-			print("What is the name of the matrix you would like to multiply?")
+			print("What is the name of the matrix you would like to multiply?", flush=True)
 			A = input(">>> ").strip()
-			print("What is the value of the constant you would like to multiply it by?")
+			print("What is the value of the constant you would like to multiply it by?", flush=True)
 			B = int(input(">>> ").strip())
 			C = B * mats[A]
-			print("The trace of the product is: " + str(C.trace()))
-			print("Would you like to save this matrix? (Y/N)")
+			print("The trace of the product is: " + str(C.trace()), flush=True)
+			print("Would you like to save this matrix? (Y/N)", flush=True)
 			I = input(">>> ").strip().upper()
 			if I == "N":
 				continue
-			print("What would you like the name of the matrix to be?")
+			print("What would you like the name of the matrix to be?", flush=True)
 			N = input(">>> ").strip()
 			mats[N] = C
-			print("Matrix saved.")
+			print("Matrix saved.", flush=True)
 		elif (l == "X"):
-			print("What is the name of the matrix you would like to exponentiate?")
+			print("What is the name of the matrix you would like to exponentiate?", flush=True)
 			A = input(">>> ").strip()
-			print("What is the value of the exponent you would like to use?")
+			print("What is the value of the exponent you would like to use?", flush=True)
 			B = int(input(">>> ").strip())
 			C = mats[A]^B
-			print("The trace of the matrix power is is: " + str(C.trace()))
-			print("Would you like to save this matrix? (Y/N)")
+			print("The trace of the matrix power is is: " + str(C.trace()), flush=True)
+			print("Would you like to save this matrix? (Y/N)", flush=True)
 			I = input(">>> ").strip().upper()
 			if I == "N":
 				continue
-			print("What would you like the name of the matrix to be?")
+			print("What would you like the name of the matrix to be?", flush=True)
 			N = input(">>> ").strip()
 			mats[N] = C
-			print("Matrix saved.")
+			print("Matrix saved.", flush=True)
 	except:
-		print("Your input caused an error.")
+		print("Your input caused an error.", flush=True)

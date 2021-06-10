@@ -57,68 +57,68 @@ Here are the steps:
 3. A and B can now pass messages back and forth as normal
 No more unencryptable characters, but you need to make sure to
 not make any mistakes or your keystreams can come out of sync.
-""")
+""", flush=True)
 
-print("Are you friend A or friend B?")
+print("Are you friend A or friend B?", flush=True)
 l = input(">>> ").strip().upper()
 if (len(l) > 1):
-    print("You inputted more than one character...")
+    print("You inputted more than one character...", flush=True)
 elif (l == "A"):
-    print("Please enter a large random number to use as your secret key.")
+    print("Please enter a large random number to use as your secret key.", flush=True)
     aa = int(input(">>> ").strip())
     A = mulp(g, aa)
     if (A[2]):
-        print("That didn't work. Try again with a different key.")
+        print("That didn't work. Try again with a different key.", flush=True)
         exit()
-    print(f"Your public key is x={A[0]}, y={A[1]}. \nSend this to B. \nWhat is their public key?")
+    print(f"Your public key is x={A[0]}, y={A[1]}. \nSend this to B. \nWhat is their public key?", flush=True)
     B = (int(input(">>> x = ").strip()), int(input(">>> y = ").strip()), False)
     S = mulp(B, aa)
     random.seed(S[0] + S[1])
-    print("Seeding complete.")
+    print("Seeding complete.", flush=True)
 elif (l == "B"):
-    print("Please enter a large random number to use as your secret key.")
+    print("Please enter a large random number to use as your secret key.", flush=True)
     aa = int(input(">>> ").strip())
     A = mulp(g, aa)
     if (A[2]):
-        print("That didn't work. Try again with a different key.")
+        print("That didn't work. Try again with a different key.", flush=True)
         exit()
-    print("What is A's public key?")
+    print("What is A's public key?", flush=True)
     B = (int(input(">>> x = ").strip()), int(input(">>> y = ").strip()), False)
     S = mulp(B, aa)
     random.seed(S[0] + S[1])
-    print(f"Your public key is x={A[0]}, y={A[1]}. \nSend this to A.")
-    print("Seeding complete.")
+    print(f"Your public key is x={A[0]}, y={A[1]}. \nSend this to A.", flush=True)
+    print("Seeding complete.", flush=True)
 else:
-    print("That's not A or B!")
+    print("That's not A or B!", flush=True)
     exit()
 
 while True:
-    print("Would you like to encrypt (E), decrypt (D), or quit (Q)?")
+    print("Would you like to encrypt (E), decrypt (D), or quit (Q)?", flush=True)
     l = input(">>> ").strip().upper()
     if (len(l) > 1):
-        print("You inputted more than one character...")
+        print("You inputted more than one character...", flush=True)
     elif (l == "Q"):
-        print("We hope you enjoyed!")
+        print("We hope you enjoyed!", flush=True)
         exit()
     elif (l == "E"):
-        print("What would you like to encrypt?")
+        print("What would you like to encrypt?", flush=True)
         I = str.encode(input(">>> ").strip())
-        print("Here's your message:")
+        print("Here's your message:", flush=True)
         i = int(binascii.hexlify(I), 16)
         i ^= random.getrandbits(len(I) * 8)
         i = hex(i)[2:]
         if len(i) % 2 == 1:
             i = '0' + i
-        print(i)
+        print(i, flush=True)
     elif (l == "D"):
-        print("What was the message?")
+        print("What was the message?", flush=True)
         I = input(">>> ").strip()
         try:
             m = int(I, 16)
             m ^= random.getrandbits(4 * len(I))
             m = str(binascii.unhexlify(hex(m)[2:]))[2:-1]
-            print("Here's the decoded message:")
-            print(m)
+            print("Here's the decoded message:", flush=True)
+            print(m, flush=True)
         except ValueError:
-            print("I can't read that!")
+            print("I can't read that!", flush=True)
 

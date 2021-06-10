@@ -25,6 +25,10 @@ void sleepNanos(int seconds, int nanos)
 
 int main()
 {
+    setbuf(stdout, NULL);
+    setbuf(stdin, NULL);
+    setbuf(stderr, NULL);
+
     srand(time(NULL));
     system("clear");
     // https://patorjk.com/software/taag/#p=display&f=Big%20Money-ne&t=Lucky%0ALotto
