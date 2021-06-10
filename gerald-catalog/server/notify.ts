@@ -26,7 +26,8 @@ export function validateSubscription(data: unknown): Subscription | undefined {
     try {
         const url = new URL(subscription.endpoint);
         if (url.port !== "80" && url.port !== "443" && url.port !== "") return;
-        if (bannedHosts.includes(url.host)) return;
+        if (bannedHosts.includes(url.hostname)) return;
+        if (url.host.includes(":")) return;
         if (url.protocol !== "http:" && url.protocol !== "https:") return;
     } catch (e) {
         return;
