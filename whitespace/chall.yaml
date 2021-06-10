@@ -10,6 +10,6 @@ authors:
 hint:
   - What category is this?
 files:
-  - src: AA.java
+  - src: Flag.java
 visible: true
 #exploit: stegsnow AA.java
