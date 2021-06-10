@@ -11,11 +11,10 @@ hints:
   - Gerald had to know a lot of languages to become a translator. He knows there's a word for that...
 files:
   -
-    src: /image/flag.pdf
+    src: image/flag.pdf
     name: gerald.pdf
 authors:
   - Zsofia Gordon
 
-#TODO: deploy
 #TODO: uwu
 
