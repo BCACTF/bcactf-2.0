@@ -1,0 +1,14 @@
+name: Snowy Java 
+categories:
+  - foren
+value: 175
+flag: Gerald's hates the winter and can't wait for spring.
+description: |-
+  Gerald's hates the winter and can't wait for spring. Besides help me find the flag in this java file for his Algorithms Class
+authors:
+  - akth3n3rd
+hint:
+  - What category is this?
+files:
+  - src: B.java
+visible: true
