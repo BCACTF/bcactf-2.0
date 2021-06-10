@@ -1,4 +1,4 @@
-name: Snowy Java 
+name: Java Winter Wonderland
 categories:
   - foren
 value: 175
@@ -12,3 +12,4 @@ hint:
 files:
   - src: B.java
 visible: true
+#exploit: stegsnow -C B.java
