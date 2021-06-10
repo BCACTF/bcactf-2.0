@@ -18,4 +18,5 @@ files:
   - src: verify.py
 authors:
   - anli
+  - Edward Feng
 visible: true
