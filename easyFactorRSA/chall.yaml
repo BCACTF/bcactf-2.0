@@ -1,14 +1,14 @@
-name: Easy RSA 2
+name: Slightly Harder RSA
 categories:
   - crypto
 value: 75
 flag: bcactf{rsa_factoring}
 description: |-
-  Gerald's homework is getting trickier. He isn't getting the primes anymore. Help me find the plaintext
+  Gerald's homework is getting trickier. He isn't being given the primes anymore. Help him find the plaintext!
 authors:
   - akth3n3rd
 hint:
-  - We love alpertron
+  - We love Alpertron!
 files:
   - src: enc.txt
 visible: true
