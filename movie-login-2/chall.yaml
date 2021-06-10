@@ -11,6 +11,4 @@ hints:
   - What does the system pick up on?
 authors:
   - Yusuf
-visible: false
-
-# TODO: Deployment
+visible: true
