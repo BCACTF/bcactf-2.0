@@ -29,8 +29,8 @@ int main() {
 		fatal("in main() while opening file for reading");
 
 	printf("Searching for: \"");
-    printf(searchstring);
-    printf("\":\n");
+	printf(searchstring);
+	printf("\":\n");
     
 	while(printing)
 		printing = print_notes(fd, userid, searchstring);
