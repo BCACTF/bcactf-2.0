@@ -1,0 +1,26 @@
+name: IB Literature
+categories:
+  - binex
+value: 100
+flag: bcactf{so_uhh_in_both_of_these_texts_uhh_the_authors_talk_about_umm_society_uh_yeah}
+description: |-
+  IB.
+
+  Because the AP curriculum is not hard enough for BCA.
+
+  Well, what are you waiting for?
+  That IO ain't going to speak itself!
+hints:
+  - What was the exploit in the Amer Lit challenge?
+  - What can `printf` do? Actually, more than you might think!
+deploy:
+  nc:
+    build: .
+    expose: 9999
+files:
+  - src: src.c
+    name: ib-lit.c
+  - src: ib-lit
+    container: nc
+authors:
+  - Edward Feng
