@@ -4,12 +4,12 @@ categories:
 value: 175
 flag: bcactf{its_whitespace_not_java_smh}
 description: |-
-  Gerald hates the winter and can't wait for spring. Please help me find the flag in this Java file for his Algorithms Class.
+  Gerald the stegosaurus hates the snowy winter, and can't wait for spring. Please help me find the flag in this Java file for his Algorithms Class.
 authors:
   - akth3n3rd
 hint:
   - What category is this?
 files:
-  - src: B.java
+  - src: AA.java
 visible: true
-#exploit: stegsnow -C B.java
+#exploit: stegsnow AA.java
