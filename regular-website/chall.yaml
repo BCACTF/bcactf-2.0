@@ -1,0 +1,24 @@
+name: Regular Website
+categories:
+  - webex
+value: 200
+flag:
+  file: ./server/flag.txt
+description: |-
+  They said you couldn't [parse HTML with regex](https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454). So that's exactly what I did!
+hints:
+  - How is the site sanitizing your input?
+files:
+  -
+    src: server/package.json
+    name: package.json
+  -
+    src: server/server.ts
+    name: server.ts
+authors:
+  - anli
+deploy:
+  web:
+    build: .
+    expose: 1337
+visible: true
