@@ -1,0 +1,27 @@
+name: American Literature
+categories:
+  - binex
+value: 100
+flag:
+  file: ./flag.txt
+description: |-
+  Writing essays is so much fun!
+  Watch me write all these totally meaningful words about other words...
+  Actually, wait.
+  You shouldn't be reading my essays.
+  Shoo!
+hints:
+  - What's the difference between `puts` and `printf`?
+  - All the program does is print what you wrote back at you... right?
+  - The flag is on the stack. What else is the stack used for?
+deploy:
+  nc:
+    build: .
+    expose: 9999
+files:
+  - src: src.c
+    name: amer-lit.c
+  - src: amer-lit
+    container: nc
+authors:
+  - Edward Feng
