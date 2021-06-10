@@ -1,0 +1,18 @@
+name: Rainbow Passage
+categories:
+  - crypto
+tags:
+  - rev
+value: 225
+flag: bcactf{system-of-linear-equations-273de}
+description: |-
+  I'm pretty sure my friend has been communicating with the trickster god by beaming encrypted message at rainbows every time it rains. I've intercepted one of his messages along with its plaintext; can you help me figure out the password he uses so I can talk to the shape shifter myself?
+  
+  To get the flag, wrap the password in `bcactf{...}`.
+hints:
+  - What is linear independence?
+files:
+  - src: rp.py
+authors:
+  - eiis1000
+visible: true
