@@ -3,7 +3,7 @@ import { URL } from "url";
 import fetch from 'node-fetch';
 import { generateRequestDetails, setVapidDetails } from 'web-push';
 
-let bannedHosts = ["localhost", "127.0.0.1", "::1", "host.docker.internal"]
+let bannedHosts = ["localhost", "host.docker.internal"]
 if (process.env.BANNED_HOSTS) {
     bannedHosts = bannedHosts.concat(process.env.BANNED_HOSTS.split(","));
 }
@@ -28,6 +28,9 @@ export function validateSubscription(data: unknown): Subscription | undefined {
         if (url.port !== "80" && url.port !== "443" && url.port !== "") return;
         if (bannedHosts.includes(url.hostname)) return;
         if (url.host.includes(":")) return;
+        if (url.host.includes("bcactf.com")) return;
+        if (url.host.includes("192.168.")) return;
+        if (url.hostname.startsWith("127.")) return;
         if (url.protocol !== "http:" && url.protocol !== "https:") return;
     } catch (e) {
         return;
