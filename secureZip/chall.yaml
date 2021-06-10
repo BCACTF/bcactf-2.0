@@ -1,0 +1,20 @@
+name: Secure Zip
+categories: 
+  - foren
+value: 100
+flag: bcactf{cr4ck1ng_z1p_p455w0rd5_15_fun_a12ca37bdacef7}
+
+description: |-
+  Gerald lost his homework in this zip file. He needs to extract his homework or else he fails CTF101.
+
+files:
+  - src: chall.zip
+authors:
+  - akth3n3rd
+hints:
+  - A quick google search of "Free/Fast Zip password cracker" will help find the right command
+  - Gerald loves listening to the song that goes "we will, we will".
+visible: true
+# Exploit: 
+#1. ``fcrackzip -b -D -p ~/rockyou.txt -u ./chall.zip ``
+#2. ``unzip -P "dogedoge" ./chall.zip
