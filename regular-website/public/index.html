@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Just a Regular Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+        @keyframes skeumorphism {
+            0% {
+                filter: blur(30px);
+            }
+
+            40% {
+                filter: blur(0);
+            }
+
+            60% {
+                filter: blur(0);
+            }
+
+            100% {
+                filter: blur(30px);
+            }
+        }
+
+        h1 {
+            background-image: linear-gradient(135deg, red, orange, yellow, green, blue, purple);
+            font-weight: 800;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation-name: fancy-title;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            font-family: cursive;
+        }
+
+        @keyframes fancy-title {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        body {
+            background-image: linear-gradient(135deg, red, orange, yellow, green, blue, purple);
+            background-repeat: no-repeat;
+            background-color: black;
+            animation-name: skeumorphism;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        .asbestos-free {
+            position: fixed;
+            color: black;
+            font-size: 100px;
+            font-weight: bold;
+            animation-name: small-brain;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes small-brain {
+            0% {
+                color: red;
+            }
+
+            33% {
+                color: lime;
+            }
+
+            67% {
+                color: blue;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+    </style>
+</head>
+
+<body class="w-100 h-100">
+    <p class="asbestos-free">asbestos-free!</p>
+    <form method="post" class="container my-5 bg-white rounded py-3 shadow" style="transform: rotate(3deg)">
+        <h1 class="text-center mb-3">A Regular Website</h1>
+        <p>And here's some content. Isn't this site amazing? The other day I took a walk around my house. It was quite the walk. There we go that's some content. Leave a comment if you liked it.</p>
+        <form>
+            <textarea class="form-control" placeholder="Your comment"></textarea>
+            <input type="submit" class="btn btn-primary text-center" name="text" value="Submit comment" />
+        </form>
+    </form>
+</body>
+
+</html>
