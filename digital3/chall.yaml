@@ -9,10 +9,10 @@ flag: bcactf{w45nt_tHls_Fun_7423505843fauiehy}
 # flag:
 #   file: ./flag.txt
 description: |-
-  - Gerald, Gerald, and Gerald are arguing on how to spell a word.
-  - Gerald thinks its spelled "cypher". Gerald thinks its spelled "cipher". And Gerald agrees with Gerald.
-  - Gerald is content with winning the debate. All this talk reminds him about his old encryption circuits.
-  - He decides he'll try making a new and better one.
+  Gerald, Gerald, and Gerald are arguing on how to spell a word.
+  Gerald thinks its spelled "cypher". Gerald thinks its spelled "cipher". And Gerald agrees with Gerald.
+  Gerald is content with winning the debate. All this talk reminds him about his old encryption circuits.
+  He decides he'll try making a new and better one.
 files:
   - src: circuit_3.dig
   - src: Block4.dig

@@ -5,7 +5,9 @@ value: 150
 flag: bcactf{f0rtr4N_i5_c0oO0l}
 description: |-
   This just looks like a binary...
+
   Lets try to decompile it...
+
   Wait, this isn't C...
 hints:
   - What is the original language, maybe look into that language?
