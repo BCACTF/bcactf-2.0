@@ -20,7 +20,6 @@ void logic() {
     scanf("%d", &s);
     
     knows_logic = (p || q || !r) && (!p || r || !s) && (q != s) && s;
-    // FFFT or TFTT
 }
 
 void algebra() {
@@ -38,7 +37,6 @@ void algebra() {
     int eq3 = 4*x + 8*y + 8*z;
 
     knows_algebra = (eq1 == 153) && (eq2 == -163) && (eq3 == -28);
-    // 3, -17, 12
 }
 
 void functions() {
@@ -56,7 +54,6 @@ void functions() {
     int discriminant = b * b - 4 * a * c;
 
     knows_functions = (vertex_x == 2) && (vertex_y == -2) && (discriminant == 16);
-    // 2, -8, 6
 }
 
 void quiz() {
