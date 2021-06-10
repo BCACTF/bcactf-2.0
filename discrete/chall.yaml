@@ -10,7 +10,7 @@ description: |-
   You'll just have to demonstrate your skills before getting the flag.
 hints:
   - You can't just jump to the flag function directly.
-  - What happens when you jump to some function? It runs that code. What happens when it returns?
+  - What happens when you jump to some function? It runs that code. What happens when *that* returns?
 deploy:
   nc:
     build: .
