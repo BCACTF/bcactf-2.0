@@ -11,6 +11,4 @@ hints:
   - Are there any new keywords being detected?
 authors:
   - Yusuf
-visible: false
-
-# TODO: Deployment
+visible: true 
