@@ -1,5 +1,6 @@
 name: Movie-Login-3
-category: Webex
+categories:
+  - webex
 value: 200
 flag:
   bcactf{gu3ss_th3r3s_n0_st0pp1ng_y0u!}
@@ -12,6 +13,8 @@ files:
   - src: server/denylist.json
 authors:
   - Yusuf
-visible: false
-
-# TODO: Deployment
+deploy:
+  web:
+    build: .
+    expose: 54321
+visible: true 
