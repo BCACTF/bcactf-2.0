@@ -29,11 +29,19 @@ for t, u in zip(m2, e2):
 
 VS = V.span_of_basis(T)
 
-# here's getting the first two letters, because I'm too lazy to write general code:
+f = ''
+for ll in range(16):
+	v = [0]*16
+	v[ll] = 1
+	v = V(v)
+	c = VS.coordinates(v)
+	L = V([0]*16)
+	for i, ii in enumerate(c):
+		if ii == 1:
+			#print(i)
+			L = L + V(U[i])
+	L = list(L)
+	s = ''.join([''+str(i) for i in L])
+	f += chr(int(s[:8],2))
+	f += chr(int(s[8:],2))
 
-v = V([1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
-c = VS.coordinates(v) # has '1' at loc 1 and 8
-L = list(V(U[1]) + V(U[8]))
-s = ''.join([''+str(i) for i in L])
-chr(int(s[:8]) # s
-chr(int(s[8:]) # y
