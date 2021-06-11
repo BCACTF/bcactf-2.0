@@ -21,5 +21,6 @@ RUN npm run build --if-present
 
 # Expose port and run server
 ENV VAPID_PRIVATE_KEY=jbB5Tus4T0EFGgOkTk05E663DzaE7T7EYwf4vNRrR7A
+ENV NODE_TLS_REJECT_UNAUTHORIZED=0
 EXPOSE 1337
 CMD ["npm", "start"]
