@@ -20,8 +20,6 @@ with open("flag.txt", "r") as f:
     flag = f.read().strip().encode("ascii")
 m = int(binascii.hexlify(flag), 16)
 
-mats = {"I": MS.identity_matrix(), "G": G, "E": MS(encrypt(m))}
-
 async def handle_conn(reader, writer):
 	def print(text):
 		writer.write(text.encode() + b"\n")
@@ -30,6 +28,8 @@ async def handle_conn(reader, writer):
 		writer.write(b">>> ")
 		await writer.drain()
 		return (await reader.readline()).decode().strip()
+
+    mats = {"I": MS.identity_matrix(), "G": G, "E": MS(encrypt(m))}
 
 	print("""
 	Welcome to the *advanced* RSAtrix demo calculator! 
