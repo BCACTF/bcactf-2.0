@@ -8,12 +8,6 @@
 #include <unistd.h>
 #endif
 
-int generateNumber()
-{
-    // Make a number from 1 to 9
-    return (rand() % 9) + 1;
-}
-
 void sleepNanos(int seconds, int nanos)
 { // cross-platform sleep function
     // https://stackoverflow.com/questions/1157209/is-there-an-alternative-sleep-function-in-c-to-milliseconds
@@ -72,16 +66,16 @@ int main()
     system("clear");
     puts("Spinning...");
     sleepNanos(0, 500000000);
-    // Get three numbers ready
-    int first, second, third = 0;
+    // Get three letters ready
+    char first, second, third = ' ';
     // "Spin" three slots.
     // Having the ending \r fixes spacing issues and the extra closing brackets but makes the "spin" less pretty.
     for (int i = 0; i < 10000; i++)
     {
         if (i > 0)
             printf("\r           " /*\r*/);
-        first = generateNumber();
-        printf("[[[ %d ]]]", first);
+        first = alphabet[rand() % 26];
+        printf("[[[ %c ]]]", first);
         sleepNanos(0, 100);
     }
     puts("");
@@ -90,8 +84,8 @@ int main()
     {
         if (i > 0)
             printf("\r           " /*\r*/);
-        second = generateNumber();
-        printf("[[[ %d ]]]", second);
+        second = alphabet[rand() % 26];
+        printf("[[[ %c ]]]", second);
         sleepNanos(0, 100);
     }
     puts("");
@@ -100,13 +94,13 @@ int main()
     {
         if (i > 0)
             printf("\r           " /*\r*/);
-        third = generateNumber();
-        printf("[[[ %d ]]]", third);
+        third = alphabet[rand() % 26];
+        printf("[[[ %c ]]]", third);
         sleepNanos(0, 100);
     }
     puts("");
     sleepNanos(1, 0);
-    // If all the numbers match, print the flag.
+    // If all the letters match, print the flag.
     if (first == second && first == third)
     {
         puts("Congratulations! You won the grand prize!");
@@ -155,13 +149,13 @@ int main()
         sleepNanos(1, 500000000);
         // https://www.asciiart.eu/animals/reptiles/dinosaurs
         puts("");
-        puts("                            ");
-        puts("                        / `. ' \\");
-        puts("              ---.  <    > <    >---.");
+        puts("                         .       .");
+        puts("                        / `.   .' \\");
+        puts("                .---.  <    > <    >  .---.");
         puts("                |    \\  \\ - ~ ~ - /  /    |");
         puts("                 ~-..-~             ~-..-~");
         puts("             \\~~~\\.'                    `./~~~/");
-        puts(" -~~^-.    \\__/                        \\__/");
+        puts("   .-~~^-.    \\__/                        \\__/");
         puts(" .'  O    \\     /               /       \\  \\");
         puts("(_____,    `._.'               |         }  \\/~~~/");
         puts(" `----.          /       }     |        /    \\__/");
@@ -234,7 +228,7 @@ int main()
     else
     {
         puts("");
-        puts("You didn't win anything. Try matching more numbers next time!");
+        puts("You didn't win anything. Try matching more letters next time!");
     }
     puts("");
     sleepNanos(1, 500000000);
