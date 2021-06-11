@@ -113,6 +113,7 @@ router.get("/gerald/:id", async (ctx) => {
     const id: string = ctx.params.id;
     const gerald = db.getGerald(id);
     if (gerald) {
+        console.log(ctx.ip);
         if (gerald.copyrightClaim && ctx.ip !== "127.0.0.1" && ctx.ip !== "::1" && ctx.ip !== "::ffff:127.0.0.1") {
             ctx.throw(451, "Geralds with active copyright claims can only be viewed by an on-site administrator.");
         } else {

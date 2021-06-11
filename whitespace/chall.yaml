@@ -1,0 +1,15 @@
+name: Java Winter Wonderland
+categories:
+  - foren
+value: 175
+flag: bcactf{its_whitespace_not_java_smh}
+description: |-
+  Gerald the stegosaurus hates the snowy winter, and can't wait for spring. Please help me find the flag in this Java file for his Algorithms Class.
+authors:
+  - akth3n3rd
+hint:
+  - What category is this?
+files:
+  - src: Flag.java
+visible: true
+#exploit: stegsnow AA.java

@@ -8,7 +8,9 @@ description: |-
   It's that time of year again! Another movie is coming out, and I really want to get some insider information. I heard that you leaked the last movie poster, and I was wondering if you could do it again for me?  
 hints:
   - What steps are they taking to prevent an injection?
-  - What does the system pick up on?
+  - Check the denylist maybe?
+files:
+  - src: server/denylist.json
 authors:
   - Yusuf
 deploy:

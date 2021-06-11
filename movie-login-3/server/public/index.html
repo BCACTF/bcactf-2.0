@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../server.js"></script>
+    <!--fix title add a better one-->
+    <title>Even Higher-Tech Login Page</title>
+
+</head>
+<body>
+<div class = "valign-wrapper" id = "name">
+
+</div>
+<div class = "valign-wrapper input-container">
+    <div class = "container">
+        <div class = "row" id = "loginheader">
+            <h4>Login Page</h4>
+        </div>
+        <div class = "row">
+            <form class = "input-field col s4 push-s4" method="POST" action="/" id = "UsernameInput">
+                <div class = "row">
+                    <input name="Username" id="Username" type="text" class="validate">
+                    <label for="Username" style="color: black;">Username</label>
+                </div>
+                <div class = "row">
+                    <input name="Password" id="Password" type="password" class="validate">
+                    <label for="Password" style="color: black;">Password</label>
+                </div>
+                <div class = "row">
+                    <input type = "submit" value = "Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
