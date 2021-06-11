@@ -70,7 +70,7 @@ int main()
     char first, second, third = ' ';
     // "Spin" three slots.
     // Having the ending \r fixes spacing issues and the extra closing brackets but makes the "spin" less pretty.
-    for (int i = 0; i < 1000; i++)
+    for (int i = 0; i < 100; i++)
     {
         if (i > 0)
             printf("\r           " /*\r*/);
@@ -80,7 +80,7 @@ int main()
     }
     puts("");
     sleepNanos(0, 500000000);
-    for (int i = 0; i < 1000; i++)
+    for (int i = 0; i < 100; i++)
     {
         if (i > 0)
             printf("\r           " /*\r*/);
@@ -90,7 +90,7 @@ int main()
     }
     puts("");
     sleepNanos(0, 500000000);
-    for (int i = 0; i < 3000; i++)
+    for (int i = 0; i < 300; i++)
     {
         if (i > 0)
             printf("\r           " /*\r*/);
