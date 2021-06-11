@@ -43,7 +43,7 @@ m = int(binascii.hexlify(flag), 16)
 print("Encrypting...")
 mats = {"G" : G, "E" : MS(encrypt(m))}
 vals = {"e" : e, "d" : d}
-done = {"A" : False, "M" : False, "C" : False, "X" : False, "I" : False}
+done = {"A" : False, "M" : False, "C" : False, "X" : False, "U" : False, "N" : False, "T" : False}
 
 
 print("""
@@ -56,7 +56,7 @@ Also, d is secret now. Oops! We've added integer operations to compensate.
 print(f"n = {n}")
 
 while True:
-	print("Would you like to print the traces of your stored matrices (P), list your stored integers (L), \nadd two matrices (A), multiply two matrices (M), multiply a matrix by a constant (C), \ntake a matrix power (X), add two integers (I), or quit (Q)?")
+	print("Would you like to print the traces of your stored matrices (P), list your stored integers (L), \nadd two matrices (A), multiply two matrices (M), multiply a matrix by a constant (C), \ntake a matrix power (X), add two integers (D), \nmultiply two integers (U), exponentiate two integers mod n (N), save the trace of a matrix (T), or quit (Q)?")
 	try:
 		l = input(">>> ").strip().upper()
 		if len(l) > 1:
@@ -142,7 +142,8 @@ while True:
 			N = input(">>> ").strip()
 			mats[N] = C
 			print("Matrix saved.")
-		elif l == "I" and not done["I"]:
+		elif l == "D" and not done["D"]:
+			done["D"] = True
 			print("What is the name or value of the first number you would like to add?")
 			A = input(">>> ").strip()
 			if A in vals:
@@ -156,9 +157,72 @@ while True:
 			else:
 				B = int(B)
 			C = A + B
-			print("Sum calculated. We will make the brash assumption you'd like to save the result.")
+			print("Sum calculated. Do you want to save the result (S), or print and quit (Q)?")
+			I = input(">>> ").strip().upper()
+			if I == "Q":
+				print(C)
+				print("We hope you enjoyed!")
+				exit()
 			print("What would you like the name of the variable to be?")
 			N = input(">>> ").strip()
 			vals[N] = C
+		elif l == "U" and not done["U"]:
+			done["U"] = True
+			print("What is the name or value of the first number you would like to multiply?")
+			A = input(">>> ").strip()
+			if A in vals:
+				A = vals[A]
+			else:
+				A = int(A)
+			print("What is the name or value of the second number you would like to multiply?")
+			B = input(">>> ").strip()
+			if B in vals:
+				B = vals[B]
+			else:
+				B = int(B)
+			C = A * B
+			print("Product calculated. Do you want to save the result (S), or print and quit (Q)?")
+			I = input(">>> ").strip().upper()
+			if I == "Q":
+				print(C)
+				print("We hope you enjoyed!")
+				exit()
+			print("What would you like the name of the variable to be?")
+			N = input(">>> ").strip()
+			vals[N] = C
+		elif l == "N" and not done["N"]:
+			done["N"] = True
+			print("What is the name or value of the first number you would like to exponentiate?")
+			A = input(">>> ").strip()
+			if A in vals:
+				A = vals[A]
+			else:
+				A = int(A)
+			print("What is the name or value of the second number you would like to exponentiate?")
+			B = input(">>> ").strip()
+			if B in vals:
+				B = vals[B]
+			else:
+				B = int(B)
+			C = int(R(A) ^ B)
+			print("Power calculated. Do you want to save the result (S), or print and quit (Q)?")
+			I = input(">>> ").strip().upper()
+			if I == "Q":
+				print(C)
+				print("We hope you enjoyed!")
+				exit()
+			print("What would you like the name of the variable to be?")
+			N = input(">>> ").strip()
+			vals[N] = C
+		elif l == "T" and not done["T"]:
+			done["T"] = True
+			print("What is the name of the matrix whose trace you would like to save?")
+			A = input(">>> ").strip()
+			C = mats[A].trace()
+			print("Trace calculated. We will make the brash assumption you'd like to save the result.")
+			print("What would you like the name of the variable to be?")
+			N = input(">>> ").strip()
+			vals[N] = C
+		
 	except:
 		print("Your input caused an error.")

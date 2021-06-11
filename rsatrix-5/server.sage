@@ -58,7 +58,7 @@ async def handle_conn(reader, writer):
 	await writer.drain()
 	mats = {"G" : G, "E" : MS(encrypt(m))}
 	vals = {"e" : e, "d" : d}
-	done = {"A" : False, "M" : False, "C" : False, "X" : False, "I" : False}
+	done = {"A" : False, "M" : False, "C" : False, "X" : False, "U" : False, "N" : False, "T" : False}
 
 	print("""
 	Our calculator demo has gotten pretty expensive.
@@ -159,7 +159,8 @@ async def handle_conn(reader, writer):
 				N = (await prompt())
 				mats[N] = C
 				print("Matrix saved.")
-			elif l == "I" and not done["I"]:
+			elif l == "D" and not done["D"]:
+				done["D"] = True
 				print("What is the name or value of the first number you would like to add?")
 				A = (await prompt())
 				if A in vals:
@@ -173,7 +174,78 @@ async def handle_conn(reader, writer):
 				else:
 					B = int(B)
 				C = A + B
-				print("Sum calculated. We will make the brash assumption you'd like to save the result.")
+				print("Sum calculated. Do you want to save the result (S), or print and quit (Q)?")
+				I = (await prompt()).upper()
+				if I == "Q":
+					print(C)
+					print("We hope you enjoyed!")
+					await writer.drain()
+					writer.close()
+					await writer.wait_closed()
+					return
+				print("What would you like the name of the variable to be?")
+				N = (await prompt())
+				vals[N] = C
+			elif l == "U" and not done["U"]:
+				done["U"] = True
+				print("What is the name or value of the first number you would like to multiply?")
+				A = (await prompt())
+				if A in vals:
+					A = vals[A]
+				else:
+					A = int(A)
+				print("What is the name or value of the second number you would like to multiply?")
+				B = (await prompt())
+				if B in vals:
+					B = vals[B]
+				else:
+					B = int(B)
+				C = A * B
+				print("Product calculated. Do you want to save the result (S), or print and quit (Q)?")
+				I = (await prompt()).upper()
+				if I == "Q":
+					print(C)
+					print("We hope you enjoyed!")
+					await writer.drain()
+					writer.close()
+					await writer.wait_closed()
+					return
+				print("What would you like the name of the variable to be?")
+				N = (await prompt())
+				vals[N] = C
+			elif l == "N" and not done["N"]:
+				done["N"] = True
+				print("What is the name or value of the first number you would like to exponentiate?")
+				A = (await prompt())
+				if A in vals:
+					A = vals[A]
+				else:
+					A = int(A)
+				print("What is the name or value of the second number you would like to exponentiate?")
+				B = (await prompt())
+				if B in vals:
+					B = vals[B]
+				else:
+					B = int(B)
+				C = int(R(A) ^ B)
+				print("Power calculated. Do you want to save the result (S), or print and quit (Q)?")
+				I = (await prompt()).upper()
+				if I == "Q":
+					print(C)
+					print("We hope you enjoyed!")
+					await writer.drain()
+					writer.close()
+					await writer.wait_closed()
+					return
+				print("What would you like the name of the variable to be?")
+				N = (await prompt())
+				vals[N] = C
+			elif l == "T" and not done["T"]:
+				done["T"] = True
+				print("What is the name of the matrix whose trace you would like to save?")
+				A = (await prompt())
+				C = mats[A].trace()
+				print("Trace calculated. We will make the brash assumption you'd like to save the result.")
 				print("What would you like the name of the variable to be?")
 				N = (await prompt())
 				vals[N] = C
