@@ -22,5 +22,6 @@ files:
     name: ib-lit.c
   - src: ib-lit
     container: nc
+visible: false
 authors:
   - Edward Feng
