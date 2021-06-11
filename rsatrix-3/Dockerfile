@@ -7,11 +7,11 @@ WORKDIR /home/ctf
 RUN mkdir -m 700 .sage
 RUN chown ctf:ctf .sage
 
-COPY rt3.sage .
+COPY server.sage .
 COPY flag.txt .
 
 ENV HOME /home/ctf
 
 USER ctf
 EXPOSE 9999
-CMD ["sage", "/home/ctf/rt3.sage"]
+CMD ["sage", "/home/ctf/server.sage"]
