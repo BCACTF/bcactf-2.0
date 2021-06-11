@@ -1,24 +1,17 @@
-FROM ubuntu@sha256:86ac87f73641c920fb42cc9612d4fb57b5626b56ea2a19b894d0673fd5b4f2e9
+FROM sagemath/sagemath:9.0-py3
 
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN apt-get update -y && \
-    apt-get install -y sagemath --no-install-recommends && \
-    rm -rf /var/lib/apt/lists/*
-
+USER root
 RUN useradd -m -d /home/ctf -u 12345 ctf
 WORKDIR /home/ctf
 
-COPY ynetd .
-RUN chmod +x ynetd
+RUN mkdir -m 700 .sage
+RUN chown ctf:ctf .sage
 
 COPY rt3.sage .
 COPY flag.txt .
 
-RUN chown -R root:root /home/ctf
-RUN chown ctf:ctf /home/ctf
-RUN chmod +x rt3.sage
+ENV HOME /home/ctf
 
 USER ctf
 EXPOSE 9999
-CMD ./ynetd -p 9999 ./rt3.sage
+CMD ["sage", "/home/ctf/rt3.sage"]
