@@ -33,7 +33,7 @@ async def handle_conn(reader, writer):
 		await writer.drain()
 		return (await reader.readline()).decode().strip()
 
-    mats = {"I": MS.identity_matrix(), "G": G, "E": MS(encrypt(m))}
+	mats = {"I": MS.identity_matrix(), "G": G, "E": MS(encrypt(m))}
 
 	print("""
 	Welcome to the RSAtrix demo calculator! 
