@@ -69,8 +69,8 @@ while True:
 			for k in mats:
 				print(k + ": " + str(mats[k].trace()))
 		elif l == "L":
-			print("Here is your list of integers:)"
-				print(list(vals.keys()))
+			print("Here is your list of integers:")
+            print(list(vals.keys()))
 		elif l == "A" and not done["A"]:
 			done["A"] = True
 			print("What is the name of the first matrix you would like to add?")
