@@ -29,6 +29,9 @@ function createTable(req, res) {
 }
 
 function insertValues(req, res) {
+    if (typeof req.body.Username !== "string") return res.status(400).send("No");
+    if (typeof req.body.Password !== "string") return res.status(400).send("No");
+
     // inserts a mock row into the table with the flag
     db.run(`INSERT INTO user(username, password, flag) VALUES(?, ?, ?)`, ['j(J32hf8hlALKIPkjenjKD', '8j9SPej3]\dfjjIhabenm,', 'bcactf{h0w_d1d_y0u_g3t_h3r3_th1s_t1m3?!?}'], function (err) {
         if (err) {
