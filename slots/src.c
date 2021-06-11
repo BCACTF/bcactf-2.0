@@ -70,34 +70,37 @@ int main()
     char first, second, third = ' ';
     // "Spin" three slots.
     // Having the ending \r fixes spacing issues and the extra closing brackets but makes the "spin" less pretty.
-    for (int i = 0; i < 100; i++)
-    {
-        if (i > 0)
-            printf("\r           " /*\r*/);
+    time_t start = time(NULL);
+    time_t current = time(NULL);
+    do {
+        current = time(NULL);
+        printf("\r           " /*\r*/);
         first = alphabet[rand() % 26];
         printf("[[[ %c ]]]", first);
         sleepNanos(0, 100);
-    }
+    } while (difftime(current, start) < 1);
     puts("");
     sleepNanos(0, 500000000);
-    for (int i = 0; i < 100; i++)
-    {
-        if (i > 0)
-            printf("\r           " /*\r*/);
+    start = time(NULL);
+    current = time(NULL);
+    do {
+        current = time(NULL);
+        printf("\r           " /*\r*/);
         second = alphabet[rand() % 26];
         printf("[[[ %c ]]]", second);
         sleepNanos(0, 100);
-    }
+    } while (difftime(current, start) < 1);
     puts("");
     sleepNanos(0, 500000000);
-    for (int i = 0; i < 300; i++)
-    {
-        if (i > 0)
-            printf("\r           " /*\r*/);
+    start = time(NULL);
+    current = time(NULL);
+    do {
+        current = time(NULL);
+        printf("\r           " /*\r*/);
         third = alphabet[rand() % 26];
         printf("[[[ %c ]]]", third);
         sleepNanos(0, 100);
-    }
+    } while (difftime(current, start) < 3);
     puts("");
     sleepNanos(1, 0);
     // If all the letters match, print the flag.
