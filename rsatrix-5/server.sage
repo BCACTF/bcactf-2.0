@@ -57,7 +57,7 @@ async def handle_conn(reader, writer):
 	print("Encrypting...")
 	await writer.drain()
 	mats = {"G" : G, "E" : MS(encrypt(m))}
-	vals = {"e" : e, "d" : d}
+	vals = {"e" : e, "d" : d, "n": n}
 	done = {"A" : False, "M" : False, "C" : False, "X" : False, "U" : False, "N" : False, "T" : False}
 
 	print("""
@@ -70,7 +70,7 @@ async def handle_conn(reader, writer):
 	print(f"n = {n}")
 
 	while True:
-		print("Would you like to print the traces of your stored matrices (P), list your stored integers (L), \nadd two matrices (A), multiply two matrices (M), multiply a matrix by a constant (C), \ntake a matrix power (X), add two integers (D), \nmultiply two integers (U), exponentiate two integers mod n (N), save the trace of a matrix (T), or quit (Q)?")
+		print("Would you like to print the traces of your stored matrices (P), list your stored integers (L), \nadd two matrices (A), multiply two matrices (M), multiply a matrix by a constant (C), \ntake a matrix power (X), add two integers (D), multiply two integers (U), \nexponentiate two integers mod n (N), save the trace of a matrix (T), or quit (Q)?")
 		try:
 			l = (await prompt()).upper()
 			if len(l) > 1:
