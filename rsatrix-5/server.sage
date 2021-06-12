@@ -41,7 +41,7 @@ async def handle_conn(reader, writer):
 			running = false
 		except:
 			continue
-	C = MS([randrange(n) for i in range(N*N)])
+	C = MS([randrange(100) for i in range(N*N)])
 	print("Calculating G...")
 	await writer.drain()
 	G = C * P * C^-1
