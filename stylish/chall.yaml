@@ -8,6 +8,7 @@ description: |-
   Check out my cool website! Now with customizable themes that you can share with your friends!
 hints:
   - That CSS looks suspicious...
+  - What is the server doing?
 authors:
   - anli
 files:
