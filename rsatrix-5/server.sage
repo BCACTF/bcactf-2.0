@@ -89,12 +89,12 @@ async def handle_conn(reader, writer):
 				print("Here is your list of integers:")
 				print(list(vals.keys()))
 			elif l == "A" and not done["A"]:
-				done["A"] = True
 				print("What is the name of the first matrix you would like to add?")
 				A = (await prompt())
 				print("What is the name of the second matrix you would like to add?")
 				B = (await prompt())
 				C = mats[A]+mats[B]
+				done["A"] = True
 				print("The trace of their sum is: " + str(C.trace()))
 				print("Would you like to save this matrix? (Y/N)")
 				I = (await prompt()).upper()
@@ -105,12 +105,12 @@ async def handle_conn(reader, writer):
 				mats[N] = C
 				print("Matrix saved.")
 			elif l == "M" and not done["M"]:
-				done["M"] = True
 				print("What is the name of the first matrix you would like to multiply?")
 				A = (await prompt())
 				print("What is the name of the second matrix you would like to multiply?")
 				B = (await prompt())
 				C = mats[A]*mats[B]
+				done["M"] = True
 				print("The trace of their product is: " + str(C.trace()))
 				print("Would you like to save this matrix? (Y/N)")
 				I = (await prompt()).upper()
@@ -121,12 +121,12 @@ async def handle_conn(reader, writer):
 				mats[N] = C
 				print("Matrix saved.")
 			elif l == "C" and not done["C"]:
-				done["C"] = True
 				print("What is the name of the matrix you would like to multiply?")
 				A = (await prompt())
 				print("What is the value of the constant you would like to multiply it by?")
 				B = int((await prompt()))
 				C = B * mats[A]
+				done["C"] = True
 				print("The trace of the product is: " + str(C.trace()))
 				print("Would you like to save this matrix? (Y/N)")
 				I = (await prompt()).upper()
@@ -137,7 +137,6 @@ async def handle_conn(reader, writer):
 				mats[N] = C
 				print("Matrix saved.")
 			elif l == "X" and not done["X"]:
-				done["X"] = True
 				print("What is the name of the matrix you would like to exponentiate?")
 				A = (await prompt())
 				print("What is the name or value of the exponent you would like to use?")
@@ -150,6 +149,7 @@ async def handle_conn(reader, writer):
 					print("Positive powers only.")
 					continue
 				C = mats[A]^B
+				done["X"] = True
 				print("The trace of the matrix power is is: " + str(C.trace()))
 				print("Would you like to save this matrix? (Y/N)")
 				I = (await prompt()).upper()
@@ -160,7 +160,6 @@ async def handle_conn(reader, writer):
 				mats[N] = C
 				print("Matrix saved.")
 			elif l == "D" and not done["D"]:
-				done["D"] = True
 				print("What is the name or value of the first number you would like to add?")
 				A = (await prompt())
 				if A in vals:
@@ -174,6 +173,7 @@ async def handle_conn(reader, writer):
 				else:
 					B = int(B)
 				C = A + B
+				done["D"] = True
 				print("Sum calculated. Do you want to save the result (S), or print and quit (Q)?")
 				I = (await prompt()).upper()
 				if I == "Q":
@@ -187,7 +187,6 @@ async def handle_conn(reader, writer):
 				N = (await prompt())
 				vals[N] = C
 			elif l == "U" and not done["U"]:
-				done["U"] = True
 				print("What is the name or value of the first number you would like to multiply?")
 				A = (await prompt())
 				if A in vals:
@@ -201,6 +200,7 @@ async def handle_conn(reader, writer):
 				else:
 					B = int(B)
 				C = A * B
+				done["U"] = True
 				print("Product calculated. Do you want to save the result (S), or print and quit (Q)?")
 				I = (await prompt()).upper()
 				if I == "Q":
@@ -214,7 +214,6 @@ async def handle_conn(reader, writer):
 				N = (await prompt())
 				vals[N] = C
 			elif l == "N" and not done["N"]:
-				done["N"] = True
 				print("What is the name or value of the base?")
 				A = (await prompt())
 				if A in vals:
@@ -228,6 +227,7 @@ async def handle_conn(reader, writer):
 				else:
 					B = int(B)
 				C = int(R(A) ^ B)
+				done["N"] = True
 				print("Power calculated. Do you want to save the result (S), or print and quit (Q)?")
 				I = (await prompt()).upper()
 				if I == "Q":
@@ -241,14 +241,16 @@ async def handle_conn(reader, writer):
 				N = (await prompt())
 				vals[N] = C
 			elif l == "T" and not done["T"]:
-				done["T"] = True
 				print("What is the name of the matrix whose trace you would like to save?")
 				A = (await prompt())
 				C = mats[A].trace()
+				done["T"] = True
 				print("Trace calculated. We will make the brash assumption you'd like to save the result.")
 				print("What would you like the name of the variable to be?")
 				N = (await prompt())
 				vals[N] = C
+			else:
+				print("Either that wasn't an option, or you already used up your trial!")
 		except socket.error:
 			return
 		except:

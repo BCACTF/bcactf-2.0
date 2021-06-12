@@ -72,12 +72,12 @@ while True:
 			print("Here is your list of integers:")
             print(list(vals.keys()))
 		elif l == "A" and not done["A"]:
-			done["A"] = True
 			print("What is the name of the first matrix you would like to add?")
 			A = input(">>> ").strip()
 			print("What is the name of the second matrix you would like to add?")
 			B = input(">>> ").strip()
 			C = mats[A]+mats[B]
+			done["A"] = True
 			print("The trace of their sum is: " + str(C.trace()))
 			print("Would you like to save this matrix? (Y/N)")
 			I = input(">>> ").strip().upper()
@@ -88,12 +88,12 @@ while True:
 			mats[N] = C
 			print("Matrix saved.")
 		elif l == "M" and not done["M"]:
-			done["M"] = True
 			print("What is the name of the first matrix you would like to multiply?")
 			A = input(">>> ").strip()
 			print("What is the name of the second matrix you would like to multiply?")
 			B = input(">>> ").strip()
 			C = mats[A]*mats[B]
+			done["M"] = True
 			print("The trace of their product is: " + str(C.trace()))
 			print("Would you like to save this matrix? (Y/N)")
 			I = input(">>> ").strip().upper()
@@ -104,12 +104,12 @@ while True:
 			mats[N] = C
 			print("Matrix saved.")
 		elif l == "C" and not done["C"]:
-			done["C"] = True
 			print("What is the name of the matrix you would like to multiply?")
 			A = input(">>> ").strip()
 			print("What is the value of the constant you would like to multiply it by?")
 			B = int(input(">>> ").strip())
 			C = B * mats[A]
+			done["C"] = True
 			print("The trace of the product is: " + str(C.trace()))
 			print("Would you like to save this matrix? (Y/N)")
 			I = input(">>> ").strip().upper()
@@ -120,7 +120,6 @@ while True:
 			mats[N] = C
 			print("Matrix saved.")
 		elif l == "X" and not done["X"]:
-			done["X"] = True
 			print("What is the name of the matrix you would like to exponentiate?")
 			A = input(">>> ").strip()
 			print("What is the name or value of the exponent you would like to use?")
@@ -134,6 +133,7 @@ while True:
 				continue
 			C = mats[A]^B
 			print("The trace of the matrix power is is: " + str(C.trace()))
+			done["X"] = True
 			print("Would you like to save this matrix? (Y/N)")
 			I = input(">>> ").strip().upper()
 			if I == "N":
@@ -143,7 +143,6 @@ while True:
 			mats[N] = C
 			print("Matrix saved.")
 		elif l == "D" and not done["D"]:
-			done["D"] = True
 			print("What is the name or value of the first number you would like to add?")
 			A = input(">>> ").strip()
 			if A in vals:
@@ -157,6 +156,7 @@ while True:
 			else:
 				B = int(B)
 			C = A + B
+			done["D"] = True
 			print("Sum calculated. Do you want to save the result (S), or print and quit (Q)?")
 			I = input(">>> ").strip().upper()
 			if I == "Q":
@@ -167,7 +167,6 @@ while True:
 			N = input(">>> ").strip()
 			vals[N] = C
 		elif l == "U" and not done["U"]:
-			done["U"] = True
 			print("What is the name or value of the first number you would like to multiply?")
 			A = input(">>> ").strip()
 			if A in vals:
@@ -181,6 +180,7 @@ while True:
 			else:
 				B = int(B)
 			C = A * B
+			done["U"] = True
 			print("Product calculated. Do you want to save the result (S), or print and quit (Q)?")
 			I = input(">>> ").strip().upper()
 			if I == "Q":
@@ -191,7 +191,6 @@ while True:
 			N = input(">>> ").strip()
 			vals[N] = C
 		elif l == "N" and not done["N"]:
-			done["N"] = True
 			print("What is the name or value of the exponent base?")
 			A = input(">>> ").strip()
 			if A in vals:
@@ -205,6 +204,7 @@ while True:
 			else:
 				B = int(B)
 			C = int(R(A) ^ B)
+			done["N"] = True
 			print("Power calculated. Do you want to save the result (S), or print and quit (Q)?")
 			I = input(">>> ").strip().upper()
 			if I == "Q":
@@ -215,14 +215,15 @@ while True:
 			N = input(">>> ").strip()
 			vals[N] = C
 		elif l == "T" and not done["T"]:
-			done["T"] = True
 			print("What is the name of the matrix whose trace you would like to save?")
 			A = input(">>> ").strip()
 			C = mats[A].trace()
+			done["T"] = True
 			print("Trace calculated. We will make the brash assumption you'd like to save the result.")
 			print("What would you like the name of the variable to be?")
 			N = input(">>> ").strip()
 			vals[N] = C
-		
+		else:
+			print("Either that wasn't an option, or you already used up your trial!")
 	except:
 		print("Your input caused an error.")
