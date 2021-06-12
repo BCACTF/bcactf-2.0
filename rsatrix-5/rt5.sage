@@ -43,7 +43,7 @@ m = int(binascii.hexlify(flag), 16)
 print("Encrypting...")
 mats = {"G" : G, "E" : MS(encrypt(m))}
 vals = {"e" : e, "d" : d, "n", n}
-done = {"A" : False, "M" : False, "C" : False, "X" : False, "U" : False, "N" : False, "T" : False}
+done = {"A" : False, "M" : False, "C" : False, "X" : False, "D" : False, "U" : False, "N" : False, "T" : False}
 
 
 print("""
