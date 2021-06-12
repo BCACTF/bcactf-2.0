@@ -6,6 +6,8 @@ flag:
   file: ./flag.txt
 description: |-
   We said "final iteration" before, but that's before we found a bunch of unintended solvepaths. Now, you've only got one shot...
+  
+  Please don't try any matrix exponentials that take longer than a minute to run, as they freeze up the server for everyone else.
 hints:
   - The intended solution for 5 is the same as for 4, so check out 4's hints!
   - Solve all the previous problems without negative exponents, as those were unintended...
@@ -18,4 +20,4 @@ files:
 authors:
   - eiis1000
   - MichaelK522
-visible: false
+visible: true
