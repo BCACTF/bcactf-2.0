@@ -70,7 +70,7 @@ async def handle_conn(reader, writer):
 	print(f"n = {n}")
 
 	while True:
-		print("Would you like to print the traces of your stored matrices (P), list your stored integers (L), \nadd two matrices (A), multiply two matrices (M), multiply a matrix by a constant (C), \ntake a matrix power (X), add two integers (I), or quit (Q)?")
+		print("Would you like to print the traces of your stored matrices (P), list your stored integers (L), \nadd two matrices (A), multiply two matrices (M), multiply a matrix by a constant (C), \ntake a matrix power (X), add two integers (D), \nmultiply two integers (U), exponentiate two integers mod n (N), save the trace of a matrix (T), or quit (Q)?")
 		try:
 			l = (await prompt()).upper()
 			if len(l) > 1:
