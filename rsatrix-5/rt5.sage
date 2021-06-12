@@ -192,13 +192,13 @@ while True:
 			vals[N] = C
 		elif l == "N" and not done["N"]:
 			done["N"] = True
-			print("What is the name or value of the first number you would like to exponentiate?")
+			print("What is the name or value of the exponent base?")
 			A = input(">>> ").strip()
 			if A in vals:
 				A = vals[A]
 			else:
 				A = int(A)
-			print("What is the name or value of the second number you would like to exponentiate?")
+			print("What is the name or value of the exponent base?")
 			B = input(">>> ").strip()
 			if B in vals:
 				B = vals[B]
