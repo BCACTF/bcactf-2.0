@@ -5,30 +5,29 @@ const logger = require('morgan');
 const PORT = 54321;
 const sqlite = require('sqlite3').verbose();
 var banlist = require('./denylist.json');
-let db;
 
 function createDB(req, res) {
     // creates the in-memory db
-    db = new sqlite.Database(':memory:', function (err) {
+    const db = new sqlite.Database(':memory:', function (err) {
         if (err) {
             return console.log(err.message);
         }
-        createTable(req, res);
+        createTable(db, req, res);
     });
 }
 
-function createTable(req, res) {
+function createTable(db, req, res) {
     // creates the user table
     db.run("CREATE TABLE user(username VARCHAR(45) NOT NULL PRIMARY KEY, password VARCHAR(45) NOT NULL, flag VARCHAR(45) NOT NULL);", function (err) {
         if (err) {
             return console.log(err.message);
         }
         console.log('Table created')
-        insertValues(req, res);
+        insertValues(db, req, res);
     });
 }
 
-function insertValues(req, res) {
+function insertValues(db, req, res) {
     if (typeof req.body.Username !== "string") return res.status(400).send("No");
     if (typeof req.body.Password !== "string") return res.status(400).send("No");
 
@@ -53,17 +52,17 @@ function insertValues(req, res) {
             if(flag !== undefined) {
                 res.render('1', {flag: flag.flag});
                 //res.send("Your flag is " + flag.flag);
-                closeDB();
+                closeDB(db);
             } else {
                 console.log("whoops")
                 res.render('2', {invalid: true});
-                closeDB();
+                closeDB(db);
             }
         });
     });
 }
 
-function closeDB() {
+function closeDB(db) {
     db.close(function (err) {
         if (err) {
             return console.log(err.message);
