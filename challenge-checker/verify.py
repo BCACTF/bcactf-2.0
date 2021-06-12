@@ -123,10 +123,21 @@ def check(raw_data) -> "Tuple[list[str], list[str]]":
     return errors, warnings
 
 if __name__ == "__main__":
-    cprint("Paste in your chall.yaml file, then send an EOF:", "cyan", attrs=["bold"])
+    cprint("Paste in your chall.yaml file, then send an EOF or two empty lines:", "cyan", attrs=["bold"])
     sys.stdout.flush()
     try:
-        raw_data = sys.stdin.read()
+        raw_data = ""
+        empty_lines = 0
+        while empty_lines < 2:
+            try:
+                line = input()
+            except EOFError:
+                break
+            if len(line) > 0:
+                empty_lines = 0
+            else:
+                empty_lines += 1
+            raw_data += line + "\n"
         errors, warnings = check(raw_data)
     except Exception as e:
         cprint("Fatal error: ", "red", attrs=["bold"], end="")
