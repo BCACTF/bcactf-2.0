@@ -9,6 +9,7 @@ authors:
   - akth3n3rd
 hint:
   - What category is this?
+  - Stegosauruses don't like snow
 files:
   - src: Flag.java
 visible: true
