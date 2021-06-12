@@ -43,20 +43,20 @@ m = int(binascii.hexlify(flag), 16)
 print("Encrypting...")
 mats = {"G" : G, "E" : MS(encrypt(m))}
 vals = {"e" : e, "d" : d, "n" : n}
-done = {"A" : False, "M" : False, "C" : False, "X" : False, "D" : False, "U" : False, "N" : False, "T" : False}
+done = {"A" : False, "M" : False, "X" : False, "D" : False, "U" : False, "N" : False, "T" : False}
 
 
 print("""
 Our calculator demo has gotten pretty expensive.
-Given you're not a paying customer or anything, we decided it was fair to implement a POW 
-and only allow one of each type of operation per connection.
+Given you're not a paying customer or anything, we decided it was fair to
+only allow one of each type of operation per connection.
 Try them all for the full experience!
 Also, d is secret now. Oops! We've added integer operations to compensate.
 """)
 print(f"n = {n}")
 
 while True:
-	print("Would you like to print the traces of your stored matrices (P), list your stored integers (L), \nadd two matrices (A), multiply two matrices (M), multiply a matrix by a constant (C), \ntake a matrix power (X), add two integers (D), multiply two integers (U), \nexponentiate two integers mod n (N), save the trace of a matrix (T), or quit (Q)?")
+	print("Would you like to print the traces of your stored matrices (P), list your stored integers (L), \nadd two matrices (A), multiply two matrices (M), take a matrix power (X), \nadd two integers (D), multiply two integers (U), exponentiate two integers mod n (N), \nsave the trace of a matrix (T), or quit (Q)?")
 	try:
 		l = input(">>> ").strip().upper()
 		if len(l) > 1:
@@ -95,22 +95,6 @@ while True:
 			C = mats[A]*mats[B]
 			done["M"] = True
 			print("The trace of their product is: " + str(C.trace()))
-			print("Would you like to save this matrix? (Y/N)")
-			I = input(">>> ").strip().upper()
-			if I == "N":
-				continue
-			print("What would you like the name of the matrix to be?")
-			N = input(">>> ").strip()
-			mats[N] = C
-			print("Matrix saved.")
-		elif l == "C" and not done["C"]:
-			print("What is the name of the matrix you would like to multiply?")
-			A = input(">>> ").strip()
-			print("What is the value of the constant you would like to multiply it by?")
-			B = int(input(">>> ").strip())
-			C = B * mats[A]
-			done["C"] = True
-			print("The trace of the product is: " + str(C.trace()))
 			print("Would you like to save this matrix? (Y/N)")
 			I = input(">>> ").strip().upper()
 			if I == "N":
