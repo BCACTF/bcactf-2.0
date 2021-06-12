@@ -8,6 +8,7 @@ description: |-
   We said "final iteration" before, but that's before we found a bunch of unintended solvepaths. Now, you've only got one shot...
 hints:
   - The intended solution for 5 is the same as for 4, so check out 4's hints!
+  - Solve all the previous problems without negative exponents, as those were unintended...
 deploy:
   nc:
     build: .
