@@ -13,7 +13,7 @@ hints:
   - "Better get familiar with this wiki article: https://minecraft.fandom.com/wiki/Chunk_format"
   - "https://github.com/jaquadro/NBTExplorer/releases or https://pypi.org/project/anvil-parser/"
   - "There are 6 parts to the flag. There are no underscores between them. All decimals should be truncated, not rounded."
-  - "All coordinates are block coordinates."
+  - "All coordinates are by block (not chunk)."
 files:
   - src: bcacraft.tar.gz 
 authors:
