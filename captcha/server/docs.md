@@ -38,7 +38,7 @@ X-Captcha-Challenge: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMjU2R0NNIn0.olzRmRu19fLfNlk
 Content-Type: application/json
 
 {
-    "answers": [false, false, false, true, false, false, true, true, true]
+    "answer": [false, false, false, true, false, false, true, true, true]
 }
 ```
 
