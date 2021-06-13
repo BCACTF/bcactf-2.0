@@ -1,0 +1,4 @@
+**RAINBOW PASSAGE:**
+
+The first thing to note is that the encryption treats bit 1 of each byte separately from byte 2, etc, so we can just consider the encode_block method as a function that takes in a 16 bit vector and outputs a 16 bit vector. If the plaintext was 1000000000000000, then the ciphertext would be the first two bytes of the flag. If it was 010..., it would be the next two, etc. 
+Since that's *not* what the plaintext is, this doesn't *directly* help us, but what's critical is that the encryption function is linear: letting + be XOR, f(e1 + e2) = m1 + m2. This means that if we find a linear combination of 16 bit vectors that gets us to 1000000000000000 (or 010... etc), we'll get the first two bytes of the flag (and the next two, etc). 
